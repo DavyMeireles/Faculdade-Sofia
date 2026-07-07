@@ -1,0 +1,299 @@
+﻿.qr-code-container {
+    position: fixed;
+    right: 30px;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 8333;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+    /* Estado escondido por SCROLL - MAIS IMPORTANTE */
+    .qr-code-container.scroll-hidden {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    /* Estado escondido por scroll NÃO deve ser afetado quando expandido */
+    .qr-code-container.expanded.scroll-hidden {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .qr-code-container {
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-code-container {
+        right: 10px;
+    }
+}
+
+.qr-code-card {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    width: 110px;
+}
+
+    .qr-code-card:hover {
+        transform: scale(1.05);
+        background: rgba(0, 0, 0, 0.95);
+        border-color: #C5A059;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+
+/* Container do QR Code - SEM DISTORÇÃO */
+#qrCodeCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #qrCodeCanvas canvas,
+    #qrCodeCanvas img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        border-radius: 12px;
+        background: white;
+        padding: 6px;
+        display: block;
+        object-fit: contain;
+    }
+
+/* Overlay */
+.qr-code-overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 4px;
+    border-radius: 0 0 12px 12px;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.qr-code-card:hover .qr-code-overlay {
+    opacity: 1;
+}
+
+.qr-code-overlay span {
+    color: #C5A059 !important;
+    font-weight: 500;
+}
+
+.qr-code-overlay i {
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+/* Header */
+.qr-code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 11px;
+    gap: 8px;
+}
+
+    .qr-code-header i:first-child {
+        color: #C5A059;
+        font-size: 14px;
+    }
+
+    .qr-code-header span {
+        flex: 1;
+        font-weight: 500;
+        display: none;
+    }
+
+/* Footer */
+.qr-code-footer {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-copy-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s;
+}
+
+    .qr-copy-btn:hover {
+        background: #C5A059;
+        transform: scale(1.1);
+    }
+
+.qr-close-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .qr-close-btn:hover {
+        background: #ff5a5a;
+        transform: rotate(90deg);
+    }
+
+/* Estado Expandido - Centralizado na tela */
+.qr-code-container.expanded {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    bottom: auto;
+    left: auto;
+    transform: translate(50%, -50%);
+    z-index: 10000;
+}
+
+    /* Expandido NUNCA deve ficar escondido por scroll */
+    .qr-code-container.expanded.scroll-hidden {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    .qr-code-container.expanded .qr-code-card {
+        width: 320px;
+        padding: 20px;
+        cursor: default;
+    }
+
+    .qr-code-container.expanded .qr-code-header span {
+        display: block;
+    }
+
+    .qr-code-container.expanded .qr-code-footer {
+        display: flex;
+    }
+
+    .qr-code-container.expanded #qrCodeCanvas canvas,
+    .qr-code-container.expanded #qrCodeCanvas img {
+        padding: 15px;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .qr-code-container.expanded .qr-code-overlay {
+        opacity: 1;
+        bottom: 15px;
+        pointer-events: auto;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+        .qr-code-container.expanded .qr-code-overlay span {
+            font-size: 12px;
+        }
+
+/* Estado Escondido (fechado manualmente) */
+.qr-code-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Animações */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(197, 160, 89, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+    }
+}
+
+.qr-code-card {
+    animation: pulse 2s infinite;
+}
+
+.qr-code-container.expanded .qr-code-card {
+    animation: none;
+}
+
+/* Responsividade para expandido em mobile */
+@media (max-width: 768px) {
+    .qr-code-container.expanded .qr-code-card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-code-container.expanded .qr-code-card {
+        width: 260px;
+        padding: 15px;
+    }
+}
+
+/* Ajuste fino para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .qr-code-container {
+        right: 20px;
+    }
+}

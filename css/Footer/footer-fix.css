@@ -1,0 +1,90 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #0a2b3e;
+    padding: 40px 0 20px;
+    margin-top: auto;
+}
+
+/* Manter cor única para todos os links do footer */
+.footer-column a,
+.footer-bottom a,
+.social-links a {
+    color: #e0e0e0 !important;
+    text-decoration: none !important;
+    transition: opacity 0.3s ease;
+}
+
+    /* Efeito hover e active com a MESMA cor (apenas opacidade/brilho) */
+    .footer-column a:hover,
+    .footer-column a:active,
+    .footer-column a:focus,
+    .footer-bottom a:hover,
+    .footer-bottom a:active,
+    .footer-bottom a:focus,
+    .social-links a:hover,
+    .social-links a:active,
+    .social-links a:focus {
+        color: #e0e0e0 !important;
+        opacity: 0.8;
+        text-decoration: none !important;
+    }
+
+/* Links das redes sociais específicos */
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+    .social-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+/* Links na lista */
+.footer-column ul li a i {
+    margin-right: 8px;
+    color: #e0e0e0 !important;
+}
+
+.footer-column ul li a:hover i {
+    opacity: 0.8;
+}
+
+/* Links do bottom */
+.footer-bottom a {
+    color: #e0e0e0;
+    margin-left: 15px;
+}
+
+/* Botão newsletter */
+.btn-primary {
+    background-color: #0066cc;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0066cc;
+        opacity: 0.9;
+    }

@@ -1,0 +1,5 @@
+# Vídeos grandes (não versionados no git)
+pagina_inicial/Videos/
+
+# Arquivos enviados por usuários (alunos, banners, editais, etc.)
+uploads/

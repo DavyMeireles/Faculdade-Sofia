@@ -1,0 +1,123 @@
+﻿
+
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 8999;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(37, 211, 102, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    animation: pulse-glow 2s infinite;
+}
+
+/* Efeito de pulsação suave e moderna */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 0 12px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Ícone SVG interno (WhatsApp) - responsivo */
+.whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: white;
+    transition: transform 0.2s ease;
+}
+
+/* Efeito hover: leve aumento e mudança de fundo */
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    background-color: #20b859;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    animation: none; /* pausa a animação de pulsar no hover para suavidade */
+}
+
+    .whatsapp-float:hover svg {
+        transform: scale(1.02);
+    }
+
+/* Tooltip sutil (opcional) que aparece ao passar o mouse */
+.whatsapp-float::after {
+    content: "Fale conosco";
+    position: absolute;
+    right: 70px;
+    background: #1f2a3e;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 30px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    letter-spacing: 0.3px;
+}
+
+.whatsapp-float:hover::after {
+    opacity: 1;
+    visibility: visible;
+    right: 78px;
+}
+
+/* Ajuste para telas muito pequenas (mobile) */
+@media (max-width: 550px) {
+    .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .whatsapp-float::after {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            right: 65px;
+        }
+
+        .whatsapp-float:hover::after {
+            right: 70px;
+        }
+
+    .container {
+        padding: 20px 16px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+}
+
+.whatsapp-float:active {
+    transform: scale(0.96);
+    transition: transform 0.05s;
+}
+

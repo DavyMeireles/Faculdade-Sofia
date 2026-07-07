@@ -1,0 +1,16 @@
+﻿.icon-glass {
+    width: 25%;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.icon-glass:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.4);
+}
