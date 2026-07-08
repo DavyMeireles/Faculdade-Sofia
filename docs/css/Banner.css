@@ -1,0 +1,269 @@
+﻿﻿﻿﻿.banner-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    max-height: 588px;
+    overflow: hidden;
+}
+
+/* NOVA REGRA: Remove espaçamento quando o banner é o primeiro elemento após o menu */
+.banner-wrapper:first-of-type {
+    margin-top: 0;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+}
+
+.hero-content.bannerimg {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 546px;
+}
+
+    .hero-content.bannerimg img {
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.15);
+        padding: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        margin: 0 auto;
+        cursor: pointer;
+        max-height: 525px;
+        object-fit: cover;
+        width: auto;
+    }
+
+        .hero-content.bannerimg img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.4);
+        }
+
+.banner-image {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+    .banner-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.4);
+    }
+
+/* Botão de fechar melhorado */
+.banner-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 50;
+    font-size: 16px;
+}
+
+    .banner-close-btn:hover {
+        background: rgba(255, 70, 70, 0.9);
+        transform: scale(1.1) rotate(90deg);
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+
+/* Animação de fade out ao fechar */
+.banner-wrapper {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+    .banner-wrapper.hidden {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+/* Banner personalizado com efeito vidro */
+.custom-banner {
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0;
+    padding: 1rem 0;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Fallback para navegadores antigos */
+@supports not (backdrop-filter: blur(10px)) {
+    .custom-banner {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+        opacity: 0.95;
+    }
+}
+
+/* Efeito de brilho */
+.custom-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    transform: skewX(-20deg);
+    animation: customBannerShine 8s infinite;
+    pointer-events: none;
+}
+
+@keyframes customBannerShine {
+    0% {
+        transform: translateX(-100%) skewX(-20deg);
+    }
+
+    100% {
+        transform: translateX(100%) skewX(-20deg);
+    }
+}
+
+/* RESPONSIVIDADE ATUALIZADA - 110% maior */
+@media (max-width: 992px) {
+    .banner-wrapper {
+        max-height: 504px;
+    }
+
+    .hero-content.bannerimg {
+        max-height: 462px;
+    }
+
+        .hero-content.bannerimg img {
+            max-height: 441px;
+        }
+}
+
+@media (max-width: 768px) {
+    .banner-wrapper {
+        padding: 0 10px;
+        margin-top: 0;
+        max-height: 420px;
+    }
+
+    .banner-close-btn {
+        top: 10px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .hero-content.bannerimg img,
+    .banner-image {
+        padding: 3px;
+    }
+
+    .hero-content.bannerimg img {
+        max-height: 378px;
+    }
+
+    .custom-banner {
+        backdrop-filter: blur(8px);
+    }
+
+        .custom-banner .row {
+            flex-direction: column;
+            text-align: center;
+            gap: 0.75rem;
+        }
+
+    .custom-banner-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-wrapper {
+        max-height: 336px;
+    }
+
+    .hero-content.bannerimg {
+        max-height: 315px;
+    }
+
+        .hero-content.bannerimg img {
+            max-height: 315px;
+            padding: 2px;
+        }
+
+    .custom-banner {
+        backdrop-filter: blur(6px);
+    }
+
+    .custom-banner-title {
+        font-size: 0.95rem;
+    }
+
+    .custom-banner-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Redução de movimento para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .custom-banner::before {
+        animation: none;
+    }
+
+    .hero-content.bannerimg img:hover,
+    .banner-image:hover,
+    .banner-close-btn:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T&#xE9;cnico em Farm&#xE1;cia</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/WhatsApp.css">
+    <link rel="stylesheet" href="../css/clinic-main.css?v=9XvJ5tVs0WqvQ-fCI90XqVaZsS5Hp6nvCYlLHMJVpjs" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div b-lj3f8y2p6z>
+    <header b-lj3f8y2p6z id="mainHeader">
+        <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
+<style>
+    .sublinhado {
+        text-decoration: underline;
+        color: #001F3F;
+    }
+
+    .cortx {
+        color: #001F3F;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-combo {
+        position: relative;
+    }
+
+    .combo-title {
+        cursor: pointer;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none !important;
+    }
+
+    .combo-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-combo:hover .combo-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu-item {
+        position: relative;
+    }
+
+    .submenu-title {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        text-decoration: none !important;
+    }
+
+    .submenu-dropdown {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background: white;
+        min-width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .submenu-item:hover .submenu-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown-item {
+        display: block;
+        padding: 8px 16px;
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .dropdown-item:hover {
+            background: #f5f5f5;
+        }
+
+    .nav-combo.active .combo-dropdown,
+    .submenu-item.active .submenu-dropdown {
+        display: block;
+    }
+
+    #mainHeader,
+    #mainHeader .container,
+    .header-content,
+    .nav-menu .combo-title,
+    .logo-container {
+        background: transparent !important;
+    }
+
+    .nav-menu .combo-title {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+        .nav-menu .combo-title i {
+            color: #ffffff;
+        }
+
+    .combo-arrow {
+        color: #C5A059;
+    }
+
+    #mainHeader.internal-page .nav-menu .combo-title,
+    #mainHeader.internal-page .nav-menu .combo-title i {
+        color: #003a6d !important;
+        text-shadow: none !important;
+    }
+
+    #mainHeader.internal-page .combo-arrow {
+        color: #C5A059 !important;
+    }
+
+    #mainHeader.scrolled .nav-menu .combo-title,
+    #mainHeader.scrolled .nav-menu .combo-title i {
+        color: #003a6d !important;
+        text-shadow: none !important;
+    }
+
+    #mainHeader.scrolled .combo-arrow {
+        color: #C5A059 !important;
+    }
+</style>
+
+<div class="container">
+    <div class="header-content">
+        <div class="logo-container" id="logoContainer">
+            <a class="logo-link" id="btnHome" title="Ir para página inicial" href="../home.html">
+                <div class="logo" id="logoWithMenu">
+                    <div class="logo-icon glass-effect">
+                        <img src="../pagina_inicial/icon/logo8.png" alt="Logo Santa Sofia">
+                    </div>
+                    <div class="logo-text-below blue-text">
+                        <span class="logo-subtitle-line1"><div class="sublinhado">FACULDADE SOFIA</div> </span>
+                        <span class="logo-subtitle-line2"><div class="cortx">CLÍNICA ESCOLA</div></span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="institutional-dropdown" id="institutionalDropdown">
+                <div class="institutional-dropdown-content">
+                    <div class="institutional-submenu-item">
+                        <div class="institutional-submenu-title">
+                            <span><i class="fas fa-university" style="color:#4a6fa5;"></i> SANTA SOFIA</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="institutional-submenu-dropdown">
+                            <a class="dropdown-item" href="Home/HInstiEnsino">
+                                <i class="fas fa-clock-rotate-left" style="color:#7f8c8d;"></i> História da Instituição de Ensino
+                            </a>
+                            <a class="dropdown-item" href="../Home/VideoInstitucional.html">
+                                <i class="fas fa-briefcase-medical" style="color:#27ae60;"></i> FACULDADE SOFIA · DESDE 1987
+                            </a>
+                        </div>                        
+                    </div>
+                    <div class="institutional-submenu-item">
+                        <div class="institutional-submenu-title">
+                            <span><i class="fas fa-hospital-alt" style="color:#c0392b;"></i> SANTA CASA</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="institutional-submenu-dropdown">
+                            <a class="dropdown-item" href="../Home/HInstiSantaCasa.html">
+                                <i class="fas fa-clock-rotate-left" style="color:#7f8c8d;"></i> História
+                            </a>
+                            <a class="dropdown-item" href="../Home/ServSantaCasa.html">
+                                <i class="fas fa-briefcase-medical" style="color:#27ae60;"></i> Serviços
+                            </a>
+                        </div>
+                    </div>
+                    <div class="institutional-submenu-item">
+                        <div class="institutional-submenu-title">
+                            <span><i class="fas fa-heart-circle-plus" style="color:#e74c3c;"></i> SIHUSA</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="institutional-submenu-dropdown">
+                            <a class="dropdown-item" href="../Home/HistorSihusa.html">
+                                <i class="fas fa-book-open" style="color:#7f8c8d;"></i> Nossa História
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-school" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">ENSINO</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a class="submenu-item" style="font-size: 14px;font-weight:bold;" href="https://faculdadesofia.sistematutor.com.br/certificados">
+                                <i class="fas fa-eye" style="color:#8e44ad;"></i> Consulta de Veracidade
+                            </a>                                                    
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <span><i class="fas fa-screwdriver-wrench" style="color:#2980b9;"></i> Escola Técnica</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a class="dropdown-item" href="TEnfermagem.html">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Técnicos em Enfermagem</span>
+                                    </a>
+                                    <a class="dropdown-item" href="TFarmacia.html">
+                                        <span><i class="fas fa-capsules" style="color:#8e44ad;"></i> Técnicos em Farmácia</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <span><i class="fas fa-graduation-cap" style="color:#8e44ad;"></i>Graduação</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a class="dropdown-item" href="BEnfermagem.html">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i>Bacharelado em Enfermagem</span>
+                                    </a>
+                                    <a class="dropdown-item" href="BPsicologia.html">
+                                        <span><i class="fas fa-brain" style="color:#27ae60;"></i>Bacharelado em Psicologia</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <span><i class="fas fa-graduation-cap" style="color:#8e44ad;"></i> Pós-Graduação</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a class="dropdown-item" href="PosEnfermagem.html">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Pós-Graduação em Enfermagem</span>
+                                    </a>                                    
+                                    <a class="dropdown-item" href="PosPsicologia.html">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Pós-Graduação em Psicologia</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-calendar-check" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">VESTIBULAR</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a class="dropdown-item" href="../vestibular/index.html">
+                                <i class="fas fa-id-card" style="color:#27ae60;"></i>Vestibular 2026b
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-building-user" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">SOFIA - CLÍNICA ESCOLA</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <i class="fas fa-handshake" style="color:#003a6d;"></i>
+                                    <span class="menu-text full-text">CONVÊNIOS</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a href="#plano-sihusa" class="dropdown-item"><i class="fas fa-building" style="color:#3498db;"></i> Sihusa</a>
+                                    <a href="#plano-unimed" class="dropdown-item"><i class="fas fa-building" style="color:#3498db;"></i> Unimed</a>
+                                    <a href="#plano-abbas" class="dropdown-item"><i class="fas fa-mosque" style="color:#16a085;"></i> Abas</a>
+                                    <a href="#plano-porto" class="dropdown-item"><i class="fas fa-anchor" style="color:#f39c12;"></i> Porto Seguro</a>
+                                    <a href="#plano-samaritano" class="dropdown-item"><i class="fas fa-truck-medical" style="color:#f39c12;"></i> Samaritano</a>
+                                    <a href="#plano-apas-pm" class="dropdown-item"><i class="fas fa-building-shield" style="color:#f39c12;"></i> Apas-PM</a>
+                                    <a href="#plano-fusex" class="dropdown-item"><i class="fas fa-shield" style="color:#f39c12;"></i> Fusex</a>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="../Oftalmologia.html">
+                                <i class="fas fa-eye" style="color:#8e44ad;"></i> Oftalmologia avançada
+                            </a>
+                            <a class="dropdown-item" href="../Psicologia.html">
+                                <i class="fas fa-heart" style="color:#8e44ad;"></i> Psicologia
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-hand-holding-heart" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">SIHUSA</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a href="../Home/HistorSihusa.html" class="dropdown-item">
+                                <i class="fas fa-circle-info" style="color:#3498db;"></i> Institucional
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-calendar-alt" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">EVENTOS</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a href="#plano-sihusa" class="dropdown-item"><i class="fas fa-calendar-check" style="color:#e74c3c;"></i> Agenda</a>
+                            <a href="#plano-unimed" class="dropdown-item"><i class="fas fa-clock-rotate-left" style="color:#3498db;"></i> Histórico</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-actions">
+            <a class="btn-appointment" href="https://faculdadesofia.sistematutor.com.br/portal/login">
+                <i class="fas fa-user-graduate" style="color:#ffffff;"></i><span>Portal do Aluno</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+        var navMenu = document.getElementById('navMenu');
+        if (navMenu) {
+            navMenu.classList.toggle('show');
+        }
+    });
+     
+    document.querySelectorAll('.accordion-header').forEach(function(header) {
+        header.addEventListener('click', function(e) {
+            e.preventDefault();
+            var content = this.nextElementSibling;
+            var icon = this.querySelector('.fa-chevron-down');
+
+            if (content && content.classList.contains('accordion-content')) {
+                if (content.style.display === 'none' || !content.style.display) {
+                    content.style.display = 'block';
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.display = 'none';
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+    });
+
+    // Mobile submenu toggle
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.submenu-title').forEach(function(title) {
+            title.addEventListener('click', function(e) {
+                e.preventDefault();
+                var dropdown = this.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('submenu-dropdown')) {
+                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+
+        document.querySelectorAll('.combo-title').forEach(function(title) {
+            title.addEventListener('click', function(e) {
+                e.preventDefault();
+                var parent = this.closest('.nav-combo');
+                if (parent) {
+                    parent.classList.toggle('active');
+                }
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("btnHome").addEventListener("click", function() {
+            window.location.href = "/home";
+        });
+    });
+</script>
+
+<script>
+  
+    (function() {
+      
+        const DARK_TEXT_THRESHOLD = 128; 
+        const CHECK_INTERVAL_MS = 100;   
+        const UPDATE_DEBOUNCE_MS = 50;  
+
+        const menuItems = document.querySelectorAll('.combo-title');
+        const menuIcons = document.querySelectorAll('.combo-title i');
+        const menuArrows = document.querySelectorAll('.combo-arrow');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const btnAppointment = document.querySelector('.btn-appointment');
+               
+        let currentTextColor = null;
+        let currentBgColor = null;
+               
+        function getLuminance(r, g, b) {
+           return 0.299 * r + 0.587 * g + 0.114 * b;
+        }
+       
+        function rgbToHex(r, g, b) {
+            return '#' + [r, g, b].map(x => {
+                const hex = x.toString(16);
+                return hex.length === 1 ? '0' + hex : hex;
+            }).join('');
+        }
+              
+        function extractRgb(color) {
+         
+            const rgbMatch = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+            if (rgbMatch) {
+                return {
+                    r: parseInt(rgbMatch[1]),
+                    g: parseInt(rgbMatch[2]),
+                    b: parseInt(rgbMatch[3])
+                };
+            }
+
+         
+            const hexMatch = color.match(/^#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})$/i);
+            if (hexMatch) {
+                return {
+                    r: parseInt(hexMatch[1], 16),
+                    g: parseInt(hexMatch[2], 16),
+                    b: parseInt(hexMatch[3], 16)
+                };
+            }
+
+            
+            const shortHexMatch = color.match(/^#([a-f0-9])([a-f0-9])([a-f0-9])$/i);
+            if (shortHexMatch) {
+                return {
+                    r: parseInt(shortHexMatch[1] + shortHexMatch[1], 16),
+                    g: parseInt(shortHexMatch[2] + shortHexMatch[2], 16),
+                    b: parseInt(shortHexMatch[3] + shortHexMatch[3], 16)
+                };
+            }
+
+            return null;
+        }
+                
+        function getBackgroundColorAt(x, y) {
+            try {
+             
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+
+            
+                canvas.width = 1;
+                canvas.height = 1;
+
+              
+                context.drawWindow(window, x, y, 1, 1, 'rgb');
+
+            
+                const imageData = context.getImageData(0, 0, 1, 1);
+                const data = imageData.data;
+
+                if (data && data.length >= 3) {
+                    const rgb = {
+                        r: data[0],
+                        g: data[1],
+                        b: data[2]
+                    };
+                    const luminance = getLuminance(rgb.r, rgb.g, rgb.b);
+                    const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
+
+                    return {
+                        rgb: rgb,
+                        luminance: luminance,
+                        hex: hex,
+                        isDark: luminance < DARK_TEXT_THRESHOLD
+                    };
+                }
+            } catch (e) {
+               
+            }
+            return null;
+        }
+
+       
+        function getCurrentBackgroundColor() {
+          
+            const header = document.getElementById('mainHeader');
+            if (!header) return null;
+
+            const rect = header.getBoundingClientRect();
+            
+            const y = rect.bottom + 10;
+            const x = window.innerWidth / 2;
+
+         
+            if (y < 0 || y > window.innerHeight) return null;
+
+            return getBackgroundColorAt(x, y);
+        }
+       
+        function isDarkBackground() {
+          
+            const bgInfo = getCurrentBackgroundColor();
+            if (bgInfo) {
+                return bgInfo.isDark;
+            }
+                       
+            const heroSection = document.querySelector('.video-hero');
+            const servicesSection = document.querySelector('.services-section');
+            const topicsSection = document.querySelector('.topics-section');
+            const statsSection = document.querySelector('.stats-section');
+
+            if (!heroSection) return true; 
+
+            const heroRect = heroSection.getBoundingClientRect();
+            const scrollPosition = window.scrollY;
+            const viewportCenter = window.innerHeight / 2;
+           
+            if (scrollPosition + viewportCenter < heroRect.bottom) {
+                return true; 
+            }
+           
+            if (servicesSection) {
+                const servicesRect = servicesSection.getBoundingClientRect();
+                if (scrollPosition + viewportCenter >= servicesRect.top &&
+                    scrollPosition + viewportCenter <= servicesRect.bottom) {
+                    return false; 
+                }
+            }
+
+            if (topicsSection) {
+                const topicsRect = topicsSection.getBoundingClientRect();
+                if (scrollPosition + viewportCenter >= topicsRect.top &&
+                    scrollPosition + viewportCenter <= topicsRect.bottom) {
+                    return false; 
+                }
+            }
+
+            if (statsSection) {
+                const statsRect = statsSection.getBoundingClientRect();
+                if (scrollPosition + viewportCenter >= statsRect.top &&
+                    scrollPosition + viewportCenter <= statsRect.bottom) {
+                    return false; 
+                }
+            }
+
+            return true; 
+        }
+
+        function updateMenuColors() {
+            const isDark = isDarkBackground();
+            const shouldUseLightText = isDark;
+
+            if (currentTextColor === shouldUseLightText) return;
+            currentTextColor = shouldUseLightText;
+
+            const textColor = shouldUseLightText ? '#ffffff' : '#003a6d';
+            const iconColor = shouldUseLightText ? '#ffffff' : '#003a6d';
+            const arrowColor = shouldUseLightText ? '#C5A059' : '#C5A059'; // Mantém gold sempre
+            const btnBgColor = shouldUseLightText ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 58, 109, 0.15)';
+            const btnBorderColor = shouldUseLightText ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 58, 109, 0.3)';
+            const btnHoverBg = shouldUseLightText ? 'rgba(255, 255, 255, 0.25)' : 'rgba(0, 58, 109, 0.25)';
+
+            const style = document.createElement('style');
+            style.id = 'dynamic-menu-colors';
+
+            const oldStyle = document.getElementById('dynamic-menu-colors');
+            if (oldStyle) oldStyle.remove();
+
+            style.textContent = `
+                /* Cores dinâmicas do menu */
+                .combo-title,
+                .combo-title i,
+                .mobile-menu-btn i {
+                    transition: color 0.3s ease !important;
+                }
+
+                .combo-title {
+                    color: ${textColor} !important;
+                    text-shadow: ${shouldUseLightText ? '1px 1px 2px rgba(0,0,0,0.3)' : 'none'} !important;
+                }
+
+                .combo-title i {
+                    color: ${iconColor} !important;
+                }
+
+                .combo-arrow {
+                    color: ${arrowColor} !important;
+                }
+
+                .mobile-menu-btn {
+                    background: ${btnBgColor} !important;
+                    border-color: ${btnBorderColor} !important;
+                    color: ${textColor} !important;
+                }
+
+                .mobile-menu-btn:hover {
+                    background: ${btnHoverBg} !important;
+                }
+
+                .mobile-menu-btn i {
+                    color: ${textColor} !important;
+                }
+
+                .btn-appointment {
+                    background: ${btnBgColor} !important;
+                    border-color: ${btnBorderColor} !important;
+                    color: ${textColor} !important;
+                }
+
+                .btn-appointment:hover {
+                    background: ${btnHoverBg} !important;
+                }
+
+                .btn-appointment i {
+                    color: ${textColor} !important;
+                }
+
+                /* Ajuste para o texto do logo quando em fundo claro */
+                .logo-subtitle-line1 div,
+                .logo-subtitle-line2 div {
+                    color: ${textColor} !important;
+                    transition: color 0.3s ease !important;
+                }
+
+                /* Ajuste para o ícone do QR code */
+                .qr-code-scroll {
+                    transition: all 0.3s ease;
+                }
+            `;
+
+            document.head.appendChild(style);
+        }
+
+        let debounceTimer;
+        function debouncedUpdate() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                updateMenuColors();
+            }, UPDATE_DEBOUNCE_MS);
+        }
+
+        function initIntersectionObserver() {
+            const sections = document.querySelectorAll('section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateMenuColors();
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '-50px 0px 0px 0px'
+            });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        function init() {
+            setTimeout(updateMenuColors, 100);
+            window.addEventListener('scroll', debouncedUpdate);
+            window.addEventListener('resize', debouncedUpdate);
+            if (window.MutationObserver) {
+                const observer = new MutationObserver(debouncedUpdate);
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true,
+                    attributeFilter: ['class', 'style']
+                });
+            }
+            initIntersectionObserver();
+
+            setInterval(() => {
+                if (Math.abs(window.scrollY - (window._lastScrollY || 0)) > 50) {
+                    updateMenuColors();
+                    window._lastScrollY = window.scrollY;
+                }
+            }, CHECK_INTERVAL_MS);
+
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+</script>
+        
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="../pagina_inicial/icon/logo8.png" alt="Logo Santa Sofia">
+                </div>
+            </div>
+
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-school"></i>
+                            <span>ENSINO</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-screwdriver-wrench"></i>
+                                    <span>Escola Técnica</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="TEnfermagem.html" class="mobile-nav-link" data-turbo="true">Técnicos em Enfermagem</a></li>
+                                    <li><a href="TFarmacia.html" class="mobile-nav-link" data-turbo="true">Técnicos em Farmácia</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Pós-Graduação</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="PosPsicologia.html" class="mobile-nav-link" data-turbo="true">Pós-Graduação em Psicologia</a></li>
+                                    <li><a href="PosEnfermagem.html" class="mobile-nav-link" data-turbo="true">Pós-Graduação em Enfermagem</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Graduação</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="BEnfermagem.html" class="mobile-nav-link" data-turbo="true">Bacharelado em Enfermagem</a></li>
+                                    <li><a href="BPsicologia.html" class="mobile-nav-link" data-turbo="true">Bacharelado em Psicologia</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>VESTIBULAR</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li>
+                            <a class="dropdown-item" href="../vestibular/index.html">
+                                    <i class="fas fa-id-card" style="color:#27ae60;"></i>Edital/Vestibular 2026b
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-building-user"></i>
+                            <span>SOFIA - CLÍNICA ESCOLA</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>CONVÊNIOS</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="#plano-sihusa" class="mobile-nav-link" data-turbo="false">Sihusa</a></li>
+                                    <li><a href="#plano-unimed" class="mobile-nav-link" data-turbo="false">Unimed</a></li>
+                                    <li><a href="#plano-abbas" class="mobile-nav-link" data-turbo="false">Abas</a></li>
+                                    <li><a href="#plano-porto" class="mobile-nav-link" data-turbo="false">Porto Seguro</a></li>
+                                    <li><a href="#plano-samaritano" class="mobile-nav-link" data-turbo="false">Samaritano</a></li>
+                                    <li><a href="#plano-apas-pm" class="mobile-nav-link" data-turbo="false">Apas-PM</a></li>
+                                    <li><a href="#plano-fusex" class="mobile-nav-link" data-turbo="false">Fusex</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Oftalmologia.html" class="mobile-nav-link" data-turbo="true"><i class="fas fa-eye"></i> Oftalmologia avançada</a></li>
+                            <li><a href="../Psicologia.html" class="mobile-nav-link" data-turbo="true"><i class="fas fa-heart"></i> Psicologia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>SIHUSA</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li><a href="../Home/HistorSihusa.html" class="mobile-nav-link" data-turbo="false"><i class="fas fa-circle-info"></i> Institucional</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>EVENTOS</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li><a href="#agenda" class="mobile-nav-link" data-turbo="false">Agenda</a></li>
+                            <li><a href="#historico" class="mobile-nav-link" data-turbo="false">Histórico</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-footer">
+                <a class="btn-appointment" href="https://faculdadesofia.sistematutor.com.br/portal/login">
+                    <i class="fas fa-user-graduate" style="color:#ffffff;"></i><span>Portal do Aluno</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /* Menu Mobile Styles */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    .mobile-menu-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 350px;
+        height: 100%;
+        background: #ffffff;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu-container {
+        right: 0;
+    }
+
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #e5e5e5;
+        background: #ffffff;
+    }
+
+    .mobile-menu-logo img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    .mobile-menu-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+        .mobile-menu-close:hover {
+            background-color: #f0f0f0;
+        }
+
+    .mobile-nav {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px 0;
+    }
+
+    .mobile-nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-item {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .mobile-nav-link:hover {
+            background-color: #f5f5f5;
+            color: #003a6d;
+        }
+
+        .mobile-nav-link i:first-child {
+            width: 24px;
+            color: #003a6d;
+            font-size: 18px;
+        }
+
+    .mobile-arrow {
+        margin-left: auto;
+        transition: transform 0.3s ease;
+        font-size: 14px;
+        color: #999;
+    }
+
+    .mobile-nav-item.open > .mobile-nav-link .mobile-arrow {
+        transform: rotate(180deg);
+    }
+
+    .mobile-submenu {
+        list-style: none;
+        padding-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #f9f9f9;
+    }
+
+    .mobile-nav-item.open > .mobile-submenu {
+        max-height: 800px;
+    }
+
+    .mobile-submenu .mobile-nav-link {
+        padding: 12px 20px 12px 56px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .mobile-menu-footer {
+        padding: 20px;
+        border-top: 1px solid #e5e5e5;
+        background: #ffffff;
+    }
+
+    .btn-mobile-appointment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #003a6d;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .btn-mobile-appointment:hover {
+            background: #002244;
+            color: white;
+        }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #003a6d;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+   
+
+    .nav-wrapper {
+        display: none;
+    }
+</style>
+
+<script>
+    // Menu Mobile JavaScript - Versão Corrigida
+    (function() {
+        // Inicializar menu mobile
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            if (!mobileMenuBtn || !mobileMenuOverlay) return;
+
+            function openMenu(e) {
+                if (e) e.stopPropagation();
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu(e) {
+                if (e) e.stopPropagation();
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuBtn.removeEventListener('click', openMenu);
+            mobileMenuBtn.addEventListener('click', openMenu);
+
+            if (mobileMenuClose) {
+                mobileMenuClose.removeEventListener('click', closeMenu);
+                mobileMenuClose.addEventListener('click', closeMenu);
+            }
+
+            mobileMenuOverlay.removeEventListener('click', closeMenu);
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    closeMenu();
+                }
+            });
+
+            document.removeEventListener('keydown', closeMenuOnEsc);
+            document.addEventListener('keydown', closeMenuOnEsc);
+
+            function closeMenuOnEsc(e) {
+                if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                    closeMenu();
+                }
+            }
+
+            // Accordion para submenus
+            const menuItems = document.querySelectorAll('.mobile-nav-item.has-children > .mobile-nav-link');
+
+            menuItems.forEach(function(item) {
+                item.removeEventListener('click', handleAccordionClick);
+                item.addEventListener('click', handleAccordionClick);
+            });
+        }
+
+        function handleAccordionClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const parentLi = this.closest('.mobile-nav-item');
+            if (parentLi) {
+                parentLi.classList.toggle('open');
+            }
+        }
+
+        // Fechar menu ao clicar em link
+        function closeMenuOnLinkClick() {
+            const links = document.querySelectorAll('.mobile-submenu .mobile-nav-link');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+            links.forEach(function(link) {
+                link.removeEventListener('click', closeMenuHandler);
+                link.addEventListener('click', closeMenuHandler);
+            });
+
+            function closeMenuHandler() {
+                if (mobileMenuOverlay) {
+                    setTimeout(function() {
+                        mobileMenuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }, 150);
+                }
+            }
+        }
+
+        // Inicializar
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                initMobileMenu();
+                closeMenuOnLinkClick();
+            });
+        } else {
+            initMobileMenu();
+            closeMenuOnLinkClick();
+        }
+
+        // Re-inicializar após navegação Turbo
+        document.addEventListener('turbo:load', function() {
+            initMobileMenu();
+            closeMenuOnLinkClick();
+        });
+
+        // Re-inicializar após HTMX
+        document.addEventListener('htmx:afterSwap', function() {
+            initMobileMenu();
+            closeMenuOnLinkClick();
+        });
+    })();
+</script>
+    </header>
+    <!-- Ícones de Redes Sociais Fixos à Esquerda -->
+    <div class="social-sidebar">
+        <a href="https://www.facebook.com/faculdadesofia" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/faculdadesofia" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/faculdadesofia" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/53151369/admin/dashboard/" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5519999601237" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+       
+    <a href="#" id="whatsappButton" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.7 29.6 111L5.7 472c-2 6.7 3.6 12.9 10.6 10.9l106.9-29.3c33.6 18.7 71.8 28.5 110.6 28.5 122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-65.1-157.1zm-157 291.4c-33.2 0-65.7-8.9-94.1-25.7l-6.7-4-63.8 17.5 17-62.3-4.3-6.9c-18.2-29.4-27.8-63.3-27.8-98.4 0-96.2 78.2-174.4 174.4-174.4 46.5 0 90.3 18.1 123.2 51 32.9 32.9 51 76.7 51 123.2 0 96.2-78.2 174.4-174.4 174.4z" />
+            <path d="M224 120c-57.3 0-104 46.7-104 104 0 19.8 5.5 38.2 15.1 54.1l-16.2 59.5 60.6-16c15.4 8.9 33.1 14 52 14 57.3 0 104-46.7 104-104s-46.7-104-104-104zm39.9 145.3c-1.5 4.2-8.7 20.8-11.9 23.1-3 2.2-6.9 2.5-9.9.8-5-2.8-21.6-13.3-40.9-25.1-22.7-13.9-37.9-30.9-43.2-36.1-3.4-3.3-5-7.2-3.1-11.1 1.5-3 3.5-5.3 5.5-7.9 1.9-2.5 2.5-4.3 3.8-7.2 1.3-2.9.6-5.4-.3-7.6-.9-2.2-8.2-19.8-11.2-27.1-2.9-7-5.9-6-8.1-6.1-2.1-.1-4.5-.1-6.9-.1-2.4 0-6.3.9-9.6 4.5-3.3 3.6-12.6 12.3-12.6 30s12.9 34.8 14.7 37.2c1.8 2.4 25.3 38.6 61.2 54.1 8.5 3.7 15.1 5.9 20.3 7.6 8.5 2.7 16.3 2.3 22.4 1.4 6.8-1 20.9-8.5 23.8-16.8 2.9-8.2 2.9-15.2 2-16.7-.9-1.5-3.3-2.4-6.9-4.2-3.6-1.8-21.2-10.5-24.5-11.7-3.3-1.2-5.7-1.8-8.1 1.8z" />
+        </svg>
+    </a>
+
+    <script>
+        (function() {
+            const PHONE_NUMBER = "5519999601237";  
+            const DEFAULT_MESSAGE = "Olá, como podemos ajudar?";
+            const whatsBtn = document.getElementById('whatsappButton');
+            function getWhatsAppUrl() {
+                let encodedMsg = encodeURIComponent(DEFAULT_MESSAGE);
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isMobile = /android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(userAgent);
+                if (isMobile) {
+                    return `whatsapp://send?phone=${PHONE_NUMBER}&text=${encodedMsg}`;
+                } else {
+                    return `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${encodedMsg}`;
+                }
+            }
+            function openWhatsApp(event) {
+                event.preventDefault();
+                const whatsUrl = getWhatsAppUrl();
+                window.open(whatsUrl, '_blank');
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+            }
+            if (whatsBtn) {
+                whatsBtn.addEventListener('click', openWhatsApp);
+                whatsBtn.setAttribute('aria-label', 'Abrir conversa no WhatsApp');
+                whatsBtn.setAttribute('role', 'button');
+                whatsBtn.addEventListener('click', function() {
+                    this.style.animation = 'none';
+                    setTimeout(() => {
+                        this.style.animation = 'pulse-glow 2s infinite';
+                    }, 500);
+                });
+            } else {
+                console.warn('Elemento do botão WhatsApp não encontrado.');
+            }
+            if (PHONE_NUMBER === "5519999601237") {
+            }
+        })();
+    </script>
+
+        <main b-lj3f8y2p6z role="main" class="pb-3">
+                <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        /* Navbar personalizada */
+        .navbar-sofia {
+            background-color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            padding: 0.8rem 0;
+        }
+
+            .navbar-sofia .navbar-brand {
+                font-weight: 800;
+                font-size: 1.7rem;
+                color: #0b3b3f;
+                letter-spacing: -0.5px;
+            }
+
+                .navbar-sofia .navbar-brand span {
+                    color: #1e8f7c;
+                }
+
+        .nav-link-custom {
+            font-weight: 500;
+            color: #1e2a3e;
+            margin: 0 0.5rem;
+            transition: 0.2s;
+        }
+
+            .nav-link-custom:hover, .nav-link-custom.active {
+                color: #1e8f7c;
+            }
+
+        .btn-curso {
+            background: linear-gradient(135deg, #1e8f7c 0%, #0f5c50 100%);
+            color: white;
+            border-radius: 40px;
+            padding: 0.6rem 1.8rem;
+            font-weight: 600;
+            border: none;
+            transition: 0.2s;
+        }
+
+            .btn-curso:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(30,143,124,0.3);
+                color: white;
+            }
+        /* Hero Section */
+        .hero-farmacia {
+            background: linear-gradient(120deg, #eef9f5 0%, #ffffff 100%);
+            padding: 4rem 0 3rem 0;
+            border-bottom: 1px solid rgba(30,143,124,0.1);
+        }
+
+        .badge-sofia {
+            background-color: #1e8f7c20;
+            color: #0f5c50;
+            border-radius: 60px;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .titulo-principal {
+            font-weight: 800;
+            font-size: 3rem;
+            color: #0b3b3f;
+            line-height: 1.2;
+        }
+
+        .highlight-farma {
+            color: #1e8f7c;
+            border-bottom: 3px solid #c5e8e2;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 32px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            height: 100%;
+            border: 1px solid #eef2f0;
+        }
+
+            .info-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 30px 40px -15px rgba(0,0,0,0.12);
+            }
+
+        .icon-circle {
+            background-color: #e1f5f1;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+
+            .icon-circle i {
+                font-size: 28px;
+                color: #1e8f7c;
+            }
+
+        .modulo-card {
+            background: #ffffff;
+            border-radius: 24px;
+            transition: 0.2s;
+            border: 1px solid #e9ecef;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f0f9f6;
+            color: #0f5c50;
+            font-weight: 600;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: #cde0db;
+        }
+
+        .footer-sofia {
+            background-color: #0b2b2e;
+            color: #cfdfdc;
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid #5b8c85;
+            color: #cfdfdc;
+            border-radius: 30px;
+            padding: 0.5rem 1.4rem;
+            transition: 0.2s;
+        }
+
+            .btn-outline-light-custom:hover {
+                background-color: #1e8f7c;
+                border-color: #1e8f7c;
+                color: white;
+            }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #0b3b3f;
+            position: relative;
+            display: inline-block;
+        }
+
+            .section-title:after {
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                left: 0;
+                width: 60px;
+                height: 4px;
+                background: #1e8f7c;
+                border-radius: 4px;
+            }
+
+        .list-check i {
+            color: #1e8f7c;
+            margin-right: 10px;
+        }
+
+        .bg-soft-clinic {
+            background-color: #fef9f0;
+        }
+
+        .mercado-card {
+            border-left: 5px solid #1e8f7c;
+            background: white;
+        }
+       
+        .section-title {
+            font-size: 1.8rem;
+        }
+    </style>
+<br />
+<br />
+<br />
+    <section class="hero-farmacia">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6">
+                    <span class="badge-sofia mb-3"><i class="fas fa-graduation-cap me-1"></i> Novo para 2026</span>
+                    <h1 class="titulo-principal mb-3">Técnico em <span class="highlight-farma">Farmácia</span><br>Formação completa e prática</h1>
+                    <p class="lead text-secondary mb-4">Prepare-se para atuar na área farmacêutica com excelência, ética e domínio técnico. Curso alinhado às exigências do mercado da saúde e com infraestrutura de ponta na Faculdade Sofia.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#grade" class="btn btn-curso px-4 py-2"><i class="fas fa-calendar-alt me-2"></i>Início previsto: Março/2026</a>
+                        <a href="#contato" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="fas fa-id-card me-2"></i>Garanta sua vaga</a>
+                    </div>
+                    <div class="mt-4 pt-2">
+                        <div class="d-flex gap-4 flex-wrap">
+                            <div><i class="fas fa-clock text-success me-1"></i> <strong>Duração:</strong> 18 meses</div>
+                            <div><i class="fas fa-chalkboard-user text-success me-1"></i> <strong>Modalidade:</strong> Presencial + Práticas</div>
+                            <div><i class="fas fa-certificate text-success me-1"></i> <strong>Certificação:</strong> Reconhecido pelo MEC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="../pagina_inicial/img/farmacia.png" alt="Técnico em Farmácia" class="img-fluid rounded-4 shadow-lg" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRAESTRUTURA E NÚMEROS (inspirado no site original) -->
+    <section class="container py-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+                <div class="info-card p-3">
+                    <h2 class="display-5 fw-bold text-success">+1.200</h2>
+                    <p class="text-muted mb-0">Alunos formados na área da saúde</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="info-card p-3">
+                    <h2 class="display-5 fw-bold text-success">+39</h2>
+                    <p class="text-muted mb-0">Anos de tradição em ensino técnico</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="info-card p-3">
+                    <h2 class="display-5 fw-bold text-success">86%</h2>
+                    <p class="text-muted mb-0">Empregabilidade em até 6 meses</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="info-card p-3">
+                    <h2 class="display-5 fw-bold text-success">30+</h2>
+                    <p class="text-muted mb-0">Laboratórios e parceiros de estágio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O CURSO -->
+    <section id="sobre" class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <span class="badge-sofia mb-2"><i class="fas fa-syringe"></i> Perfil profissional</span>
+                    <h2 class="section-title mb-4">Técnico em Farmácia: protagonista na saúde</h2>
+                    <p class="text-secondary fs-5">O curso técnico em Farmácia da Faculdade Sofia forma profissionais capacitados para auxiliar farmacêuticos, manipular medicamentos, controlar estoques, realizar dispensação e atuar em drogarias, hospitais e indústrias. Nossa grade une ciência, tecnologia e humanização.</p>
+                    <div class="mt-4">
+                        <div class="d-flex mb-3"><i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i><div><strong>Metodologia ativa e laboratórios simulados</strong><br>Treinamento em ambiente real com equipamentos modernos.</div></div>
+                        <div class="d-flex mb-3"><i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i><div><strong>Estágio supervisionado garantido</strong><br>Parcerias com farmácias, hospitais e drogaria popular.</div></div>
+                        <div class="d-flex mb-3"><i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i><div><strong>Corpo docente especializado</strong><br>Farmacêuticos e mestres com experiência de mercado.</div></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light rounded-4 p-4 shadow-sm">
+                        <h4 class="fw-bold mb-3"><i class="fas fa-info-circle text-success me-2"></i>Informações importantes</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-building text-success me-3"></i> <strong>Unidade:</strong> Campinas - Prédio histórico (antigo hospital referência)</li>
+                            <li class="mb-3"><i class="fas fa-clock text-success me-3"></i> <strong>Carga horária:</strong> 1.200 horas + 400h de estágio supervisionado</li>
+                            <li class="mb-3"><i class="fas fa-calendar-week text-success me-3"></i> <strong>Turnos:</strong> Matutino (7h às 12h) e Noturno (18h30 às 22h30)</li>
+                            <li class="mb-3"><i class="fas fa-globe text-success me-3"></i> <strong>Certificado:</strong> Habilitação profissional Técnica em Farmácia</li>
+                            <li class="mb-3"><i class="fas fa-hand-holding-heart text-success me-3"></i> <strong>Diferencial Sofia:</strong> Projeto "Farmácia Solidária" com atuação comunitária</li>
+                        </ul>
+                        <div class="alert alert-success mt-3 bg-success bg-opacity-10 border-0">
+                            <i class="fas fa-trophy me-2"></i> Reconhecida como uma das melhores faculdades da área da saúde em Campinas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRADE CURRICULAR (Detalhada) -->
+    <section id="grade" class="py-5 bg-soft-clinic">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-sofia">Matriz curricular 2026</span>
+                <h2 class="section-title mt-2">Grade completa e atualizada</h2>
+                <p class="text-secondary mt-3 mx-auto" style="max-width: 700px;">Disciplinas teóricas e práticas alinhadas às Diretrizes Curriculares Nacionais para o Técnico em Farmácia.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="accordion" id="accordionFarm1">
+                        <div class="accordion-item modulo-card mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button bg-white text-dark fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#mod1">📚 Eixo Base & Ciências Farmacêuticas</button></h2>
+                            <div id="mod1" class="accordion-collapse collapse show" data-bs-parent="#accordionFarm1">
+                                <div class="accordion-body pt-0"><ul class="list-check list-unstyled"><li><i class="fas fa-capsules"></i> Fundamentos da Farmácia e Legislação</li><li><i class="fas fa-flask"></i> Química Farmacêutica e Análises Clínicas</li><li><i class="fas fa-microscope"></i> Microbiologia e Parasitologia</li><li><i class="fas fa-heartbeat"></i> Farmacologia Aplicada</li><li><i class="fas fa-calculator"></i> Cálculos Farmacêuticos e Doseamentos</li></ul></div>
+                            </div>
+                        </div>
+                        <div class="accordion-item modulo-card mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#mod2">💊 Assistência e Dispensação</button></h2>
+                            <div id="mod2" class="accordion-collapse collapse" data-bs-parent="#accordionFarm1">
+                                <div class="accordion-body pt-0"><ul class="list-check list-unstyled"><li><i class="fas fa-prescription-bottle-alt"></i> Técnicas de Dispensação e Atenção Farmacêutica</li><li><i class="fas fa-chart-line"></i> Gerenciamento de Estoque e Logística</li><li><i class="fas fa-people-arrows"></i> Atendimento ao Cliente e Ética Profissional</li><li><i class="fas fa-clinic-medical"></i> Farmácia Hospitalar e Unidades de Saúde</li></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion" id="accordionFarm2">
+                        <div class="accordion-item modulo-card mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#mod3">⚗️ Manipulação & Controle de Qualidade</button></h2>
+                            <div id="mod3" class="accordion-collapse collapse" data-bs-parent="#accordionFarm2">
+                                <div class="accordion-body pt-0"><ul class="list-check list-unstyled"><li><i class="fas fa-mortar-pestle"></i> Farmácia Magistral e Manipulação</li><li><i class="fas fa-vial"></i> Boas Práticas e Controle de Qualidade</li><li><i class="fas fa-industry"></i> Produção de Fitoterápicos e Homeopáticos</li><li><i class="fas fa-chart-bar"></i> Gestão de Farmácias e Drogaria</li></ul></div>
+                            </div>
+                        </div>
+                        <div class="accordion-item modulo-card mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#mod4">🏥 Estágios & Práticas Integradoras</button></h2>
+                            <div id="mod4" class="accordion-collapse collapse" data-bs-parent="#accordionFarm2">
+                                <div class="accordion-body pt-0"><ul class="list-check list-unstyled"><li><i class="fas fa-hospital-user"></i> Estágio Curricular em Farmácias e Hospitais</li><li><i class="fas fa-chalkboard-user"></i> Projeto Integrador (Saúde Pública)</li><li><i class="fas fa-notes-medical"></i> Primeiros Socorros e Biossegurança</li><li><i class="fas fa-file-prescription"></i> TCC: Elaboração de Protocolo Farmacêutico</li></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 p-3 bg-white rounded-3 shadow-sm text-center">
+                <i class="fas fa-syringe text-success me-2"></i> <strong>Carga horária total:</strong> 1.600h (incluindo estágio) | <strong>Certificação:</strong> Técnico em Farmácia pelo MEC.
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <span class="badge-sofia">Por que escolher a Sofia</span>
+                    <h2 class="section-title mt-2">Diferenciais que transformam sua carreira</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4"><div class="info-card text-center"><div class="icon-circle mx-auto"><i class="fas fa-microscope"></i></div><h5>Laboratório de Simulação Realística</h5><p>Ambiente equipado com balanças, capela, autoclave e drogas similares, vivência prática desde o primeiro semestre.</p></div></div>
+                <div class="col-md-4"><div class="info-card text-center"><div class="icon-circle mx-auto"><i class="fas fa-chalkboard-user"></i></div><h5>Metodologia PBL + Projetos</h5><p>Aprendizagem baseada em problemas e estudos de caso reais da farmácia comunitária e hospitalar.</p></div></div>
+                <div class="col-md-4"><div class="info-card text-center"><div class="icon-circle mx-auto"><i class="fas fa-hand-holding-usd"></i></div><h5>Empregabilidade & Networking</h5><p>Feira de Carreiras e parceria com rede de farmácias (Drogasil, São Paulo, Pague Menos e hospitais regionais).</p></div></div>
+                <div class="col-md-4"><div class="info-card text-center"><div class="icon-circle mx-auto"><i class="fas fa-clock"></i></div><h5>Horários flexíveis para trabalhadores</h5><p>Entrada noturna e modular para quem já atua na área da saúde e deseja especialização técnica.</p></div></div>
+                <div class="col-md-4"><div class="info-card text-center"><div class="icon-circle mx-auto"><i class="fas fa-brain"></i></div><h5>Preparação para o futuro</h5><p>Inclusão de telefarmácia, gestão digital e empreendedorismo farmacêutico.</p></div></div>
+                <div class="col-md-4"><div class="info-card text-center"><div class="icon-circle mx-auto"><i class="fas fa-hands-helping"></i></div><h5>Atendimento psicossocial e tutorias</h5><p>Apoio contínuo ao aluno, nivelamento e monitoria para garantir sucesso acadêmico.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCADO DE TRABALHO -->
+    <section id="mercado" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="section-title mb-3">Mercado em expansão</h2>
+                    <p class="lead text-secondary">O setor farmacêutico cresce acima da média nacional. O técnico em Farmácia é um dos profissionais mais requisitados em drogarias, hospitais, indústrias e unidades básicas de saúde.</p>
+                    <div class="mercado-card p-3 rounded-3 mt-4 shadow-sm">
+                        <i class="fas fa-chart-line fs-1 text-success"></i>
+                        <p class="mt-2 mb-0"><strong>Empregabilidade 86%</strong> — dados dos egressos 2024/2025. Salários iniciais de R$ 2.200 a R$ 3.500 + benefícios.</p>
+                    </div>
+                    <div class="mt-3"><i class="fas fa-check-circle text-success"></i> Atuação em: Farmácias e Drogarias, Farmácias de Manipulação, Indústria, Laboratórios, Hospitais, Unidades de Saúde, Vigilância Sanitária.</div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-md-6"><div class="p-3 bg-white rounded-3 shadow-sm h-100"><i class="fas fa-store fa-2x text-success mb-2"></i><h6>Farmácia Comercial</h6><small class="text-secondary">Dispensação, orientação e controle de medicamentos.</small></div></div>
+                        <div class="col-md-6"><div class="p-3 bg-white rounded-3 shadow-sm h-100"><i class="fas fa-hospital fa-2x text-success mb-2"></i><h6>Farmácia Hospitalar</h6><small class="text-secondary">Gestão de estoques, manipulação oncológica e logística.</small></div></div>
+                        <div class="col-md-6"><div class="p-3 bg-white rounded-3 shadow-sm h-100"><i class="fas fa-flask fa-2x text-success mb-2"></i><h6>Indústria Farmacêutica</h6><small class="text-secondary">Controle qualidade, produção e pesquisa.</small></div></div>
+                        <div class="col-md-6"><div class="p-3 bg-white rounded-3 shadow-sm h-100"><i class="fas fa-user-md fa-2x text-success mb-2"></i><h6>ESF e Atenção Básica</h6><small class="text-secondary">Programas de saúde pública e medicamentos essenciais.</small></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTO (inspirado no site original) -->
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <i class="fas fa-quote-left fa-3x text-success opacity-25 mb-3"></i>
+                    <p class="fs-4 fst-italic">"O curso de Técnico em Farmácia da Faculdade Sofia mudou minha vida. Consegui estágio no 2º semestre e fui efetivada antes mesmo de me formar. Estrutura excelente e professores incríveis."</p>
+                    <div class="d-flex align-items-center justify-content-center gap-2 mt-3"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="depoimento" class="rounded-circle" width="48" height="48"><div><strong>Camila Mendes</strong><br><span class="text-muted small">Técnica em Farmácia - Turma 2025</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+<!-- Vestibular Social CTA -->
+<section class="py-5" style="background-color:#0a2b3e;">
+    <div class="container text-center text-white">
+        <h2 class="fw-bold mb-3">
+            <i class="fas fa-hand-holding-heart me-2" style="color:#eab676;"></i>Vestibular Social
+        </h2>
+        <p class="mb-4 mx-auto" style="color:aliceblue; max-width:700px;">
+            A Faculdade Sofia oferece bolsas de até 75% para candidatos do Vestibular Social. Fale com a nossa equipe pelo WhatsApp e descubra as condições para o curso de Técnico em Farmácia.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Vestibular%20Social%20(bolsas%20de%20at%C3%A9%2075%25)." target="_blank" rel="noopener noreferrer" class="btn btn-lg rounded-pill fw-bold px-5 py-3" style="background-color:#eab676; color:#0a2b3e;">
+            <i class="fab fa-whatsapp me-2"></i>Falar sobre o Vestibular Social
+        </a>
+    </div>
+</section>
+        </main>
+    </div>
+
+    <footer b-lj3f8y2p6z id="contact">
+        <link rel="stylesheet" href="../css/Footer/footer-fix.css" />
+<style>
+    /* Footer fixo no final da página */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+
+    footer {
+        flex-shrink: 0;
+        background-color: #0a2b3e;
+        padding: 40px 0 20px;
+        margin-top: auto;
+    }
+
+    /* Links na cor #eab676 */
+    .footer-column a,
+    .footer-bottom a,
+    .social-links a {
+        color: #eab676 !important;
+        text-decoration: none !important;
+    }
+
+        .footer-column a:hover,
+        .footer-column a:active,
+        .footer-column a:focus,
+        .footer-bottom a:hover,
+        .footer-bottom a:active,
+        .footer-bottom a:focus,
+        .social-links a:hover,
+        .social-links a:active,
+        .social-links a:focus {
+            color: #eab676 !important;
+            text-decoration: none !important;
+        }
+
+    .social-links a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+    .footer-column ul li a i {
+        color: #eab676 !important;
+    }
+
+    .footer-bottom a {
+        color: #eab676 !important;
+        margin-left: 15px;
+    }
+
+    .btn-primary {
+        background-color: #eab676 !important;
+        border: none;
+        color: #0a2b3e !important;
+        font-weight: bold;
+    }
+
+        .btn-primary:hover {
+            background-color: #eab676 !important;
+            opacity: 0.9;
+            color: #0a2b3e !important;
+        }
+</style>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Faculdade Sofia</h3>
+                <p style="color:aliceblue">A Faculdade do Trabalhador da Saúde. Formando profissionais de Enfermagem, Psicologia e cursos técnicos em saúde há 39 anos, no coração de Campinas.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/53151369/admin/dashboard/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../home.html"><i class="fas fa-chevron-right"></i> Início</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contato Faculdade Sofia</h3>
+                <ul>
+                    <li><a href="https://www.google.com/maps/place/R.&#x2B;Barreto&#x2B;Leme,&#x2B;1552&#x2B;-&#x2B;Centro,&#x2B;Campinas&#x2B;-&#x2B;SP,&#x2B;13010-201/@-22.9001848,-47.0591758,17z/data=!3m1!4b1!4m6!3m5!1s0x94c8cf4d1236aae1:0x16774f8944d1587c!8m2!3d-22.9001898!4d-47.0566009!16s%2Fg%2F11bw3_lzfp?entry=ttu&amp;g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> Rua Barreto Leme, 1552 - Centro, Campinas - SP</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5519999601237" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Comercial - whatsapp: (19) 99960-1237</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5519999589629" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Secretaria - whatsapp: (19) 99958-9629</a></li>
+                    <li><a href="tel:(19)3737-5500"><i class="fas fa-phone"></i> Fixo: (19) 3737-5500</a></li>
+                    <li><a href="mailto:secretaria@faculdadesofia.com.br"><i class="fas fa-envelope"></i> secretaria@faculdadesofia.com.br</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Notícias de Saúde (Newsletter)</h3>
+                <p style="color:aliceblue">Inscreva-se para receber as últimas notícias sobre saúde, descobertas médicas e atualizações da Faculdade Sofia.</p>
+
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" id="newsletterEmail" class="form-control">
+                    <button class="btn btn-primary" id="subscribeBtn" style="width: 100%; margin-top: 10px;">Inscrever-se</button>
+                    <div id="newsletterMessage" style="margin-top: 10px; font-size: 14px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Faculdade Sofia. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/Footer/newsletterEmail.js"></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-pt-BR.min.js"></script>
+    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/clinic-main.js?v=qe6fNxzpkw0cpfNb9_KsNyVrMpU0yEPuxEqJul_oW30"></script>
+
+    
+
+    <script>
+        // Summernote initialization
+        function loadSummernote() {
+            if (typeof jQuery === 'undefined') {
+                console.error('jQuery não está carregado');
+                return;
+            }
+
+            if (jQuery.fn.summernote) {
+                initSummernote();
+                return;
+            }
+
+            var summernoteCSS = document.createElement('link');
+            summernoteCSS.rel = 'stylesheet';
+            summernoteCSS.href = 'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css';
+            document.head.appendChild(summernoteCSS);
+
+            var summernoteJS = document.createElement('script');
+            summernoteJS.src = 'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js';
+            summernoteJS.onload = function() {
+                var langJS = document.createElement('script');
+                langJS.src = 'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-pt-BR.min.js';
+                langJS.onload = initSummernote;
+                document.head.appendChild(langJS);
+            };
+            document.head.appendChild(summernoteJS);
+        }
+
+        function initSummernote() {
+            if (jQuery('#ConteudoHtml').length && jQuery.fn.summernote) {
+                jQuery('#ConteudoHtml').summernote({
+                    height: 400,
+                    lang: 'pt-BR'
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            loadSummernote();
+        });
+    </script>
+
+    <!-- Script SIMPLES para menu - SEM bloqueios -->
+    <script>
+        (function() {
+            // Apenas garantir que links com href="#" não causem scroll para o topo
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+    </script>
+    <script>
+        // Suprimir erros de extensões do Chrome
+        (function() {
+            // Salvar o console.error original
+            const originalError = console.error;
+
+            // Filtrar erros específicos de extensões
+            console.error = function(...args) {
+                const message = args[0] || '';
+
+                // Ignorar erros de extensões
+                if (typeof message === 'string' && (
+                    message.includes('extension') ||
+                    message.includes('runtime.lastError') ||
+                    message.includes('SlashCommand')
+                )) {
+                    return; // Não exibir no console
+                }
+
+                // Passar outros erros adiante
+                originalError.apply(console, args);
+            };
+
+            // Prevenir erros de runtime.lastError do Chrome
+            if (typeof chrome !== 'undefined' && chrome.runtime) {
+                const originalLastError = chrome.runtime.lastError;
+                Object.defineProperty(chrome.runtime, 'lastError', {
+                    get: function() {
+                        return null;
+                    }
+                });
+            }
+        })();
+
+                document.querySelectorAll('.dropdown-item').forEach(link => {
+         
+        });
+    </script>
+    <script>
+        // Filtro para limpar console de erros de extensões
+        (function() {
+            const originalError = console.error;
+            console.error = function(...args) {
+                const msg = args[0]?.toString() || '';
+                if (!msg.includes('lastError') && !msg.includes('extension') && !msg.includes('SlashCommand')) {
+                    originalError.apply(console, args);
+                }
+            };
+        })();
+    </script>
+    <script>
+        // Script para garantir que o menu tenha fundo branco em páginas internas
+        (function() {
+            function isHomePage() {
+                // Verifica se é a página inicial pelo caminho da URL ou pela presença do vídeo hero
+                const path = window.location.pathname;
+                const isRootPath = path === '/' || path === '/home' || path === '/index';
+                const hasVideoHero = document.querySelector('.video-hero') !== null;
+                return isRootPath || hasVideoHero;
+            }
+
+            function updateHeaderForPage() {
+                const header = document.getElementById('mainHeader');
+                if (!header) return;
+
+                if (!isHomePage()) {
+                    // Páginas internas: fundo branco
+                    header.classList.add('internal-page');
+                    header.classList.remove('scrolled');
+
+                    // Ajusta cores dos textos do menu
+                    document.querySelectorAll('.combo-title, .combo-title i, .combo-title .menu-text').forEach(el => {
+                        if (el.style) {
+                            el.style.color = '#003a6d';
+                        }
+                    });
+                } else {
+                    // Home: verifica scroll
+                    header.classList.remove('internal-page');
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                }
+            }
+
+            // Executa imediatamente
+            updateHeaderForPage();
+
+            // Executa após pequeno delay (para garantir que o DOM está pronto)
+            setTimeout(updateHeaderForPage, 50);
+
+            // Observa mudanças de rota (para navegação dentro do site)
+            let lastUrl = location.href;
+            new MutationObserver(() => {
+                const url = location.href;
+                if (url !== lastUrl) {
+                    lastUrl = url;
+                    setTimeout(updateHeaderForPage, 100);
+                }
+            }).observe(document, { subtree: true, childList: true });
+
+            // Atualiza no scroll apenas se for home
+            window.addEventListener('scroll', function() {
+                if (isHomePage()) {
+                    const header = document.getElementById('mainHeader');
+                    if (header) {
+                        if (window.scrollY > 50) {
+                            header.classList.add('scrolled');
+                            header.classList.remove('internal-page');
+                        } else {
+                            header.classList.remove('scrolled');
+                            header.classList.remove('internal-page');
+                        }
+                    }
+                }
+            });
+        })();
+    </script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script>
+        // Aguardar o DOM carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar todos os CKEditors
+            const editorElements = document.querySelectorAll('.ckeditor');
+
+            editorElements.forEach(element => {
+                ClassicEditor
+                    .create(element, {
+                        language: 'pt-br',
+                        toolbar: {
+                            items: [
+                                'heading', '|',
+                                'bold', 'italic', 'underline', '|',
+                                'link', 'bulletedList', 'numberedList', '|',
+                                'undo', 'redo'
+                            ]
+                        }
+                    })
+                    .catch(error => {
+                        console.warn('CKEditor failed for element:', element.id, error);
+                        // Mostrar textarea normal como fallback
+                        element.style.display = 'block';
+                    });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

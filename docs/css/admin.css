@@ -1,0 +1,112 @@
+﻿/* Estilos para o painel administrativo */
+.admin-sidebar {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #005596 0%, #003a6d 100%);
+}
+
+    .admin-sidebar .nav-link {
+        color: rgba(255,255,255,0.8);
+        padding: 12px 20px;
+        margin: 4px 0;
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+
+        .admin-sidebar .nav-link:hover,
+        .admin-sidebar .nav-link.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            transform: translateX(5px);
+        }
+
+        .admin-sidebar .nav-link i {
+            width: 24px;
+            font-size: 1.1rem;
+        }
+
+.admin-content {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.admin-header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+.card-stats {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+    .card-stats:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+
+/* Ocultar social sidebar em páginas administrativas */
+body[data-page="admin"] .social-sidebar,
+body.admin-page .social-sidebar,
+.social-sidebar.hide-on-admin {
+    display: none !important;
+}
+
+/* Animações para o modal de captura */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(197, 160, 89, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+    }
+}
+
+.btn-capture:not(:disabled) {
+    animation: pulse 2s infinite;
+}
+
+/* Efeitos de transição */
+.foto-preview img {
+    transition: all 0.3s ease;
+}
+
+    .foto-preview img:hover {
+        transform: scale(1.02);
+    }
+
+/* Tooltips personalizados */
+.tooltip-custom {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip-custom .tooltip-text {
+        visibility: hidden;
+        width: 120px;
+        background-color: #005596;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip-custom:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
