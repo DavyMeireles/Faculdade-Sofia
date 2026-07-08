@@ -6,10 +6,10 @@
 
 ## Correções que aparecem em todas as páginas (fazer primeiro — resolve o site inteiro de uma vez)
 
-- [ ] 🔴 Trocar o bloco "Santa Sofia Clínica Escola... há mais de 17 anos" no rodapé por um rodapé institucional real da Faculdade Sofia
-- [ ] 🔴 Padronizar o número de "anos de tradição" em todo o site (rodapé, Home, Técnico em Enfermagem, Técnico em Farmácia)
-- [ ] 🔴 Substituir o Google Forms externo por formulário nativo (um por curso, se possível)
-- [ ] 🔴 Adicionar seção/CTA do Vestibular Social ("bolsas de até 75%") na Home, nas páginas de curso e na página de Vestibular
+- [x] 🔴 Trocar o bloco "Santa Sofia Clínica Escola... há mais de 17 anos" no rodapé por um rodapé institucional real da Faculdade Sofia
+- [x] 🔴 Padronizar o número de "anos de tradição" em todo o site (rodapé, Home, Técnico em Enfermagem, Técnico em Farmácia) — definido em 39 anos (base 1987, já usada no selo do menu)
+- [ ] 🔴 Substituir o Google Forms externo por formulário nativo (um por curso, se possível) — pendente: depende de endpoint de backend, fora deste diretório
+- [x] 🔴 Adicionar seção/CTA do Vestibular Social ("bolsas de até 75%") na Home, nas páginas de curso e na página de Vestibular
 - [ ] 🟡 Corrigir o link do menu "Nossa História / Santa Sofia" na página de Técnico em Farmácia (aponta para caminho errado)
 - [ ] 🟡 Adicionar botão flutuante de WhatsApp em todas as páginas
 - [ ] 🟢 Trocar URLs técnicas por amigáveis (/cursos/bacharelado-enfermagem etc.) e renomear "Vestibular 2026b" para "Vestibular 2026"
@@ -33,9 +33,9 @@
 
 ## 3. Bacharelado em Enfermagem
 
-- [ ] 🔴 Trocar botão "Processo seletivo" (Google Forms) por formulário nativo do curso
-- [ ] 🔴 Corrigir rodapé (ver correção sistêmica)
-- [ ] 🔴 Adicionar bloco do Vestibular Social ("até 75%") na seção de processo seletivo
+- [ ] 🔴 Trocar botão "Processo seletivo" (Google Forms) por formulário nativo do curso — pendente: depende de endpoint de backend
+- [x] 🔴 Corrigir rodapé (ver correção sistêmica)
+- [x] 🔴 Adicionar bloco do Vestibular Social ("até 75%") na seção de processo seletivo — adicionado como CTA de página; ainda falta detalhamento de valores (item 🟡 abaixo)
 - [ ] 🟡 Adicionar fotos reais (laboratório, fachada, alunos em prática)
 - [ ] 🟡 Adicionar 2–3 depoimentos de egressos
 - [ ] 🟡 Adicionar faixa de mensalidade/valores
@@ -44,31 +44,31 @@
 
 - [ ] 🔴 Comprovar a "nota máxima" com nome da avaliação + link para o e-MEC
 - [ ] 🔴 Deixar o(s) turno(s) claros e em destaque no hero
-- [ ] 🔴 Trocar botão "Pré-inscrição" (Google Forms) por formulário nativo do curso
-- [ ] 🔴 Adicionar bloco de mensalidade/Vestibular Social ("até 75%")
+- [ ] 🔴 Trocar botão "Pré-inscrição" (Google Forms) por formulário nativo do curso — pendente: depende de endpoint de backend
+- [x] 🔴 Adicionar bloco de mensalidade/Vestibular Social ("até 75%") — CTA de Vestibular Social adicionado; detalhamento de mensalidade ainda pendente
 - [ ] 🟡 Adicionar grade curricular completa por semestre (ou renomear o botão "Estrutura curricular")
 - [ ] 🟡 Adicionar fotos reais da Clínica-Escola e laboratórios
 - [ ] 🟡 Adicionar 2–3 depoimentos de egressos
 
 ## 5. Técnico em Enfermagem
 
-- [ ] 🔴 Padronizar "12 anos" com o número definido na correção sistêmica
-- [ ] 🔴 Trocar formulário embutido (Google Forms) por formulário nativo
+- [x] 🔴 Padronizar "12 anos" com o número definido na correção sistêmica — agora 39 anos
+- [ ] 🔴 Trocar formulário embutido (Google Forms) por formulário nativo — pendente: depende de endpoint de backend
 - [ ] 🟡 Confirmar com a secretaria o indicador "68% ocupadas" (ou remover se não for real)
 - [ ] 🟡 Confirmar autenticidade do depoimento "Mariana C." e adicionar foto com consentimento
-- [ ] 🟡 Adicionar bloco do Vestibular Social ("até 75%") com detalhamento de valores
+- [x] 🟡 Adicionar bloco do Vestibular Social ("até 75%") — CTA adicionado; detalhamento de valores ainda pendente
 
 ## 6. Técnico em Farmácia
 
 - [ ] 🟡 Corrigir link quebrado do menu "Nossa História / Santa Sofia"
-- [ ] 🔴 Padronizar "+12 anos" com o número definido na correção sistêmica
+- [x] 🔴 Padronizar "+12 anos" com o número definido na correção sistêmica — agora +39
 - [ ] 🟡 Confirmar se as parcerias citadas (Drogasil, Pague Menos) são reais e vigentes
 - [ ] 🔴 Trocar a foto de banco de imagens de "Camila Mendes" por depoimento real com foto autorizada
-- [ ] 🔴 Aplicar formulário nativo no CTA "Garanta sua vaga"
-- [ ] 🟡 Adicionar bloco do Vestibular Social ("até 75%")
+- [ ] 🔴 Aplicar formulário nativo no CTA "Garanta sua vaga" — pendente: depende de endpoint de backend
+- [x] 🟡 Adicionar bloco do Vestibular Social ("até 75%")
 
 ## 7. Página de Vestibular
 
-- [ ] 🔴 Transformar a página (só tem 2 PDFs hoje) em página completa: processo seletivo, datas, cursos, Vestibular Social, CTA de WhatsApp
+- [ ] 🔴 Transformar a página (só tem 2 PDFs hoje) em página completa: processo seletivo, datas, cursos, Vestibular Social, CTA de WhatsApp — CTA de Vestibular Social adicionado; reformulação completa da página ainda pendente
 - [ ] 🟢 Renomear item de menu "Vestibular 2026b" para "Vestibular 2026"
-- [ ] 🔴 Corrigir rodapé (ver correção sistêmica)
+- [x] 🔴 Corrigir rodapé (ver correção sistêmica)
