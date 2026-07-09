@@ -61,7 +61,7 @@
 
 ## 6. Técnico em Farmácia
 
-- [ ] 🟡 Corrigir link quebrado do menu "Nossa História / Santa Sofia"
+- [x] 🟡 Corrigir link quebrado do menu "Nossa História / Santa Sofia" — mesma correção da seção "todas as páginas"
 - [x] 🔴 Padronizar "+12 anos" com o número definido na correção sistêmica — agora +39
 - [ ] 🟡 Confirmar se as parcerias citadas (Drogasil, Pague Menos) são reais e vigentes
 - [ ] 🔴 Trocar a foto de banco de imagens de "Camila Mendes" por depoimento real com foto autorizada
