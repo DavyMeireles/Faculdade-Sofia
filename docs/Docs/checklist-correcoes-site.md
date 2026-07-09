@@ -61,7 +61,7 @@
 
 ## 6. Técnico em Farmácia
 
-- [ ] 🟡 Corrigir link quebrado do menu "Nossa História / Santa Sofia"
+- [x] 🟡 Corrigir link quebrado do menu "Nossa História / Santa Sofia" — mesma correção da seção "todas as páginas"
 - [x] 🔴 Padronizar "+12 anos" com o número definido na correção sistêmica — agora +39
 - [ ] 🟡 Confirmar se as parcerias citadas (Drogasil, Pague Menos) são reais e vigentes
 - [ ] 🔴 Trocar a foto de banco de imagens de "Camila Mendes" por depoimento real com foto autorizada
@@ -73,3 +73,16 @@
 - [ ] 🔴 Transformar a página (só tem 2 PDFs hoje) em página completa: processo seletivo, datas, cursos, Vestibular Social, CTA de WhatsApp — CTA de Vestibular Social adicionado; reformulação completa da página ainda pendente
 - [x] 🟢 Renomear item de menu "Vestibular 2026b" para "Vestibular 2026" — renomeado para "Vestibular 2026 - 2º Semestre" (pedido do cliente)
 - [x] 🔴 Corrigir rodapé (ver correção sistêmica)
+
+## Achados extras (páginas de Pós-graduação, fora do escopo original do guia)
+
+Durante o mapeamento das 6 páginas de curso para uma futura padronização, encontramos bugs reais nas páginas de Pós-graduação (não cobertas pelo guia original):
+
+- [x] 🔴 Técnico em Farmácia: botão "Garanta sua vaga" apontava para `#contato`, que não existe na página (clique não fazia nada) — corrigido para link de WhatsApp
+- [x] 🔴 Pós-graduação em Psicologia: botão "Garanta sua vaga 2026" apontava para `#inscricao`, que não existe na página — corrigido para link de WhatsApp
+- [x] 🔴 Pós-graduação em Enfermagem: botão "Quero me inscrever" tinha `href="#"` (vazio) — corrigido para link de WhatsApp
+- [x] 🔴 Pós-graduação em Enfermagem: ainda mostrava "+12 Anos de tradição", divergente da padronização feita em 39 anos — corrigido
+
+## Padronização das páginas de curso (pendente — planejamento futuro)
+
+As 6 páginas de curso (BEnfermagem, BPsicologia, TEnfermagem, TFarmacia, PosEnfermagem, PosPsicologia) usam estruturas HTML/CSS diferentes entre si: classes de hero distintas, ids de seção diferentes, blocos de estatística em 3 formatos distintos com valores de empregabilidade divergentes (86%/92%/93%/94%), e cobertura desigual de depoimentos (BEnfermagem e BPsicologia não têm nenhum). Definir uma estrutura única fica para uma etapa futura — decisão registrada em conversa, ainda não iniciada.
