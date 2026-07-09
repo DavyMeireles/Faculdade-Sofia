@@ -10,8 +10,8 @@
 - [x] 🔴 Padronizar o número de "anos de tradição" em todo o site (rodapé, Home, Técnico em Enfermagem, Técnico em Farmácia) — definido em 39 anos (base 1987, já usada no selo do menu)
 - [ ] 🔴 Substituir o Google Forms externo por formulário nativo (um por curso, se possível) — pendente: depende de endpoint de backend, fora deste diretório
 - [x] 🔴 Adicionar seção/CTA do Vestibular Social ("bolsas de até 75%") na Home, nas páginas de curso e na página de Vestibular
-- [ ] 🟡 Corrigir o link do menu "Nossa História / Santa Sofia" na página de Técnico em Farmácia (aponta para caminho errado)
-- [ ] 🟡 Adicionar botão flutuante de WhatsApp em todas as páginas
+- [x] 🟡 Corrigir o link do menu "Nossa História / Santa Sofia" na página de Técnico em Farmácia (aponta para caminho errado) — faltava a barra inicial em `href="Home/HInstiEnsino"`
+- [x] 🟡 Adicionar botão flutuante de WhatsApp em todas as páginas — verificado: já existia em todas as 16 páginas, item já estava resolvido
 - [ ] 🟢 Trocar URLs técnicas por amigáveis (/cursos/bacharelado-enfermagem etc.) e renomear "Vestibular 2026b" para "Vestibular 2026"
 
 ## 1. Página Inicial (Home)
@@ -19,7 +19,7 @@
 - [ ] 🔴 Corrigir o texto do selo "Certificação e-MAC" para "Certificação e-MEC"
 - [ ] 🔴 Preencher os contadores zerados (alunos formados, anos de tradição, % empregabilidade)
 - [ ] 🔴 Trocar as "especialidades médicas" (Oftalmologia, Psiquiatria etc.) pelos 4 cursos reais em destaque
-- [ ] 🟡 Reforçar a frase "A Faculdade do Trabalhador da Saúde" ao longo da página
+- [x] 🟡 Reforçar a frase "A Faculdade do Trabalhador da Saúde" ao longo da página — adicionado título no hero (que estava sem nenhum texto) e reforçado no rodapé
 - [ ] 🟡 Trazer o diferencial do prédio histórico (Unicamp) para logo abaixo do hero, com foto real + depoimentos
 
 ## 2. Nossa História / Institucional
@@ -46,7 +46,7 @@
 - [ ] 🔴 Deixar o(s) turno(s) claros e em destaque no hero
 - [ ] 🔴 Trocar botão "Pré-inscrição" (Google Forms) por formulário nativo do curso — pendente: depende de endpoint de backend
 - [x] 🔴 Adicionar bloco de mensalidade/Vestibular Social ("até 75%") — CTA de Vestibular Social adicionado; detalhamento de mensalidade ainda pendente
-- [ ] 🟡 Adicionar grade curricular completa por semestre (ou renomear o botão "Estrutura curricular")
+- [x] 🟡 Adicionar grade curricular completa por semestre (ou renomear o botão "Estrutura curricular") — botão renomeado para "Eixos formativos" (não temos grade por semestre para publicar)
 - [ ] 🟡 Adicionar fotos reais da Clínica-Escola e laboratórios
 - [ ] 🟡 Adicionar 2–3 depoimentos de egressos
 
