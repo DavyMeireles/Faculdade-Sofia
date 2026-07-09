@@ -12,7 +12,8 @@
 - [x] 🔴 Adicionar seção/CTA do Vestibular Social ("bolsas de até 75%") na Home, nas páginas de curso e na página de Vestibular
 - [x] 🟡 Corrigir o link do menu "Nossa História / Santa Sofia" na página de Técnico em Farmácia (aponta para caminho errado) — faltava a barra inicial em `href="Home/HInstiEnsino"`
 - [x] 🟡 Adicionar botão flutuante de WhatsApp em todas as páginas — verificado: já existia em todas as 16 páginas, item já estava resolvido
-- [ ] 🟢 Trocar URLs técnicas por amigáveis (/cursos/bacharelado-enfermagem etc.) e renomear "Vestibular 2026b" para "Vestibular 2026"
+- [ ] 🟢 Trocar URLs técnicas por amigáveis (/cursos/bacharelado-enfermagem etc.) — pendente: exige alterar rewrite rules no nginx de produção + atualizar links internos + redirects das URLs antigas
+- [x] 🟢 Renomear "Vestibular 2026b" para "Vestibular 2026" — renomeado para "Vestibular 2026 - 2º Semestre" (pedido do cliente)
 
 ## 1. Página Inicial (Home)
 
@@ -70,5 +71,5 @@
 ## 7. Página de Vestibular
 
 - [ ] 🔴 Transformar a página (só tem 2 PDFs hoje) em página completa: processo seletivo, datas, cursos, Vestibular Social, CTA de WhatsApp — CTA de Vestibular Social adicionado; reformulação completa da página ainda pendente
-- [ ] 🟢 Renomear item de menu "Vestibular 2026b" para "Vestibular 2026"
+- [x] 🟢 Renomear item de menu "Vestibular 2026b" para "Vestibular 2026" — renomeado para "Vestibular 2026 - 2º Semestre" (pedido do cliente)
 - [x] 🔴 Corrigir rodapé (ver correção sistêmica)
