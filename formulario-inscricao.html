@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Inscrição (prévia de layout) - Faculdade Santa Sofia</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/WhatsApp.css">
+    <link rel="stylesheet" href="/css/clinic-main.css?v=9XvJ5tVs0WqvQ-fCI90XqVaZsS5Hp6nvCYlLHMJVpjs" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div b-lj3f8y2p6z>
+    <header b-lj3f8y2p6z id="mainHeader">
+        <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
+<style>
+    .sublinhado {
+        text-decoration: underline;
+        color: #001F3F;
+    }
+
+    .cortx {
+        color: #001F3F;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-combo {
+        position: relative;
+    }
+
+    .combo-title {
+        cursor: pointer;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none !important;
+    }
+
+    .combo-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-combo:hover .combo-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu-item {
+        position: relative;
+    }
+
+    .submenu-title {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        text-decoration: none !important;
+    }
+
+    .submenu-dropdown {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background: white;
+        min-width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .submenu-item:hover .submenu-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown-item {
+        display: block;
+        padding: 8px 16px;
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .dropdown-item:hover {
+            background: #f5f5f5;
+        }
+
+    .nav-combo.active .combo-dropdown,
+    .submenu-item.active .submenu-dropdown {
+        display: block;
+    }
+
+    #mainHeader,
+    #mainHeader .container,
+    .header-content,
+    .nav-menu .combo-title,
+    .logo-container {
+        background: transparent !important;
+    }
+
+    .nav-menu .combo-title {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+        .nav-menu .combo-title i {
+            color: #ffffff;
+        }
+
+    .combo-arrow {
+        color: #C5A059;
+    }
+
+    #mainHeader.internal-page .nav-menu .combo-title,
+    #mainHeader.internal-page .nav-menu .combo-title i {
+        color: #003a6d !important;
+        text-shadow: none !important;
+    }
+
+    #mainHeader.internal-page .combo-arrow {
+        color: #C5A059 !important;
+    }
+
+    #mainHeader.scrolled .nav-menu .combo-title,
+    #mainHeader.scrolled .nav-menu .combo-title i {
+        color: #003a6d !important;
+        text-shadow: none !important;
+    }
+
+    #mainHeader.scrolled .combo-arrow {
+        color: #C5A059 !important;
+    }
+</style>
+
+<div class="container">
+    <div class="header-content">
+        <div class="logo-container" id="logoContainer">
+            <a class="logo-link" id="btnHome" title="Ir para página inicial" href="/home">
+                <div class="logo" id="logoWithMenu">
+                    <div class="logo-icon glass-effect">
+                        <img src="/pagina_inicial/icon/logo8.png" alt="Logo Santa Sofia">
+                    </div>
+                    <div class="logo-text-below blue-text">
+                        <span class="logo-subtitle-line1"><div class="sublinhado">FACULDADE SOFIA</div> </span>
+                        <span class="logo-subtitle-line2"><div class="cortx">CLÍNICA ESCOLA</div></span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="institutional-dropdown" id="institutionalDropdown">
+                <div class="institutional-dropdown-content">
+                    <div class="institutional-submenu-item">
+                        <div class="institutional-submenu-title">
+                            <span><i class="fas fa-university" style="color:#4a6fa5;"></i> SANTA SOFIA</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="institutional-submenu-dropdown">
+                            <a class="dropdown-item" href="/Home/HInstiEnsino">
+                                <i class="fas fa-clock-rotate-left" style="color:#7f8c8d;"></i> História da Instituição de Ensino
+                            </a>
+                            <a class="dropdown-item" href="/Home/VideoInstitucional">
+                                <i class="fas fa-briefcase-medical" style="color:#27ae60;"></i> FACULDADE SOFIA · DESDE 2006
+                            </a>
+                        </div>
+                    </div>
+                    <div class="institutional-submenu-item">
+                        <div class="institutional-submenu-title">
+                            <span><i class="fas fa-hospital-alt" style="color:#c0392b;"></i> SANTA CASA</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="institutional-submenu-dropdown">
+                            <a class="dropdown-item" href="/Home/HInstiSantaCasa">
+                                <i class="fas fa-clock-rotate-left" style="color:#7f8c8d;"></i> História
+                            </a>
+                            <a class="dropdown-item" href="/Home/ServSantaCasa">
+                                <i class="fas fa-briefcase-medical" style="color:#27ae60;"></i> Serviços
+                            </a>
+                        </div>
+                    </div>
+                    <div class="institutional-submenu-item">
+                        <div class="institutional-submenu-title">
+                            <span><i class="fas fa-heart-circle-plus" style="color:#e74c3c;"></i> SIHUSA</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="institutional-submenu-dropdown">
+                            <a class="dropdown-item" href="/Home/HistorSihusa">
+                                <i class="fas fa-book-open" style="color:#7f8c8d;"></i> Nossa História
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-school" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">ENSINO</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a class="submenu-item" style="font-size: 14px;font-weight:bold;" href="https://faculdadesofia.sistematutor.com.br/certificados">
+                                <i class="fas fa-eye" style="color:#8e44ad;"></i> Consulta de Veracidade
+                            </a>
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <span><i class="fas fa-screwdriver-wrench" style="color:#2980b9;"></i> Escola Técnica</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a class="dropdown-item" href="/Cursos/TEnfermagem">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Técnicos em Enfermagem</span>
+                                    </a>
+                                    <a class="dropdown-item" href="/Cursos/TFarmacia">
+                                        <span><i class="fas fa-capsules" style="color:#8e44ad;"></i> Técnicos em Farmácia</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <span><i class="fas fa-graduation-cap" style="color:#8e44ad;"></i>Graduação</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a class="dropdown-item" href="/Cursos/BEnfermagem">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i>Bacharelado em Enfermagem</span>
+                                    </a>
+                                    <a class="dropdown-item" href="/Cursos/BPsicologia">
+                                        <span><i class="fas fa-brain" style="color:#27ae60;"></i>Bacharelado em Psicologia</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <span><i class="fas fa-graduation-cap" style="color:#8e44ad;"></i> Pós-Graduação</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a class="dropdown-item" href="/Cursos/PosEnfermagem">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Pós-Graduação em Enfermagem</span>
+                                    </a>
+                                    <a class="dropdown-item" href="/Cursos/PosPsicologia">
+                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Pós-Graduação em Psicologia</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-calendar-check" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">VESTIBULAR</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a class="dropdown-item" href="/vestibular/index">
+                                <i class="fas fa-id-card" style="color:#27ae60;"></i>Vestibular 2026 - 2º Semestre
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-building-user" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">SOFIA - CLÍNICA ESCOLA</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <div class="submenu-item">
+                                <div class="submenu-title">
+                                    <i class="fas fa-handshake" style="color:#003a6d;"></i>
+                                    <span class="menu-text full-text">CONVÊNIOS</span>
+                                    <i class="fas fa-chevron-right submenu-arrow"></i>
+                                </div>
+                                <div class="submenu-dropdown">
+                                    <a href="#plano-sihusa" class="dropdown-item"><i class="fas fa-building" style="color:#3498db;"></i> Sihusa</a>
+                                    <a href="#plano-unimed" class="dropdown-item"><i class="fas fa-building" style="color:#3498db;"></i> Unimed</a>
+                                    <a href="#plano-abbas" class="dropdown-item"><i class="fas fa-mosque" style="color:#16a085;"></i> Abas</a>
+                                    <a href="#plano-porto" class="dropdown-item"><i class="fas fa-anchor" style="color:#f39c12;"></i> Porto Seguro</a>
+                                    <a href="#plano-samaritano" class="dropdown-item"><i class="fas fa-truck-medical" style="color:#f39c12;"></i> Samaritano</a>
+                                    <a href="#plano-apas-pm" class="dropdown-item"><i class="fas fa-building-shield" style="color:#f39c12;"></i> Apas-PM</a>
+                                    <a href="#plano-fusex" class="dropdown-item"><i class="fas fa-shield" style="color:#f39c12;"></i> Fusex</a>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="/Oftalmologia">
+                                <i class="fas fa-eye" style="color:#8e44ad;"></i> Oftalmologia avançada
+                            </a>
+                            <a class="dropdown-item" href="/Psicologia">
+                                <i class="fas fa-heart" style="color:#8e44ad;"></i> Psicologia
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-hand-holding-heart" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">SIHUSA</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a href="/Home/HistorSihusa" class="dropdown-item">
+                                <i class="fas fa-circle-info" style="color:#3498db;"></i> Institucional
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-combo">
+                        <a class="combo-title" href="#">
+                            <i class="fas fa-calendar-alt" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">EVENTOS</span>
+                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        </a>
+                        <div class="combo-dropdown">
+                            <a href="#plano-sihusa" class="dropdown-item"><i class="fas fa-calendar-check" style="color:#e74c3c;"></i> Agenda</a>
+                            <a href="#plano-unimed" class="dropdown-item"><i class="fas fa-clock-rotate-left" style="color:#3498db;"></i> Histórico</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-actions">
+            <a class="btn-appointment" href="https://faculdadesofia.sistematutor.com.br/portal/login">
+                <i class="fas fa-user-graduate" style="color:#ffffff;"></i><span>Portal do Aluno</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+        var navMenu = document.getElementById('navMenu');
+        if (navMenu) {
+            navMenu.classList.toggle('show');
+        }
+    });
+
+    document.querySelectorAll('.accordion-header').forEach(function(header) {
+        header.addEventListener('click', function(e) {
+            e.preventDefault();
+            var content = this.nextElementSibling;
+            var icon = this.querySelector('.fa-chevron-down');
+
+            if (content && content.classList.contains('accordion-content')) {
+                if (content.style.display === 'none' || !content.style.display) {
+                    content.style.display = 'block';
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.display = 'none';
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+    });
+
+    // Mobile submenu toggle
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.submenu-title').forEach(function(title) {
+            title.addEventListener('click', function(e) {
+                e.preventDefault();
+                var dropdown = this.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('submenu-dropdown')) {
+                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+
+        document.querySelectorAll('.combo-title').forEach(function(title) {
+            title.addEventListener('click', function(e) {
+                e.preventDefault();
+                var parent = this.closest('.nav-combo');
+                if (parent) {
+                    parent.classList.toggle('active');
+                }
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("btnHome").addEventListener("click", function() {
+            window.location.href = "/home";
+        });
+    });
+</script>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="/pagina_inicial/icon/logo8.png" alt="Logo Santa Sofia">
+                </div>
+            </div>
+
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-school"></i>
+                            <span>ENSINO</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-screwdriver-wrench"></i>
+                                    <span>Escola Técnica</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="/Cursos/TEnfermagem" class="mobile-nav-link" data-turbo="true">Técnicos em Enfermagem</a></li>
+                                    <li><a href="/Cursos/TFarmacia" class="mobile-nav-link" data-turbo="true">Técnicos em Farmácia</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Pós-Graduação</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="/Cursos/PosPsicologia" class="mobile-nav-link" data-turbo="true">Pós-Graduação em Psicologia</a></li>
+                                    <li><a href="/Cursos/PosEnfermagem" class="mobile-nav-link" data-turbo="true">Pós-Graduação em Enfermagem</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Graduação</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="/Cursos/BEnfermagem" class="mobile-nav-link" data-turbo="true">Bacharelado em Enfermagem</a></li>
+                                    <li><a href="/Cursos/BPsicologia" class="mobile-nav-link" data-turbo="true">Bacharelado em Psicologia</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>VESTIBULAR</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li>
+                            <a class="dropdown-item" href="/vestibular/index">
+                                    <i class="fas fa-id-card" style="color:#27ae60;"></i>Edital/Vestibular 2026 - 2º Semestre
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-building-user"></i>
+                            <span>SOFIA - CLÍNICA ESCOLA</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li class="mobile-nav-item has-children">
+                                <p class="mobile-nav-link">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>CONVÊNIOS</span>
+                                    <i class="fas fa-chevron-down mobile-arrow"></i>
+                                </p>
+                                <ul class="mobile-submenu">
+                                    <li><a href="#plano-sihusa" class="mobile-nav-link" data-turbo="false">Sihusa</a></li>
+                                    <li><a href="#plano-unimed" class="mobile-nav-link" data-turbo="false">Unimed</a></li>
+                                    <li><a href="#plano-abbas" class="mobile-nav-link" data-turbo="false">Abas</a></li>
+                                    <li><a href="#plano-porto" class="mobile-nav-link" data-turbo="false">Porto Seguro</a></li>
+                                    <li><a href="#plano-samaritano" class="mobile-nav-link" data-turbo="false">Samaritano</a></li>
+                                    <li><a href="#plano-apas-pm" class="mobile-nav-link" data-turbo="false">Apas-PM</a></li>
+                                    <li><a href="#plano-fusex" class="mobile-nav-link" data-turbo="false">Fusex</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/Oftalmologia" class="mobile-nav-link" data-turbo="true"><i class="fas fa-eye"></i> Oftalmologia avançada</a></li>
+                            <li><a href="/Psicologia" class="mobile-nav-link" data-turbo="true"><i class="fas fa-heart"></i> Psicologia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>SIHUSA</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li><a href="/Home/HistorSihusa" class="mobile-nav-link" data-turbo="false"><i class="fas fa-circle-info"></i> Institucional</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-nav-item has-children">
+                        <p class="mobile-nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>EVENTOS</span>
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </p>
+                        <ul class="mobile-submenu">
+                            <li><a href="#agenda" class="mobile-nav-link" data-turbo="false">Agenda</a></li>
+                            <li><a href="#historico" class="mobile-nav-link" data-turbo="false">Histórico</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-footer">
+                <a class="btn-appointment" href="https://faculdadesofia.sistematutor.com.br/portal/login">
+                    <i class="fas fa-user-graduate" style="color:#ffffff;"></i><span>Portal do Aluno</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /* Menu Mobile Styles */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    .mobile-menu-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 350px;
+        height: 100%;
+        background: #ffffff;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu-container {
+        right: 0;
+    }
+
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #e5e5e5;
+        background: #ffffff;
+    }
+
+    .mobile-menu-logo img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    .mobile-menu-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+        .mobile-menu-close:hover {
+            background-color: #f0f0f0;
+        }
+
+    .mobile-nav {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px 0;
+    }
+
+    .mobile-nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-item {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .mobile-nav-link:hover {
+            background-color: #f5f5f5;
+            color: #003a6d;
+        }
+
+        .mobile-nav-link i:first-child {
+            width: 24px;
+            color: #003a6d;
+            font-size: 18px;
+        }
+
+    .mobile-arrow {
+        margin-left: auto;
+        transition: transform 0.3s ease;
+        font-size: 14px;
+        color: #999;
+    }
+
+    .mobile-nav-item.open > .mobile-nav-link .mobile-arrow {
+        transform: rotate(180deg);
+    }
+
+    .mobile-submenu {
+        list-style: none;
+        padding-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #f9f9f9;
+    }
+
+    .mobile-nav-item.open > .mobile-submenu {
+        max-height: 800px;
+    }
+
+    .mobile-submenu .mobile-nav-link {
+        padding: 12px 20px 12px 56px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .mobile-menu-footer {
+        padding: 20px;
+        border-top: 1px solid #e5e5e5;
+        background: #ffffff;
+    }
+
+    .btn-mobile-appointment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #003a6d;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .btn-mobile-appointment:hover {
+            background: #002244;
+            color: white;
+        }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #003a6d;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+
+
+    .nav-wrapper {
+        display: none;
+    }
+
+    }
+</style>
+
+<script>
+    // Menu Mobile JavaScript - Versão Corrigida
+    (function() {
+        // Inicializar menu mobile
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            if (!mobileMenuBtn || !mobileMenuOverlay) return;
+
+            function openMenu(e) {
+                if (e) e.stopPropagation();
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu(e) {
+                if (e) e.stopPropagation();
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuBtn.removeEventListener('click', openMenu);
+            mobileMenuBtn.addEventListener('click', openMenu);
+
+            if (mobileMenuClose) {
+                mobileMenuClose.removeEventListener('click', closeMenu);
+                mobileMenuClose.addEventListener('click', closeMenu);
+            }
+
+            mobileMenuOverlay.removeEventListener('click', closeMenu);
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    closeMenu();
+                }
+            });
+
+            document.removeEventListener('keydown', closeMenuOnEsc);
+            document.addEventListener('keydown', closeMenuOnEsc);
+
+            function closeMenuOnEsc(e) {
+                if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                    closeMenu();
+                }
+            }
+
+            // Accordion para submenus
+            const menuItems = document.querySelectorAll('.mobile-nav-item.has-children > .mobile-nav-link');
+
+            menuItems.forEach(function(item) {
+                item.removeEventListener('click', handleAccordionClick);
+                item.addEventListener('click', handleAccordionClick);
+            });
+        }
+
+        function handleAccordionClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const parentLi = this.closest('.mobile-nav-item');
+            if (parentLi) {
+                parentLi.classList.toggle('open');
+            }
+        }
+
+        // Fechar menu ao clicar em link
+        function closeMenuOnLinkClick() {
+            const links = document.querySelectorAll('.mobile-submenu .mobile-nav-link');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+            links.forEach(function(link) {
+                link.removeEventListener('click', closeMenuHandler);
+                link.addEventListener('click', closeMenuHandler);
+            });
+
+            function closeMenuHandler() {
+                if (mobileMenuOverlay) {
+                    setTimeout(function() {
+                        mobileMenuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }, 150);
+                }
+            }
+        }
+
+        // Inicializar
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                initMobileMenu();
+                closeMenuOnLinkClick();
+            });
+        } else {
+            initMobileMenu();
+            closeMenuOnLinkClick();
+        }
+
+        // Re-inicializar após navegação Turbo
+        document.addEventListener('turbo:load', function() {
+            initMobileMenu();
+            closeMenuOnLinkClick();
+        });
+
+        // Re-inicializar após HTMX
+        document.addEventListener('htmx:afterSwap', function() {
+            initMobileMenu();
+            closeMenuOnLinkClick();
+        });
+    })();
+</script>
+    </header>
+    <!-- Ícones de Redes Sociais Fixos à Esquerda -->
+    <div class="social-sidebar">
+        <a href="https://www.facebook.com/faculdadesofia" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/faculdadesofia" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/faculdadesofia" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/53151369/admin/dashboard/" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5519999601237" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+    <a href="#" id="whatsappButton" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.7 29.6 111L5.7 472c-2 6.7 3.6 12.9 10.6 10.9l106.9-29.3c33.6 18.7 71.8 28.5 110.6 28.5 122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-65.1-157.1zm-157 291.4c-33.2 0-65.7-8.9-94.1-25.7l-6.7-4-63.8 17.5 17-62.3-4.3-6.9c-18.2-29.4-27.8-63.3-27.8-98.4 0-96.2 78.2-174.4 174.4-174.4 46.5 0 90.3 18.1 123.2 51 32.9 32.9 51 76.7 51 123.2 0 96.2-78.2 174.4-174.4 174.4z" />
+            <path d="M224 120c-57.3 0-104 46.7-104 104 0 19.8 5.5 38.2 15.1 54.1l-16.2 59.5 60.6-16c15.4 8.9 33.1 14 52 14 57.3 0 104-46.7 104-104s-46.7-104-104-104zm39.9 145.3c-1.5 4.2-8.7 20.8-11.9 23.1-3 2.2-6.9 2.5-9.9.8-5-2.8-21.6-13.3-40.9-25.1-22.7-13.9-37.9-30.9-43.2-36.1-3.4-3.3-5-7.2-3.1-11.1 1.5-3 3.5-5.3 5.5-7.9 1.9-2.5 2.5-4.3 3.8-7.2 1.3-2.9.6-5.4-.3-7.6-.9-2.2-8.2-19.8-11.2-27.1-2.9-7-5.9-6-8.1-6.1-2.1-.1-4.5-.1-6.9-.1-2.4 0-6.3.9-9.6 4.5-3.3 3.6-12.6 12.3-12.6 30s12.9 34.8 14.7 37.2c1.8 2.4 25.3 38.6 61.2 54.1 8.5 3.7 15.1 5.9 20.3 7.6 8.5 2.7 16.3 2.3 22.4 1.4 6.8-1 20.9-8.5 23.8-16.8 2.9-8.2 2.9-15.2 2-16.7-.9-1.5-3.3-2.4-6.9-4.2-3.6-1.8-21.2-10.5-24.5-11.7-3.3-1.2-5.7-1.8-8.1 1.8z" />
+        </svg>
+    </a>
+
+    <script>
+        (function() {
+            const PHONE_NUMBER = "5519999601237";
+            const DEFAULT_MESSAGE = "Olá, como podemos ajudar?";
+            const whatsBtn = document.getElementById('whatsappButton');
+            function getWhatsAppUrl() {
+                let encodedMsg = encodeURIComponent(DEFAULT_MESSAGE);
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isMobile = /android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(userAgent);
+                if (isMobile) {
+                    return `whatsapp://send?phone=${PHONE_NUMBER}&text=${encodedMsg}`;
+                } else {
+                    return `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${encodedMsg}`;
+                }
+            }
+            function openWhatsApp(event) {
+                event.preventDefault();
+                const whatsUrl = getWhatsAppUrl();
+                window.open(whatsUrl, '_blank');
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+            }
+            if (whatsBtn) {
+                whatsBtn.addEventListener('click', openWhatsApp);
+                whatsBtn.setAttribute('aria-label', 'Abrir conversa no WhatsApp');
+                whatsBtn.setAttribute('role', 'button');
+                whatsBtn.addEventListener('click', function() {
+                    this.style.animation = 'none';
+                    setTimeout(() => {
+                        this.style.animation = 'pulse-glow 2s infinite';
+                    }, 500);
+                });
+            } else {
+                console.warn('Elemento do botão WhatsApp não encontrado.');
+            }
+            if (PHONE_NUMBER === "5519999601237") {
+            }
+        })();
+    </script>
+
+        <main b-lj3f8y2p6z role="main" class="pb-3">
+
+<!-- Faixa de aviso: página é só prévia de layout -->
+<div class="text-center py-2" style="background-color:#fff3cd; color:#664d03; font-weight:600; font-size:14px;">
+    <i class="fas fa-triangle-exclamation me-1"></i> Prévia de layout — este formulário ainda não envia dados para nenhum sistema. Aguardando definição do backend.
+</div>
+
+<section class="py-5" style="background-color:#0a2b3e;">
+    <div class="container text-center text-white">
+        <h1 class="fw-bold mb-2">Formulário de Inscrição</h1>
+        <p class="mb-0" style="color:aliceblue;">Preencha seus dados e nossa equipe entra em contato com todas as informações sobre matrícula, descontos e documentação.</p>
+    </div>
+</section>
+
+<section class="py-5" style="background-color:#f7f8fa;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="bg-white p-4 p-md-5 rounded-4 shadow">
+                    <form id="formInscricao" novalidate>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-semibold">Nome completo</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label fw-semibold">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="whatsapp" class="form-label fw-semibold">WhatsApp</label>
+                                <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="(19) 90000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="curso" class="form-label fw-semibold">Curso de interesse</label>
+                            <select class="form-select" id="curso" name="curso" required>
+                                <option value="" selected disabled>Selecione um curso</option>
+                                <option value="bacharelado-enfermagem">Bacharelado em Enfermagem</option>
+                                <option value="bacharelado-psicologia">Bacharelado em Psicologia</option>
+                                <option value="tecnico-enfermagem">Técnico em Enfermagem</option>
+                                <option value="tecnico-farmacia">Técnico em Farmácia</option>
+                                <option value="pos-enfermagem">Pós-graduação em Enfermagem</option>
+                                <option value="pos-psicologia">Pós-graduação em Psicologia</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="turno" class="form-label fw-semibold">Turno de preferência</label>
+                                <select class="form-select" id="turno" name="turno">
+                                    <option value="" selected>Não sei ainda</option>
+                                    <option value="manha">Manhã</option>
+                                    <option value="tarde">Tarde</option>
+                                    <option value="noite">Noite</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="origem" class="form-label fw-semibold">Como conheceu a Faculdade Sofia?</label>
+                                <select class="form-select" id="origem" name="origem">
+                                    <option value="" selected>Prefiro não dizer</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="google">Google / busca</option>
+                                    <option value="indicacao">Indicação de amigo ou familiar</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="vestibularSocial" name="vestibularSocial">
+                            <label class="form-check-label" for="vestibularSocial">
+                                Tenho interesse no <strong>Vestibular Social</strong> (bolsas de até 75%)
+                            </label>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="mensagem" class="form-label fw-semibold">Mensagem <span class="text-muted fw-normal">(opcional)</span></label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Alguma dúvida ou observação?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg w-100 fw-bold" style="background-color:#eab676; color:#0a2b3e;">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar inscrição
+                        </button>
+
+                        <div id="formPreviewNotice" class="alert alert-warning mt-3 d-none" role="alert">
+                            <i class="fas fa-circle-info me-1"></i> Isto é uma prévia de layout — o envio ainda não está conectado a nenhum sistema.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('formInscricao').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('formPreviewNotice').classList.remove('d-none');
+    });
+</script>
+
+        </main>
+    </div>
+
+    <footer b-lj3f8y2p6z id="contact">
+        <link rel="stylesheet" href="/css/Footer/footer-fix.css" />
+<style>
+    /* Footer fixo no final da página */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+
+    footer {
+        flex-shrink: 0;
+        background-color: #0a2b3e;
+        padding: 40px 0 20px;
+        margin-top: auto;
+    }
+
+    /* Links na cor #eab676 */
+    .footer-column a,
+    .footer-bottom a,
+    .social-links a {
+        color: #eab676 !important;
+        text-decoration: none !important;
+    }
+
+        .footer-column a:hover,
+        .footer-column a:active,
+        .footer-column a:focus,
+        .footer-bottom a:hover,
+        .footer-bottom a:active,
+        .footer-bottom a:focus,
+        .social-links a:hover,
+        .social-links a:active,
+        .social-links a:focus {
+            color: #eab676 !important;
+            text-decoration: none !important;
+        }
+
+    .social-links a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+    .footer-column ul li a i {
+        color: #eab676 !important;
+    }
+
+    .footer-bottom a {
+        color: #eab676 !important;
+        margin-left: 15px;
+    }
+
+    .btn-primary {
+        background-color: #eab676 !important;
+        border: none;
+        color: #0a2b3e !important;
+        font-weight: bold;
+    }
+
+        .btn-primary:hover {
+            background-color: #eab676 !important;
+            opacity: 0.9;
+            color: #0a2b3e !important;
+        }
+</style>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Faculdade Sofia</h3>
+                <p style="color:aliceblue">A Faculdade do Trabalhador da Saúde. Formando profissionais de Enfermagem, Psicologia e cursos técnicos em saúde há 20 anos, no coração de Campinas.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/53151369/admin/dashboard/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="/home"><i class="fas fa-chevron-right"></i> Início</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contato Faculdade Sofia</h3>
+                <ul>
+                    <li><a href="https://www.google.com/maps/place/R.&#x2B;Barreto&#x2B;Leme,&#x2B;1552&#x2B;-&#x2B;Centro,&#x2B;Campinas&#x2B;-&#x2B;SP,&#x2B;13010-201/@-22.9001848,-47.0591758,17z/data=!3m1!4b1!4m6!3m5!1s0x94c8cf4d1236aae1:0x16774f8944d1587c!8m2!3d-22.9001898!4d-47.0566009!16s%2Fg%2F11bw3_lzfp?entry=ttu&amp;g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> Rua Barreto Leme, 1552 - Centro, Campinas - SP</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5519999601237" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Comercial - whatsapp: (19) 99960-1237</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5519999589629" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Secretaria - whatsapp: (19) 99958-9629</a></li>
+                    <li><a href="tel:(19)3737-5500"><i class="fas fa-phone"></i> Fixo: (19) 3737-5500</a></li>
+                    <li><a href="mailto:secretaria@faculdadesofia.com.br"><i class="fas fa-envelope"></i> secretaria@faculdadesofia.com.br</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Notícias de Saúde (Newsletter)</h3>
+                <p style="color:aliceblue">Inscreva-se para receber as últimas notícias sobre saúde, descobertas médicas e atualizações da Faculdade Sofia.</p>
+
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" id="newsletterEmail" class="form-control">
+                    <button class="btn btn-primary" id="subscribeBtn" style="width: 100%; margin-top: 10px;">Inscrever-se</button>
+                    <div id="newsletterMessage" style="margin-top: 10px; font-size: 14px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Faculdade Sofia. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/Footer/newsletterEmail.js"></script>
+    </footer>
+
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/clinic-main.js?v=qe6fNxzpkw0cpfNb9_KsNyVrMpU0yEPuxEqJul_oW30"></script>
+
+    <!-- Script SIMPLES para menu - SEM bloqueios -->
+    <script>
+        (function() {
+            // Apenas garantir que links com href="#" não causem scroll para o topo
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+    </script>
+    <script>
+        // Script para garantir que o menu tenha fundo branco em páginas internas
+        (function() {
+            function isHomePage() {
+                const path = window.location.pathname;
+                const isRootPath = path === '/' || path === '/home' || path === '/index';
+                const hasVideoHero = document.querySelector('.video-hero') !== null;
+                return isRootPath || hasVideoHero;
+            }
+
+            function updateHeaderForPage() {
+                const header = document.getElementById('mainHeader');
+                if (!header) return;
+
+                if (!isHomePage()) {
+                    header.classList.add('internal-page');
+                    header.classList.remove('scrolled');
+
+                    document.querySelectorAll('.combo-title, .combo-title i, .combo-title .menu-text').forEach(el => {
+                        if (el.style) {
+                            el.style.color = '#003a6d';
+                        }
+                    });
+                } else {
+                    header.classList.remove('internal-page');
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                }
+            }
+
+            updateHeaderForPage();
+            setTimeout(updateHeaderForPage, 50);
+
+            let lastUrl = location.href;
+            new MutationObserver(() => {
+                const url = location.href;
+                if (url !== lastUrl) {
+                    lastUrl = url;
+                    setTimeout(updateHeaderForPage, 100);
+                }
+            }).observe(document, { subtree: true, childList: true });
+
+            window.addEventListener('scroll', function() {
+                if (isHomePage()) {
+                    const header = document.getElementById('mainHeader');
+                    if (header) {
+                        if (window.scrollY > 50) {
+                            header.classList.add('scrolled');
+                            header.classList.remove('internal-page');
+                        } else {
+                            header.classList.remove('scrolled');
+                            header.classList.remove('internal-page');
+                        }
+                    }
+                }
+            });
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
