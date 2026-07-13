@@ -7,7 +7,7 @@
 ## Correções que aparecem em todas as páginas (fazer primeiro — resolve o site inteiro de uma vez)
 
 - [x] 🔴 Trocar o bloco "Santa Sofia Clínica Escola... há mais de 17 anos" no rodapé por um rodapé institucional real da Faculdade Sofia
-- [x] 🔴 Padronizar o número de "anos de tradição" em todo o site (rodapé, Home, Técnico em Enfermagem, Técnico em Farmácia) — definido em 39 anos (base 1987, já usada no selo do menu)
+- [x] 🔴 Padronizar o número de "anos de tradição" em todo o site (rodapé, Home, Técnico em Enfermagem, Técnico em Farmácia, Pós Enfermagem) — **atualizado em 2026-07-13**: fundação real confirmada pelo cliente em **2006** (não 1987). Recalculado para **20 anos**. O "1987" usado antes vinha de uma segunda história institucional fabricada, achada em `Home/VideoInstitucional.html` (ver item abaixo)
 - [ ] 🔴 Substituir o Google Forms externo por formulário nativo (um por curso, se possível) — pendente: depende de endpoint de backend, fora deste diretório
 - [x] 🔴 Adicionar seção/CTA do Vestibular Social ("bolsas de até 75%") na Home, nas páginas de curso e na página de Vestibular
 - [x] 🟡 Corrigir o link do menu "Nossa História / Santa Sofia" na página de Técnico em Farmácia (aponta para caminho errado) — faltava a barra inicial em `href="Home/HInstiEnsino"`
@@ -29,8 +29,17 @@
 - [ ] 🔴 Remover menção a "São José dos Pinhais" e "120 mil m²" — trocar pela localização real (Centro de Campinas)
 - [ ] 🔴 Remover números inventados (6.500 alunos, 18 cursos, mestrado/doutorado, 15 mil alumni, teatro, editora, podcast)
 - [ ] 🔴 Remover cursos que não existem (Arquitetura, Ciência da Computação, História, Matemática, Serviço Social)
-- [ ] 🔴 Corrigir a faixa "40 anos em 2027" para bater com o número de anos definido na correção sistêmica
+- [ ] 🔴 Corrigir a faixa "40 anos em 2027" para bater com o número de anos definido na correção sistêmica (agora 20 anos, base 2006)
 - [ ] 🟡 Trocar fotos do carrossel genérico por fotos reais do prédio/fachada/salas
+
+## 2b. Nova página institucional fabricada encontrada — `Home/VideoInstitucional.html`
+
+**Achado em 2026-07-13**, ao investigar de onde vinha o "1987" usado no selo do menu. Essa página tem sua **própria linha do tempo institucional inventada**, totalmente diferente da de `Home/HInstiEnsino.html` (item 2 acima) — ou seja, o site tem *duas* histórias fabricadas diferentes. O código traz o comentário `<!-- conteúdo sintetizado ... extraídos da narrativa do site -->`, indicando que foi copiado/gerado a partir de outro site.
+
+Narrativa fictícia atual: fundação em 1987 como "Instituto Sofia de Estudos Superiores" com foco em filosofia/letras/pedagogia (47 alunos na primeira turma), depois "1998 — reconhecimento como Faculdade Sofia, cursos de Administração e Psicologia autorizados", "2005 — núcleo de pesquisa e extensão" — nada disso corresponde à instituição real.
+
+- [x] Selo "FACULDADE SOFIA · DESDE 1987" corrigido para "DESDE 2006" (era só o ano do selo, não a narrativa)
+- [ ] 🔴 Reescrever toda a linha do tempo da página com a história real (mesma pendência do item 2 — depende da conversa com o cliente)
 
 ## 3. Bacharelado em Enfermagem
 
