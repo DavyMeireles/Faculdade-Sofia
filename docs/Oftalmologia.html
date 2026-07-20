@@ -114,6 +114,28 @@
             background: #f5f5f5;
         }
 
+    .dropdown-label {
+        display: block;
+        padding: 8px 16px 2px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: #9aa4ad;
+        cursor: default;
+        user-select: none;
+    }
+
+    .dropdown-item-sub {
+        padding-left: 28px;
+    }
+
+    .dropdown-divider {
+        height: 1px;
+        margin: 6px 12px;
+        background: #e8e8e8;
+    }
+
     .nav-combo.active .combo-dropdown,
     .submenu-item.active .submenu-dropdown {
         display: block;
@@ -231,58 +253,43 @@
                 <ul class="nav-menu" id="navMenu">
                     <li class="nav-combo">
                         <a class="combo-title" href="#">
-                            <i class="fas fa-school" style="color:#003a6d;"></i>
-                            <span class="menu-text full-text">ENSINO</span>
+                            <i class="fas fa-book-open" style="color:#003a6d;"></i>
+                            <span class="menu-text full-text">CURSOS</span>
                             <i class="fas fa-chevron-down combo-arrow"></i>
                         </a>
                         <div class="combo-dropdown">
-                            <a class="submenu-item" style="font-size: 14px;font-weight:bold;" href="https://faculdadesofia.sistematutor.com.br/certificados">
+                            <a class="dropdown-item" style="font-weight:bold;" href="https://faculdadesofia.sistematutor.com.br/certificados">
                                 <i class="fas fa-eye" style="color:#8e44ad;"></i> Consulta de Veracidade
                             </a>                                                    
-                            <div class="submenu-item">
-                                <div class="submenu-title">
-                                    <span><i class="fas fa-screwdriver-wrench" style="color:#2980b9;"></i> Escola Técnica</span>
-                                    <i class="fas fa-chevron-right submenu-arrow"></i>
-                                </div>
-                                <div class="submenu-dropdown">
-                                    <a class="dropdown-item" href="Cursos/TEnfermagem.html">
-                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Técnicos em Enfermagem</span>
-                                    </a>
-                                    <a class="dropdown-item" href="Cursos/TFarmacia.html">
-                                        <span><i class="fas fa-capsules" style="color:#8e44ad;"></i> Técnicos em Farmácia</span>
-                                    </a>
-                                </div>
-                            </div>
+                            <div class="dropdown-divider"></div>
 
-                            <div class="submenu-item">
-                                <div class="submenu-title">
-                                    <span><i class="fas fa-graduation-cap" style="color:#8e44ad;"></i>Graduação</span>
-                                    <i class="fas fa-chevron-right submenu-arrow"></i>
-                                </div>
-                                <div class="submenu-dropdown">
-                                    <a class="dropdown-item" href="Cursos/BEnfermagem.html">
-                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i>Bacharelado em Enfermagem</span>
-                                    </a>
-                                    <a class="dropdown-item" href="Cursos/BPsicologia.html">
-                                        <span><i class="fas fa-brain" style="color:#27ae60;"></i>Bacharelado em Psicologia</span>
-                                    </a>
-                                </div>
-                            </div>
+                            <span class="dropdown-label">Técnicos</span>
+                            <a class="dropdown-item dropdown-item-sub" href="Cursos/TEnfermagem.html">
+                                <i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Enfermagem
+                            </a>
+                            <a class="dropdown-item dropdown-item-sub" href="Cursos/TFarmacia.html">
+                                <i class="fas fa-capsules" style="color:#8e44ad;"></i> Farmácia
+                            </a>
 
-                            <div class="submenu-item">
-                                <div class="submenu-title">
-                                    <span><i class="fas fa-graduation-cap" style="color:#8e44ad;"></i> Pós-Graduação</span>
-                                    <i class="fas fa-chevron-right submenu-arrow"></i>
-                                </div>
-                                <div class="submenu-dropdown">
-                                    <a class="dropdown-item" href="Cursos/PosEnfermagem.html">
-                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Pós-Graduação em Enfermagem</span>
-                                    </a>                                    
-                                    <a class="dropdown-item" href="Cursos/PosPsicologia.html">
-                                        <span><i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Pós-Graduação em Psicologia</span>
-                                    </a>
-                                </div>
-                            </div>
+                            <div class="dropdown-divider"></div>
+
+                            <span class="dropdown-label">Bacharelado</span>
+                            <a class="dropdown-item dropdown-item-sub" href="Cursos/BEnfermagem.html">
+                                <i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Enfermagem
+                            </a>
+                            <a class="dropdown-item dropdown-item-sub" href="Cursos/BPsicologia.html">
+                                <i class="fas fa-brain" style="color:#27ae60;"></i> Psicologia
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <span class="dropdown-label">Pós-Graduação</span>
+                            <a class="dropdown-item dropdown-item-sub" href="Cursos/PosEnfermagem.html">
+                                <i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Enfermagem
+                            </a>
+                            <a class="dropdown-item dropdown-item-sub" href="Cursos/PosPsicologia.html">
+                                <i class="fas fa-hand-holding-medical" style="color:#27ae60;"></i> Psicologia
+                            </a>
                         </div>
                     </li>
 
@@ -745,44 +752,21 @@
                 <ul class="mobile-nav-menu">
                     <li class="mobile-nav-item has-children">
                         <p class="mobile-nav-link">
-                            <i class="fas fa-school"></i>
-                            <span>ENSINO</span>
+                            <i class="fas fa-book-open"></i>
+                            <span>CURSOS</span>
                             <i class="fas fa-chevron-down mobile-arrow"></i>
                         </p>
                         <ul class="mobile-submenu">
-                            <li class="mobile-nav-item has-children">
-                                <p class="mobile-nav-link">
-                                    <i class="fas fa-screwdriver-wrench"></i>
-                                    <span>Escola Técnica</span>
-                                    <i class="fas fa-chevron-down mobile-arrow"></i>
-                                </p>
-                                <ul class="mobile-submenu">
-                                    <li><a href="Cursos/TEnfermagem.html" class="mobile-nav-link" data-turbo="true">Técnicos em Enfermagem</a></li>
-                                    <li><a href="Cursos/TFarmacia.html" class="mobile-nav-link" data-turbo="true">Técnicos em Farmácia</a></li>
-                                </ul>
-                            </li>
-                            <li class="mobile-nav-item has-children">
-                                <p class="mobile-nav-link">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Pós-Graduação</span>
-                                    <i class="fas fa-chevron-down mobile-arrow"></i>
-                                </p>
-                                <ul class="mobile-submenu">
-                                    <li><a href="Cursos/PosPsicologia.html" class="mobile-nav-link" data-turbo="true">Pós-Graduação em Psicologia</a></li>
-                                    <li><a href="Cursos/PosEnfermagem.html" class="mobile-nav-link" data-turbo="true">Pós-Graduação em Enfermagem</a></li>
-                                </ul>
-                            </li>
-                            <li class="mobile-nav-item has-children">
-                                <p class="mobile-nav-link">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Graduação</span>
-                                    <i class="fas fa-chevron-down mobile-arrow"></i>
-                                </p>
-                                <ul class="mobile-submenu">
-                                    <li><a href="Cursos/BEnfermagem.html" class="mobile-nav-link" data-turbo="true">Bacharelado em Enfermagem</a></li>
-                                    <li><a href="Cursos/BPsicologia.html" class="mobile-nav-link" data-turbo="true">Bacharelado em Psicologia</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="https://faculdadesofia.sistematutor.com.br/certificados" class="mobile-nav-link" data-turbo="false">Consulta de Veracidade</a></li>
+                            <li class="mobile-submenu-label">Técnicos</li>
+                            <li><a href="Cursos/TEnfermagem.html" class="mobile-nav-link" data-turbo="true">Enfermagem</a></li>
+                            <li><a href="Cursos/TFarmacia.html" class="mobile-nav-link" data-turbo="true">Farmácia</a></li>
+                            <li class="mobile-submenu-label">Bacharelado</li>
+                            <li><a href="Cursos/BEnfermagem.html" class="mobile-nav-link" data-turbo="true">Enfermagem</a></li>
+                            <li><a href="Cursos/BPsicologia.html" class="mobile-nav-link" data-turbo="true">Psicologia</a></li>
+                            <li class="mobile-submenu-label">Pós-Graduação</li>
+                            <li><a href="Cursos/PosEnfermagem.html" class="mobile-nav-link" data-turbo="true">Enfermagem</a></li>
+                            <li><a href="Cursos/PosPsicologia.html" class="mobile-nav-link" data-turbo="true">Psicologia</a></li>
                         </ul>
                     </li>
                      <li class="mobile-nav-item has-children">
@@ -993,6 +977,15 @@
         padding: 12px 20px 12px 56px;
         font-size: 14px;
         font-weight: normal;
+    }
+
+    .mobile-submenu-label {
+        padding: 10px 20px 2px 56px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: #9aa4ad;
     }
 
     .mobile-menu-footer {
@@ -1748,7 +1741,7 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Faculdade Sofia</h3>
-                <p style="color:aliceblue">A Faculdade do Trabalhador da Saúde. Formando profissionais de Enfermagem, Psicologia e cursos técnicos em saúde há 20 anos, no coração de Campinas.</p>
+                <p style="color:aliceblue">A Faculdade do Trabalhador da Saúde. Formando profissionais de Enfermagem, Psicologia e cursos técnicos em saúde no coração de Campinas.</p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/faculdadesofia" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
