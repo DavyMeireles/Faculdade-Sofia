@@ -1213,66 +1213,80 @@
 
         <main b-lj3f8y2p6z role="main" class="pb-3">
                 <style>
-        /* CORREÇÃO: CSS válido e sem blocos quebrados */
         * {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: #fefcf8;
+            font-family: 'Inter', sans-serif;
+            background-color: #fefef7;
+            color: #1e2a3e;
             scroll-behavior: smooth;
         }
 
-        .navbar-brand img {
-            height: 48px;
+        .btn-gold {
+            background: #ffb347;
+            color: #0b2b3b;
+            font-weight: 700;
+            border-radius: 40px;
+            padding: 10px 28px;
+            transition: 0.2s;
+            border: none;
         }
 
-        .hero-section {
-            background: linear-gradient(135deg, #0b2b3b 0%, #1a4b6e 100%);
-            color: white;
-            padding: 5rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-            .hero-section::before {
-                content: "🩺";
-                font-size: 280px;
-                opacity: 0.05;
-                position: absolute;
-                bottom: -30px;
-                right: 10px;
-                pointer-events: none;
+            .btn-gold:hover {
+                background: #e0993a;
+                color: #fff;
+                transform: translateY(-2px);
             }
 
-        .badge-sofia {
-            background-color: #ffb347;
-            color: #1e2f3a;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
+        .btn-outline-gold {
+            border: 2px solid #ffb347;
+            color: #ffb347;
+            background: transparent;
             border-radius: 40px;
+            font-weight: 600;
         }
 
-        .btn-curso {
-            background-color: #ffb347;
-            border: none;
-            color: #1e2f3a;
-            font-weight: 700;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-
-            .btn-curso:hover {
-                background-color: #ff9f1a;
-                transform: translateY(-3px);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            .btn-outline-gold:hover {
+                background: #ffb347;
                 color: #0b2b3b;
+            }
+
+        .hero {
+            background: linear-gradient(105deg, #f4f7fb 0%, #eaf0f6 100%);
+            padding: 80px 0 60px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .badge-sofia {
+            background-color: #0b2b3b;
+            color: #fefef7;
+            font-weight: 500;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+        }
+
+        .card-stat {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border: none;
+            height: 100%;
+        }
+
+            .card-stat:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
             }
 
         .section-title {
             font-weight: 800;
-            color: #0b2b3b;
+            font-size: 2.2rem;
             position: relative;
             display: inline-block;
             margin-bottom: 2rem;
@@ -1289,96 +1303,44 @@
                 border-radius: 4px;
             }
 
-        .card-detalhe {
-            border: none;
-            border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
-            height: 100%;
+        .pilar-card {
             background: white;
+            border-radius: 28px;
+            padding: 2rem 1.5rem;
+            transition: 0.2s;
+            height: 100%;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
         }
 
-            .card-detalhe:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 25px 40px rgba(0,0,0,0.1);
+            .pilar-card i {
+                font-size: 2.8rem;
+                color: #0b2b3b;
+                margin-bottom: 1rem;
             }
 
-        .icon-circle {
-            width: 64px;
-            height: 64px;
-            background: #eef4fc;
-            border-radius: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.2rem;
+        .list-check {
+            list-style: none;
+            padding-left: 0;
         }
 
-            .icon-circle i {
-                font-size: 30px;
-                color: #1a4b6e;
+            .list-check li {
+                padding-left: 1.8rem;
+                position: relative;
+                margin-bottom: 0.6rem;
             }
 
-        .grade-bg {
-            background-color: #f2f6f9;
-            border-radius: 32px;
-            padding: 2rem;
-        }
+                .list-check li:before {
+                    content: "\f00c";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    position: absolute;
+                    left: 0;
+                    color: #ffb347;
+                }
 
-        .list-check li {
-            margin-bottom: 0.75rem;
-            font-weight: 500;
-        }
-
-        .list-check i {
-            color: #ffb347;
-            margin-right: 12px;
-        }
-
-        .footer {
-            background-color: #0b2b3b;
-            color: #e0e7eb;
-        }
-
-        .btn-whats {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 60px;
-            padding: 12px 20px;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-            .btn-whats:hover {
-                background-color: #20b859;
-                color: white;
-                transform: scale(1.02);
-            }
-
-            /* Correção: removido bloco extra com seletor inválido */
-            .btn-whats span {
-                display: none;
-            }
-
-       
-        .btn-whats {
-            padding: 12px 20px;
-            border-radius: 60px;
-        }
-
-        .info-badge {
-            background: rgba(255,180,71,0.15);
-            color: #ffb347;
-            font-weight: 600;
-            border-radius: 50px;
+        .bg-soft-accent {
+            background-color: #f2f6fa;
         }
 
         .valor-destaque {
@@ -1386,44 +1348,37 @@
             font-weight: 800;
             color: #0b2b3b;
         }
-
-        /* Correção de texto e espaçamento */
-        .card-detal {
-            border: none;
-            border-radius: 24px;
-            background: white;
-            transition: 0.2s;
-        }
     </style>
 
 <br />
 <br />
 <br />
-    <section class="hero-section">
+    <section class="hero">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
                     <span class="badge-sofia mb-3 d-inline-block"><i class="fas fa-graduation-cap me-1"></i> Ingresso 2026</span>
-                    <h1 class="display-4 fw-bold mb-3" style="color:aliceblue;">Técnico em <span style="color: #ffb347;">Enfermagem</span> SOFIA</h1>
-                    <p class="lead mb-4 opacity-90">Formação técnica híbrida, com prática desde o primeiro módulo, preparando você para atuar com segurança na linha de frente da saúde.</p>
-                    <div class="mt-2 mb-4 d-flex flex-wrap gap-4">
-                        <div><i class="fas fa-clock me-1"></i> 2 anos e meio (30 meses)</div>
-                        <div><i class="fas fa-book me-1"></i> 1.840h</div>
-                        <div><i class="fas fa-laptop me-1"></i> Híbrido</div>
-                        <div><i class="fas fa-map-marker-alt me-1"></i> Centro de Campinas/SP</div>
+                    <h1 class="display-4 fw-bold mb-3">Técnico em Enfermagem <br> <span style="color:#0b2b3b;">SOFIA</span></h1>
+                    <p class="lead mb-4">Formação técnica híbrida · 2 anos e meio (30 meses) · 1.840h · Prática desde o primeiro módulo.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <div><i class="fas fa-map-marker-alt text-success"></i> Centro de Campinas/SP</div>
+                        <div><i class="fas fa-laptop"></i> Híbrido</div>
+                        <div><i class="fas fa-stethoscope"></i> 600h de estágio</div>
                     </div>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#sobre" class="btn btn-outline-light btn-lg px-4 py-3"><i class="fas fa-book-open me-2"></i> Conhecer curso</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8Ar7_WTpoyQvFFNW-p68oG2h5vA59fXZzNJ_JW_odTQDAOQ/viewform" target="_blank" class="btn btn-curso btn-lg px-4 py-3"><i class="fas fa-calendar-alt me-2"></i> Processo seletivo</a>
+                    <div class="d-flex gap-3">
+                        <a href="#sobre" class="btn btn-outline-gold px-4 py-2">Conhecer curso</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8Ar7_WTpoyQvFFNW-p68oG2h5vA59fXZzNJ_JW_odTQDAOQ/viewform" target="_blank" class="btn btn-gold px-4 py-2">Processo seletivo</a>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center">
-                    <div class="bg-white rounded-4 p-4 shadow-lg" style="background: rgba(255,255,240,0.95);">
-                        <i class="fas fa-stethoscope fa-3x" style="color:#1a4b6e;"></i>
-                        <h4 class="fw-bold mt-2 text-dark">Certificações intermediárias</h4>
-                        <p class="text-muted mb-1">Ao final do Módulo II: qualificação de <strong>Auxiliar de Enfermagem</strong>.</p>
-                        <p class="text-muted">Ao final do Módulo III: diploma de <strong>Técnico em Enfermagem</strong>.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8Ar7_WTpoyQvFFNW-p68oG2h5vA59fXZzNJ_JW_odTQDAOQ/viewform" target="_blank" class="btn btn-dark w-100 rounded-pill"><i class="fas fa-pencil-alt"></i> Quero me inscrever</a>
+                <div class="col-lg-5">
+                    <div class="card card-stat p-4 text-center">
+                        <i class="fas fa-stethoscope fa-3x mb-2" style="color:#0b2b3b"></i>
+                        <h3>Certificações intermediárias</h3>
+                        <p class="mb-2 text-muted">Módulo II: qualificação de Auxiliar de Enfermagem</p>
+                        <hr>
+                        <div><strong>Módulo III:</strong> diploma de Técnico em Enfermagem</div>
+                        <div><strong>Carga horária total:</strong> 1.840h</div>
+                        <div><strong>Modalidade:</strong> Híbrido</div>
                     </div>
                 </div>
             </div>
@@ -1431,206 +1386,220 @@
     </section>
 
     <!-- SOBRE O CURSO -->
-    <div class="container py-5" id="sobre">
-        <div class="row g-5">
-            <div class="col-lg-7">
-                <span class="info-badge px-3 py-1 d-inline-block mb-3"><i class="far fa-heart"></i> Curso Técnico de Enfermagem</span>
-                <h2 class="section-title">Formação com excelência técnica e humanidade</h2>
-                <p>O curso Técnico em Enfermagem da Faculdade Sofia prepara você para atuar como profissional essencial na linha de frente da saúde, integrando conhecimento técnico, científico e competências socioemocionais. Com duração de 2 anos e meio (30 meses) e modalidade híbrida, a grade é organizada em 3 módulos, com conteúdo com mais atividades práticas do que teóricas.</p>
-                <p>O currículo foi elaborado a partir das necessidades reais do mercado de trabalho da região. Ao final, você estará apto a realizar cuidados de enfermagem, administrar medicamentos, prestar primeiros socorros e atuar em diferentes níveis de atenção à saúde.</p>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <ul class="list-unstyled list-check">
-                            <li><i class="fas fa-check-circle"></i> Carga horária total: 1.840h (1.240h teórico-práticas + 600h de estágio)</li>
-                            <li><i class="fas fa-check-circle"></i> Frequência mínima: 75% nos módulos teórico-práticos e 100% no Estágio Supervisionado</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="list-unstyled list-check">
-                            <li><i class="fas fa-check-circle"></i> Registro Sistec (MEC) e Diretoria de Ensino Campinas Leste</li>
-                            <li><i class="fas fa-check-circle"></i> Registro profissional no COREN após a conclusão</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="grade-bg">
-                    <h4 class="fw-bold"><i class="fas fa-chalkboard-user me-2"></i> Modalidade</h4>
-                    <p>Curso híbrido, com carga teórico-prática presencial e uma parte da carga horária em EaD, distribuída ao longo dos 3 módulos.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- COORDENAÇÃO -->
-    <div class="container py-4" id="coordenacao">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card-detalhe card p-4 d-flex flex-row align-items-center gap-4">
-                    <i class="fas fa-user-tie fa-3x" style="color:#1a4b6e;"></i>
-                    <div>
-                        <span class="text-uppercase text-muted small fw-semibold">Coordenação do curso</span>
-                        <h4 class="fw-bold mb-1">Karina Diniz Tavares Medina</h4>
-                        <p class="mb-0 text-muted">Bacharel em Enfermagem pela PUC-Campinas (2013), especialista em Enfermagem em Saúde Mental e mestranda em Saúde Coletiva. Atuou em CAPS Infantojuvenil (2014–2016) e CAPS Adulto (2020–2022).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MATRIZ CURRICULAR -->
-    <div class="container py-4" id="estrutura">
-        <div class="grade-bg" id="grade">
-            <h2 class="section-title mb-4">Matriz curricular 2026</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h5><i class="fas fa-book me-2"></i> Módulo I <span class="text-muted small">— 500h</span></h5>
-                    <p class="text-muted small">160h teóricas + 80h práticas + 60h EaD + 200h estágio</p>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent">• Assistência de Enfermagem nas Patologias Cardiovasculares, Respiratórias e Endócrinas</li>
-                        <li class="list-group-item bg-transparent">• Assistência de Enfermagem nas Patologias Gastrointestinais, Urinárias e Neurológicas</li>
-                        <li class="list-group-item bg-transparent">• Enfermagem na Saúde da Mulher e do Homem</li>
-                        <li class="list-group-item bg-transparent">• Enfermagem na Saúde da Criança e do Adolescente</li>
-                        <li class="list-group-item bg-transparent">• Estágio Supervisionado (200h)</li>
-                    </ul>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <h5><i class="fas fa-book me-2"></i> Módulo II <span class="text-muted small">— 650h</span></h5>
-                    <p class="text-muted small">240h teóricas + 120h práticas + 90h EaD + 200h estágio · ao final, qualificação de Auxiliar de Enfermagem</p>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent">• Saúde Pública · Programas de Atenção à Saúde</li>
-                        <li class="list-group-item bg-transparent">• Atenção Domiciliar Infanto-Juvenil</li>
-                        <li class="list-group-item bg-transparent">• Atenção Domiciliar do Adulto e do Idoso</li>
-                        <li class="list-group-item bg-transparent">• Assistência de Enfermagem em Clínica Cirúrgica</li>
-                        <li class="list-group-item bg-transparent">• Central de Material Estéril</li>
-                        <li class="list-group-item bg-transparent">• Estágio Supervisionado (200h)</li>
-                    </ul>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <h5><i class="fas fa-book me-2"></i> Módulo III <span class="text-muted small">— 690h</span></h5>
-                    <p class="text-muted small">240h teóricas + 120h práticas + 90h EaD + 40h projeto integrador + 200h estágio · ao final, diploma de Técnico em Enfermagem</p>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent">• Suporte Básico e Avançado de Vida Adulto</li>
-                        <li class="list-group-item bg-transparent">• Suporte Básico e Avançado de Vida Neonatal e Pediátrico</li>
-                        <li class="list-group-item bg-transparent">• Processos de Qualidade e Segurança do Paciente</li>
-                        <li class="list-group-item bg-transparent">• Competências Digitais</li>
-                        <li class="list-group-item bg-transparent">• Projeto Integrador (40h) + Estágio Profissional Supervisionado (200h)</li>
-                    </ul>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <h5><i class="fas fa-flask"></i> Carga horária total</h5>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent"><i class="fas fa-hospital-user text-primary"></i> 1.840h no total do curso</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-stethoscope"></i> 600h de estágio supervisionado (200h por módulo)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- METODOLOGIA E DIFERENCIAIS -->
-    <div class="container py-5" id="diferenciais">
-        <div class="text-center mb-5">
-            <h2 class="section-title" style="color:#0b2b3b;">Metodologia e diferenciais</h2>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="card-detalhe card p-4">
-                    <div class="icon-circle"><i class="fas fa-hands-helping"></i></div>
-                    <h5 class="fw-bold">Mais prática do que teoria</h5>
-                    <p class="text-muted">Currículo elaborado a partir das necessidades reais do mercado de trabalho da região, com estágio em instituições parceiras reais.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-detalhe card p-4">
-                    <div class="icon-circle"><i class="fas fa-microscope"></i></div>
-                    <h5 class="fw-bold">Simulação realística</h5>
-                    <p class="text-muted">Laboratórios de simulação realística e treinamento em simuladores e phantoms, reproduzindo situações reais de trabalho.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-detalhe card p-4">
-                    <div class="icon-circle"><i class="fas fa-chalkboard-user"></i></div>
-                    <h5 class="fw-bold">Corpo docente de mercado</h5>
-                    <p class="text-muted">Professores com experiência de mercado, promovendo discussão de casos reais em sala.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-detalhe card p-4">
-                    <div class="icon-circle"><i class="fas fa-laptop"></i></div>
-                    <h5 class="fw-bold">AVA e biblioteca</h5>
-                    <p class="text-muted">Ambiente Virtual de Aprendizagem com vídeos e seminários, Laboratório de Informática e biblioteca com acervo físico.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MERCADO DE TRABALHO -->
-    <div class="container py-5" id="mercado">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h2 class="section-title">Mercado de trabalho</h2>
-                <p>O Técnico em Enfermagem atua sob supervisão em diferentes níveis de atenção à saúde, com registro profissional no COREN após a conclusão do curso.</p>
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <div class="p-3 border rounded-3 mb-2 text-center">
-                            <span class="valor-destaque">R$ 2.800 – R$ 5.500</span>
-                            <p class="mb-0">faixa salarial em 2026, variando por região, segmento e experiência</p>
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <span class="text-uppercase text-muted small fw-semibold">Sobre o programa</span>
+                    <h2 class="section-title">Formação com excelência técnica e humanidade</h2>
+                    <p>O curso Técnico em Enfermagem da Faculdade Sofia prepara você para atuar como profissional essencial na linha de frente da saúde, integrando conhecimento técnico, científico e competências socioemocionais. A grade é organizada em 3 módulos, com conteúdo com mais atividades práticas do que teóricas.</p>
+                    <p>O currículo foi elaborado a partir das necessidades reais do mercado de trabalho da região. Ao final, você estará apto a realizar cuidados de enfermagem, administrar medicamentos, prestar primeiros socorros e atuar em diferentes níveis de atenção à saúde.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <ul class="list-check">
+                                <li>Carga horária total: 1.840h (1.240h teórico-práticas + 600h de estágio)</li>
+                                <li>Frequência mínima: 75% nos módulos teórico-práticos e 100% no Estágio Supervisionado</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-check">
+                                <li>Registro Sistec (MEC) e Diretoria de Ensino Campinas Leste</li>
+                                <li>Registro profissional no COREN após a conclusão</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <ul class="list-check mt-3">
-                    <li><i class="fas fa-building"></i> Hospitais, clínicas, UBS, home care</li>
-                    <li><i class="fas fa-truck-medical"></i> Serviços de urgência e emergência</li>
-                    <li><i class="fas fa-chart-simple"></i> Concursos públicos e rede privada</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 mt-4 mt-lg-0">
-                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-                    <div class="bg-dark text-white p-4" style="background: #1a4b6e !important;">
-                        <h5><i class="fas fa-stethoscope me-2"></i> Áreas de atuação</h5>
-                        <p class="mb-0">Assistência ao paciente adulto, neonatal e pediátrico, atenção domiciliar, clínica cirúrgica e atenção à saúde coletiva, entre outras áreas cobertas pela matriz curricular do curso.</p>
+                <div class="col-lg-5">
+                    <div class="bg-soft-accent p-4 rounded-4">
+                        <h4 class="fw-bold mb-3"><i class="fas fa-chalkboard-user"></i> Modalidade</h4>
+                        <p>Curso híbrido, com carga teórico-prática presencial e uma parte da carga horária em EaD, distribuída ao longo dos 3 módulos.</p>
+                        <hr>
+                        <small><i class="fas fa-check-circle text-success"></i> Currículo elaborado a partir das necessidades reais do mercado de trabalho da região.</small>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- COORDENAÇÃO -->
+    <section id="coordenacao" class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-stat p-4 d-flex flex-row align-items-center gap-4">
+                        <i class="fas fa-user-tie fa-3x" style="color:#0b2b3b;"></i>
+                        <div>
+                            <span class="text-uppercase text-muted small fw-semibold">Coordenação do curso</span>
+                            <h4 class="fw-bold mb-1">Karina Diniz Tavares Medina</h4>
+                            <p class="mb-0">Bacharel em Enfermagem pela PUC-Campinas (2013), especialista em Enfermagem em Saúde Mental e mestranda em Saúde Coletiva. Atuou em CAPS Infantojuvenil (2014–2016) e CAPS Adulto (2020–2022).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MATRIZ CURRICULAR -->
+    <section id="estrutura" class="py-5 bg-soft-accent">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Matriz curricular 2026</h2>
+                <p>3 módulos, 1.840h no total, com certificações intermediárias ao longo do curso</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pilar-card">
+                        <i class="fas fa-book"></i>
+                        <h4>Módulo I <span class="text-muted small d-block">500h</span></h4>
+                        <p>Assistência de Enfermagem nas Patologias Cardiovasculares, Respiratórias, Endócrinas, Gastrointestinais, Urinárias e Neurológicas; Saúde da Mulher, do Homem, da Criança e do Adolescente; Estágio Supervisionado (200h).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pilar-card">
+                        <i class="fas fa-book-medical"></i>
+                        <h4>Módulo II <span class="text-muted small d-block">650h</span></h4>
+                        <p>Saúde Pública; Atenção Domiciliar Infanto-Juvenil, do Adulto e do Idoso; Clínica Cirúrgica; Central de Material Estéril; Estágio Supervisionado (200h). <strong>Ao final: qualificação de Auxiliar de Enfermagem.</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pilar-card">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Módulo III <span class="text-muted small d-block">690h</span></h4>
+                        <p>Suporte Básico e Avançado de Vida Adulto, Neonatal e Pediátrico; Qualidade e Segurança do Paciente; Competências Digitais; Projeto Integrador + Estágio Supervisionado (200h). <strong>Ao final: diploma de Técnico em Enfermagem.</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="alert alert-light border-0 shadow-sm rounded-4">
+                        <i class="fas fa-flask text-warning"></i> <strong>Carga horária total:</strong> 1.840h, sendo 600h de estágio supervisionado (200h por módulo).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOLOGIA E DIFERENCIAIS -->
+    <section id="diferenciais" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Metodologia e diferenciais</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="pilar-card text-center">
+                        <i class="fas fa-hands-helping"></i>
+                        <h5 class="fw-bold">Mais prática do que teoria</h5>
+                        <p class="text-muted">Currículo elaborado a partir das necessidades reais do mercado de trabalho, com estágio em instituições parceiras reais.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="pilar-card text-center">
+                        <i class="fas fa-microscope"></i>
+                        <h5 class="fw-bold">Simulação realística</h5>
+                        <p class="text-muted">Laboratórios de simulação realística e treinamento em simuladores e phantoms, reproduzindo situações reais de trabalho.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="pilar-card text-center">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h5 class="fw-bold">Corpo docente de mercado</h5>
+                        <p class="text-muted">Professores com experiência de mercado, promovendo discussão de casos reais em sala.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="pilar-card text-center">
+                        <i class="fas fa-laptop"></i>
+                        <h5 class="fw-bold">AVA e biblioteca</h5>
+                        <p class="text-muted">Ambiente Virtual de Aprendizagem com vídeos e seminários, Laboratório de Informática e biblioteca com acervo físico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCADO DE TRABALHO -->
+    <section id="mercado" class="py-5 bg-soft-accent">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Mercado de trabalho</h2>
+                <p>O Técnico em Enfermagem atua sob supervisão em diferentes níveis de atenção à saúde, com registro profissional no COREN após a conclusão.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-stat p-4 text-center h-100">
+                        <i class="fas fa-building fa-2x mb-3"></i>
+                        <h5>Rede de atendimento</h5>
+                        <p class="mb-0">Hospitais, clínicas, UBS, home care</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-stat p-4 text-center h-100">
+                        <i class="fas fa-truck-medical fa-2x mb-3"></i>
+                        <h5>Urgência e emergência</h5>
+                        <p class="mb-0">Serviços de urgência e emergência</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-stat p-4 text-center h-100">
+                        <i class="fas fa-chart-simple fa-2x mb-3"></i>
+                        <h5>Concursos e rede privada</h5>
+                        <p class="mb-0">Concursos públicos e rede privada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow p-4 rounded-4">
+                        <h5><i class="fas fa-stethoscope"></i> Faixa salarial e áreas de atuação</h5>
+                        <p class="mb-0"><span class="valor-destaque">R$ 2.800 – R$ 5.500</span> faixa salarial em 2026, variando por região, segmento e experiência. Áreas cobertas pela matriz curricular: assistência ao paciente adulto, neonatal e pediátrico, atenção domiciliar, clínica cirúrgica e atenção à saúde coletiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- INFRAESTRUTURA -->
-    <div class="container py-5" id="infra">
-        <div class="row g-5 align-items-center">
-            <div class="col-md-6">
-                <h2 class="section-title">Infraestrutura</h2>
-                <ul class="list-check">
-                    <li>Laboratórios de simulação realística e técnicas especiais</li>
-                    <li>Laboratório de Informática com acesso à internet</li>
-                    <li>Biblioteca com acervo físico e área de estudo</li>
-                    <li>Ambiente Virtual de Aprendizagem (AVA), vídeos e seminários</li>
-                    <li>Estágio supervisionado em instituições parceiras reais</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <div class="bg-dark text-white p-4 rounded-4 text-center" style="background: linear-gradient(145deg, #1a4b6e, #0b2b3b);">
-                    <i class="fas fa-building fa-4x mb-3 text-warning"></i>
-                    <h4>Localização</h4>
-                    <p class="mb-0">Rua Barreto Leme, 1552 - Centro, Campinas/SP.</p>
+    <section id="infra" class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title">Infraestrutura</h2>
+                    <ul class="list-check">
+                        <li>Laboratórios de simulação realística e técnicas especiais</li>
+                        <li>Laboratório de Informática com acesso à internet</li>
+                        <li>Biblioteca com acervo físico e área de estudo</li>
+                        <li>Ambiente Virtual de Aprendizagem (AVA), vídeos e seminários</li>
+                        <li>Estágio supervisionado em instituições parceiras reais</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-dark text-white p-4 rounded-4 text-center" style="background: linear-gradient(145deg, #1a4b6e, #0b2b3b);">
+                        <i class="fas fa-building fa-4x mb-3 text-warning"></i>
+                        <h4>Localização Privilegiada</h4>
+                        <p class="mb-0">Rua Barreto Leme, 1552 - Centro, Campinas/SP.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- CERTIFICAÇÃO E PROCESSO SELETIVO -->
-    <div class="container py-5" id="inscricao">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title">Certificação e processo seletivo</h2>
-                <p>Curso registrado no Sistec (Sistema Nacional de Informações da Educação Profissional e Tecnológica) e na Diretoria de Ensino Campinas Leste, com registro profissional no COREN após a conclusão. Ingresso por processo seletivo simplificado.</p>
-                <div class="mt-3 p-3 rounded-3 d-inline-block text-start" style="background: #eef4fc;">
-                    <i class="fas fa-graduation-cap"></i> <strong>Documentação necessária:</strong> RG, CPF, Histórico Escolar do Ensino Médio (ou certificado de conclusão).
+    <section id="inscricao" class="py-5 bg-soft-accent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <h2 class="section-title">Certificação e processo seletivo</h2>
+                    <p>Curso registrado no Sistec (Sistema Nacional de Informações da Educação Profissional e Tecnológica) e na Diretoria de Ensino Campinas Leste, com registro profissional no COREN após a conclusão. Ingresso por processo seletivo simplificado.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                        <span class="badge bg-dark p-3"><i class="fas fa-id-card"></i> RG e CPF</span>
+                        <span class="badge bg-dark p-3"><i class="fas fa-file-lines"></i> Histórico do Ensino Médio</span>
+                        <span class="badge bg-dark p-3"><i class="fas fa-notes-medical"></i> Registro COREN ao concluir</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 <!-- Vestibular Social CTA -->
 <section class="py-5" style="background-color:#0a2b3e;">
