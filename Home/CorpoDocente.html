@@ -4,7 +4,7 @@
     <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nossa Hist&#xF3;ria</title>
+    <title>Corpo Docente e Coordena&#xE7;&#xE3;o</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
 
     <!-- jQuery -->
@@ -1235,268 +1235,386 @@
         })();
     </script>
 
-        <main b-lj3f8y2p6z role="main" class="pb-3">
-            
+                <main b-lj3f8y2p6z role="main" class="pb-3">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
+    .docentes-page * {
         box-sizing: border-box;
     }
 
-    body {
+    .docentes-page {
         font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        background-color: #f8fafc;
         color: #1e293b;
-        line-height: 1.6;
     }
 
-    .container-custom {
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+    .docentes-hero {
+        background: linear-gradient(105deg, #eef3f9 0%, #f9f6ea 100%);
+        padding: 90px 0 55px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    .hero-history {
-        background: linear-gradient(145deg, #f1f5f9 0%, #ffffff 100%);
-        border-bottom: 1px solid rgba(0, 40, 80, 0.05);
-        padding-top: 3rem;
-        padding-bottom: 1.5rem;
-    }
-
-        .hero-history h1 {
-            font-weight: 500;
-            font-size: 2.8rem;
-            letter-spacing: -0.02em;
-            color: #0f2b45;
-            border-left: 8px solid #9b4d96;
-            padding-left: 1.8rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-history .lead {
-            font-size: 1.3rem;
-            color: #2c3e50;
-            font-weight: 350;
-            max-width: 900px;
-        }
-
-    .timeline-badge {
-        background-color: #ffffffd9;
-        backdrop-filter: blur(4px);
-        border-radius: 40px;
-        padding: 0.5rem 1.5rem;
-        box-shadow: 0 8px 20px -10px rgba(100, 50, 100, 0.15);
-        display: inline-block;
-        margin-bottom: 2rem;
-        border: 1px solid rgba(155, 77, 150, 0.2);
-        color: #4a2d4e;
+    .docentes-hero .badge-sofia {
+        background-color: #003a6d;
+        color: #f7f3e0;
         font-weight: 500;
-    }
-
-    .history-section {
-        padding-top: 2.2rem;
-        padding-bottom: 3.5rem;
-    }
-
-    .history-card {
-        background: #ffffff;
-        border-radius: 28px;
-        padding: 2.5rem 2.8rem;
-        box-shadow: 0 20px 35px -8px rgba(0, 20, 30, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        border: 1px solid #ffffff50;
-        backdrop-filter: blur(2px);
-        margin-bottom: 2rem;
-    }
-
-        .history-card:hover {
-            box-shadow: 0 28px 40px -12px rgba(80, 40, 80, 0.18);
-            transform: scale(1.003);
-        }
-
-        .history-card p {
-            font-size: 1.18rem;
-            margin-bottom: 1.6rem;
-            color: #1e2c3c;
-        }
-
-    .insignia {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-    }
-
-        .insignia span {
-            background-color: #ecf5fa;
-            padding: 0.5rem 1.2rem;
-            border-radius: 60px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #1f3a57;
-            border: 1px solid #b9d3e8;
-        }
-
-    .big-quote {
-        font-size: 4rem;
-        line-height: 1rem;
-        font-family: serif;
-        color: #aa80b0;
-        opacity: 0.35;
-        margin-right: 0.5rem;
-        user-select: none;
-    }
-
-    .dropcap::first-letter {
-        font-size: 3.8rem;
-        float: left;
-        font-weight: 400;
-        line-height: 0.8;
-        margin-right: 0.75rem;
-        color: #7b4a76;
-        font-family: 'Times New Roman', serif;
-    }
-
-    /* IMAGENS */
-    .history-media {
-        margin: 2rem 0 1.5rem 0;
-        border-radius: 28px;
-        overflow: hidden;
-        box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.2);
-    }
-
-        .history-media img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-            .history-media img:hover {
-                transform: scale(1.02);
-            }
-
-    .image-caption {
-        text-align: center;
+        padding: 8px 18px;
+        border-radius: 40px;
         font-size: 0.85rem;
-        color: #4a627a;
-        margin-top: 0.5rem;
-        font-style: italic;
+        display: inline-block;
+        margin-bottom: 1rem;
     }
 
-    .gallery {
+    .docentes-hero h1 {
+        font-weight: 800;
+        font-size: 2.4rem;
+        color: #0f2b45;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .docentes-hero p.lead {
+        font-size: 1.1rem;
+        color: #33424f;
+        max-width: 720px;
+    }
+
+    .docentes-section {
+        padding: 60px 0 80px;
+    }
+
+    .docente-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .docente-card {
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+        padding: 24px;
+        cursor: pointer;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+        .docente-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+        }
+
+        .docente-card:focus-visible {
+            outline: 3px solid #C5A059;
+            outline-offset: 4px;
+        }
+
+    .docente-card-header {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .docente-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        background: #eef3f9;
+    }
+
+    .docente-avatar-placeholder {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        margin: 2rem 0;
+        color: #0f2b45;
+        opacity: 0.32;
+        font-size: 1.5rem;
     }
 
-    .gallery-item {
-        flex: 1 1 250px;
-        background: white;
-        border-radius: 24px;
+    .docente-card-header-text {
+        min-width: 0;
+    }
+
+    .docente-nome {
+        font-size: 1.02rem;
+        font-weight: 700;
+        margin: 0;
+        color: #0f2b45;
+        line-height: 1.3;
+    }
+
+    .docente-area {
+        font-size: 0.85rem;
+        color: #5b6b7d;
+        margin: 3px 0 0;
+    }
+
+    .docente-toggle-icon {
+        margin-left: auto;
+        flex-shrink: 0;
+        color: #C5A059;
+        transition: transform 0.25s ease;
+    }
+
+    .docente-card.open .docente-toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    .docente-details {
+        max-height: 0;
         overflow: hidden;
-        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
+        transition: max-height 0.3s ease;
     }
 
-        .gallery-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-item p {
-            padding: 0.8rem;
-            text-align: center;
-            font-weight: 500;
-            margin: 0;
-            font-size: 0.9rem;
-            background: #fff;
-        }
-
-    .commemorative-seal {
-        text-align: center;
-        margin: 2rem 0 1rem;
+    .docente-card.open .docente-details {
+        max-height: 500px;
     }
 
-        .commemorative-seal img {
-            max-width: 140px;
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border: 3px solid #9b4d96;
-            padding: 0.3rem;
-            background: white;
-        }
-
-    
-
-    .history-card {
-        padding: 1.8rem;
+    .docente-details-inner {
+        padding-top: 16px;
+        margin-top: 16px;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        font-size: 0.88rem;
+        color: #33424f;
+        position: relative;
     }
 
-    .hero-history h1 {
-        font-size: 2rem;
+    .docente-details-inner p {
+        margin: 0 0 8px;
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .docente-details-inner p i {
+        color: #003a6d;
+        width: 16px;
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+
+    .docente-bio {
+        margin-top: 10px !important;
+        color: #5b6b7d;
+        line-height: 1.5;
+    }
+
+    .docente-bio i {
+        display: none;
+    }
+
+    .docente-close {
+        position: absolute;
+        top: -4px;
+        right: 0;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        line-height: 1;
+        color: #9aa4ad;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+
+        .docente-close:hover {
+            color: #0f2b45;
+        }
+
+    @media (max-width: 576px) {
+        .docente-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
-<br />
-<br />
-<br />
-<div class="hero-history">
-    <div class="container-custom">
-        <div class="insignia">
-            <span>🏥 Instituído em 2006</span>
-            <span>🩺 Enfermagem e Farmácia</span>
-            <span>📍 Campinas/SP</span>
+
+<div class="docentes-page">
+    <section class="docentes-hero">
+        <div class="container">
+            <span class="badge-sofia"><i class="fas fa-user-graduate"></i> Corpo Docente</span>
+            <h1>Corpo Docente e Coordenação</h1>
+            <p class="lead">Conheça os coordenadores e professores responsáveis pelos cursos e serviços da Faculdade Sofia. Clique em um card para ver contato e mini currículo.</p>
         </div>
-        <h1>Nossa história</h1>
-        <p class="lead">A trajetória do Instituto de Saúde Integrada (ISI) até se tornar a Faculdade Sofia — a Faculdade do Trabalhador da Saúde.</p>
-    </div>
+    </section>
+
+    <section class="docentes-section">
+        <div class="container">
+            <div id="docentesGrid" class="docente-grid"></div>
+        </div>
+    </section>
 </div>
 
-<section class="history-section">
-    <div class="container-custom">
+<script>
+(function () {
+    // TODO: substituir por dados reais (telefone, e-mail, plantão e mini currículo de cada docente/coordenador).
+    // Nome, foto e mini currículo já preenchidos com dados reais quando encontrados no site (ver Cursos/*.html);
+    // os demais campos (telefone, e-mail, plantão) são placeholder para todos, inclusive quem já tem foto/bio reais.
+    var docentes = [
+        {
+            id: 'karina',
+            nome: 'Karina Diniz Tavares Medina',
+            area: 'Coordenação — Técnico em Enfermagem',
+            foto: '/pagina_inicial/img/coordenadores/karina-diniz-tavares-medina.jpg',
+            telefone: '(19) 0000-0000',
+            email: 'karina.medina@faculdadesofia.edu.br',
+            plantao: 'Segunda e Quarta, 14h às 18h',
+            bio: 'Bacharel em Enfermagem pela PUC-Campinas (2013), especialista em Enfermagem em Saúde Mental e mestranda em Saúde Coletiva. Atuou em CAPS Infantojuvenil (2014–2016) e CAPS Adulto (2020–2022).'
+        },
+        {
+            id: 'cristina',
+            nome: 'Cristina Tanikawa',
+            area: 'Coordenação — Técnico em Farmácia',
+            foto: '/pagina_inicial/img/coordenadores/cristina-tanikawa.jpg',
+            telefone: '(19) 0000-0000',
+            email: 'cristina.tanikawa@faculdadesofia.edu.br',
+            plantao: 'Terça e Quinta, 14h às 18h',
+            bio: 'Farmácia e Bioquímica (UNIP), especialização em Fitoterapia. Trajetória em UNICAMP, USP, Hospital Sírio-Libanês e Fundação André Tosello. Atuação no CRF-SP e 18 anos de experiência na docência e coordenação do curso técnico em Farmácia.'
+        },
+        {
+            id: 'paulo',
+            nome: 'Dr. Paulo Fernando Signorelli',
+            area: 'Oftalmologia',
+            foto: '/pagina_inicial/img/home/img/0012.png',
+            telefone: '(19) 0000-0000',
+            email: 'paulo.signorelli@faculdadesofia.edu.br',
+            plantao: 'A confirmar',
+            bio: 'Médico oftalmologista nascido em Campinas, com mais de 30 anos de dedicação à saúde humanizada. Idealizador do SIHUSA, movimento de aproximação entre pacientes sem convênio e médicos com verdadeiro perfil de ajuda.'
+        },
+        {
+            id: 'rezende',
+            nome: 'Rezende',
+            area: 'Otorrinolaringologia',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'rezende@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        },
+        {
+            id: 'gabriel',
+            nome: 'Gabriel',
+            area: 'Otorrinolaringologia',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'gabriel@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        },
+        {
+            id: 'beatriz',
+            nome: 'Dra. Beatriz Vargas',
+            area: 'Coordenação de Psicologia — Bacharelado e Pós-Graduação',
+            foto: '/pagina_inicial/img/coordenadores/beatriz-vargas.jpg',
+            telefone: '(19) 0000-0000',
+            email: 'beatriz.vargas@faculdadesofia.edu.br',
+            plantao: 'Segunda e Quarta, 14h às 18h',
+            bio: 'Psicóloga clínica e supervisora, especialista em Terapia Cognitivo-Comportamental e EMDR. Doutora em Psicologia Clínica pela USP. Atende há 18 anos em consultório particular. Autora do livro "Emoções em Diálogo".'
+        },
+        {
+            id: 'psiquiatria',
+            nome: 'Nome a confirmar', // TODO: substituir por dados reais
+            area: 'Psiquiatria',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        },
+        {
+            id: 'clinicogeral',
+            nome: 'Nome a confirmar', // TODO: substituir por dados reais
+            area: 'Clínico Geral',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        }
+    ];
 
-        <div class="history-card" style="padding: 0.8rem; overflow: hidden;">
-            <img src="/pagina_inicial/img/home/img/0001.jpg" alt="Prédio histórico da Faculdade Sofia em Campinas/SP" style="width: 100%; border-radius: 20px; display: block;">
-        </div>
+    var grid = document.getElementById('docentesGrid');
 
-        <div class="history-card">
-            <p><strong>Origem: o Instituto de Saúde Integrada (ISI).</strong> O Instituto de Saúde Integrada – ISI foi instituído em 2006 pelo Sindicato dos Empregados em Estabelecimentos de Serviços de Saúde de Campinas e Região (SINSAÚDE), com a missão de promover educação, cultura, pesquisa, ação social e formação profissional, especialmente voltadas aos trabalhadores da área da saúde e à comunidade em geral.</p>
-            <p>Desde sua criação, o ISI tem como propósito contribuir para a qualificação e o desenvolvimento de profissionais da saúde, por meio da oferta de cursos de formação inicial, qualificação profissional e Educação Profissional Técnica de Nível Médio. Ao longo de sua trajetória, consolidou-se como referência regional na formação de profissionais nas áreas de Enfermagem e Farmácia e demais segmentos relacionados ao setor da saúde.</p>
-        </div>
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
 
-        <div class="history-card">
-            <p><strong>Missão e atuação.</strong> Sua atuação é pautada na formação humanizada, ética e de excelência, fundamentada nos princípios da responsabilidade social, compromisso com a educação e atendimento às demandas do mundo do trabalho. A instituição está localizada em Campinas, em espaço de relevante importância histórica para a área da saúde e educação, integrando um ambiente tradicional de formação de profissionais.</p>
-        </div>
+    docentes.forEach(function (d) {
+        var card = document.createElement('div');
+        card.className = 'docente-card';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-expanded', 'false');
+        card.setAttribute('aria-controls', 'docente-details-' + d.id);
+        card.setAttribute('data-id', d.id);
 
-        <div class="history-card">
-            <p><strong>2024 — uma nova etapa institucional: ISI-SOFIA.</strong> Em 2024, o Instituto passou por um processo de reorganização institucional, com a alteração da entidade mantenedora, passando a ser mantido pela Sofia Faculdade de Saúde Ltda. A unidade educacional passou a adotar a denominação ISI-SOFIA – A Faculdade do Trabalhador da Saúde, consolidando uma nova etapa institucional.</p>
-            <p>A transição para a mantença da Sofia Faculdade de Saúde representa a continuidade da trajetória construída pelo ISI, preservando sua identidade, seus valores e seu compromisso histórico com a formação de profissionais da área da saúde, ao mesmo tempo em que amplia suas possibilidades de atuação educacional, fortalecendo a oferta de cursos técnicos e de graduação.</p>
-        </div>
+        var avatarHtml = d.foto
+            ? '<img class="docente-avatar" src="' + d.foto + '" alt="' + escapeHtml(d.nome) + '">'
+            : '<div class="docente-avatar docente-avatar-placeholder"><i class="fas fa-user"></i></div>';
 
-        <div class="history-card">
-            <p><strong>Atualmente.</strong> O ISI mantém o compromisso com uma educação transformadora, baseada na integração entre ensino, pesquisa, extensão, responsabilidade social e educação para a paz, promovendo a formação de profissionais éticos, humanizados e comprometidos com a construção de uma sociedade mais justa, contribuindo para o desenvolvimento da saúde e da educação na região de Campinas.</p>
-        </div>
+        card.innerHTML =
+            '<div class="docente-card-header">' +
+                avatarHtml +
+                '<div class="docente-card-header-text">' +
+                    '<h3 class="docente-nome">' + escapeHtml(d.nome) + '</h3>' +
+                    '<p class="docente-area">' + escapeHtml(d.area) + '</p>' +
+                '</div>' +
+                '<i class="fas fa-chevron-down docente-toggle-icon" aria-hidden="true"></i>' +
+            '</div>' +
+            '<div class="docente-details" id="docente-details-' + d.id + '">' +
+                '<div class="docente-details-inner">' +
+                    '<button type="button" class="docente-close" aria-label="Fechar">&times;</button>' +
+                    '<p><i class="fab fa-whatsapp"></i> <span><strong>WhatsApp:</strong> ' + escapeHtml(d.telefone) + '</span></p>' +
+                    '<p><i class="fas fa-envelope"></i> <span><strong>E-mail:</strong> ' + escapeHtml(d.email) + '</span></p>' +
+                    '<p><i class="fas fa-clock"></i> <span><strong>Plantão:</strong> ' + escapeHtml(d.plantao) + '</span></p>' +
+                    '<p class="docente-bio"><i class="fas fa-file-lines"></i> <span>' + escapeHtml(d.bio) + '</span></p>' +
+                '</div>' +
+            '</div>';
 
-    </div>
-</section>
+        grid.appendChild(card);
+    });
+
+    function toggleCard(card) {
+        var isOpen = card.classList.contains('open');
+        if (isOpen) {
+            card.classList.remove('open');
+            card.setAttribute('aria-expanded', 'false');
+        } else {
+            card.classList.add('open');
+            card.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    grid.addEventListener('click', function (e) {
+        var closeBtn = e.target.closest('.docente-close');
+        var card = e.target.closest('.docente-card');
+        if (!card) return;
+
+        if (closeBtn) {
+            card.classList.remove('open');
+            card.setAttribute('aria-expanded', 'false');
+            return;
+        }
+
+        toggleCard(card);
+    });
+
+    grid.addEventListener('keydown', function (e) {
+        var card = e.target.closest('.docente-card');
+        if (!card) return;
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            toggleCard(card);
+        }
+    });
+})();
+</script>
+
         </main>
+
     </div>
 
     <footer b-lj3f8y2p6z id="contact">

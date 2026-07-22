@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psicologia</title>
+    <title>Corpo Docente e Coordena&#xE7;&#xE3;o</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2" />
 
     <!-- jQuery -->
@@ -1053,8 +1053,6 @@
     .nav-wrapper {
         display: none;
     }
-
-    }
 </style>
 
 <script>
@@ -1166,7 +1164,9 @@
         });
     })();
 </script>
-    </header>   
+    </header>
+  
+    
     <!-- Ícones de Redes Sociais Fixos à Esquerda -->
     <div class="social-sidebar">
         <a href="https://www.facebook.com/profile.php?id=61565867338411" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Facebook">
@@ -1181,7 +1181,7 @@
         <a href="https://www.linkedin.com/company/53151369/admin/dashboard/" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://api.whatsapp.com/send?phone=5519999595129" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="WhatsApp">
+        <a href="https://api.whatsapp.com/send?phone=5519999601237" target="_blank" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -1196,7 +1196,7 @@
 
     <script>
         (function() {
-            const PHONE_NUMBER = "5519999595129";
+            const PHONE_NUMBER = "5519999601237";  
             const DEFAULT_MESSAGE = "Olá, como podemos ajudar?";
             const whatsBtn = document.getElementById('whatsappButton');
             function getWhatsAppUrl() {
@@ -1235,438 +1235,386 @@
         })();
     </script>
 
-        <main b-lj3f8y2p6z role="main" class="pb-3">
-                <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+                <main b-lj3f8y2p6z role="main" class="pb-3">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+<style>
+    .docentes-page * {
+        box-sizing: border-box;
+    }
+
+    .docentes-page {
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        color: #1e293b;
+    }
+
+    .docentes-hero {
+        background: linear-gradient(105deg, #eef3f9 0%, #f9f6ea 100%);
+        padding: 90px 0 55px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .docentes-hero .badge-sofia {
+        background-color: #003a6d;
+        color: #f7f3e0;
+        font-weight: 500;
+        padding: 8px 18px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .docentes-hero h1 {
+        font-weight: 800;
+        font-size: 2.4rem;
+        color: #0f2b45;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .docentes-hero p.lead {
+        font-size: 1.1rem;
+        color: #33424f;
+        max-width: 720px;
+    }
+
+    .docentes-section {
+        padding: 60px 0 80px;
+    }
+
+    .docente-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .docente-card {
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+        padding: 24px;
+        cursor: pointer;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+        .docente-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fefef7;
-            color: #1e2a3e;
-            scroll-behavior: smooth;
+        .docente-card:focus-visible {
+            outline: 3px solid #C5A059;
+            outline-offset: 4px;
         }
 
-        .btn-gold {
-            background: #4b8b3b;
-            color: #ffffff;
-            font-weight: 700;
-            border-radius: 40px;
-            padding: 10px 28px;
-            transition: 0.2s;
-            border: none;
+    .docente-card-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .docente-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        background: #eef3f9;
+    }
+
+    .docente-avatar-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0f2b45;
+        opacity: 0.32;
+        font-size: 1.5rem;
+    }
+
+    .docente-card-header-text {
+        min-width: 0;
+    }
+
+    .docente-nome {
+        font-size: 1.02rem;
+        font-weight: 700;
+        margin: 0;
+        color: #0f2b45;
+        line-height: 1.3;
+    }
+
+    .docente-area {
+        font-size: 0.85rem;
+        color: #5b6b7d;
+        margin: 3px 0 0;
+    }
+
+    .docente-toggle-icon {
+        margin-left: auto;
+        flex-shrink: 0;
+        color: #C5A059;
+        transition: transform 0.25s ease;
+    }
+
+    .docente-card.open .docente-toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    .docente-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .docente-card.open .docente-details {
+        max-height: 500px;
+    }
+
+    .docente-details-inner {
+        padding-top: 16px;
+        margin-top: 16px;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        font-size: 0.88rem;
+        color: #33424f;
+        position: relative;
+    }
+
+    .docente-details-inner p {
+        margin: 0 0 8px;
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .docente-details-inner p i {
+        color: #003a6d;
+        width: 16px;
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+
+    .docente-bio {
+        margin-top: 10px !important;
+        color: #5b6b7d;
+        line-height: 1.5;
+    }
+
+    .docente-bio i {
+        display: none;
+    }
+
+    .docente-close {
+        position: absolute;
+        top: -4px;
+        right: 0;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        line-height: 1;
+        color: #9aa4ad;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+
+        .docente-close:hover {
+            color: #0f2b45;
         }
 
-            .btn-gold:hover {
-                background: #3a6e2d;
-                color: #fff;
-                transform: translateY(-2px);
-            }
-
-        .btn-outline-gold {
-            border: 2px solid #4b8b3b;
-            color: #4b8b3b;
-            background: transparent;
-            border-radius: 40px;
-            font-weight: 600;
+    @media (max-width: 576px) {
+        .docente-grid {
+            grid-template-columns: 1fr;
         }
+    }
+</style>
 
-            .btn-outline-gold:hover {
-                background: #4b8b3b;
-                color: white;
-            }
-
-        .hero {
-            background: linear-gradient(105deg, #eef5f0 0%, #fcf9f0 100%);
-            padding: 80px 0 60px;
-            border-bottom: 1px solid #e0e7e1;
-        }
-
-        .badge-sofia {
-            background-color: #1e2f3a;
-            color: #eaf4e8;
-            font-weight: 500;
-            padding: 8px 18px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-        }
-
-        .card-stat {
-            background: white;
-            border-radius: 28px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
-            border: none;
-            height: 100%;
-        }
-
-            .card-stat:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
-            }
-
-        .section-title {
-            font-weight: 800;
-            font-size: 2.2rem;
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-
-            .section-title:after {
-                content: '';
-                position: absolute;
-                bottom: -12px;
-                left: 0;
-                width: 70px;
-                height: 4px;
-                background: #4b8b3b;
-                border-radius: 4px;
-            }
-
-        .pilar-card {
-            background: white;
-            border-radius: 28px;
-            padding: 2rem 1.5rem;
-            transition: 0.2s;
-            height: 100%;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-        }
-
-            .pilar-card i {
-                font-size: 2.8rem;
-                color: #4b8b3b;
-                margin-bottom: 1rem;
-            }
-
-        .list-check {
-            list-style: none;
-            padding-left: 0;
-        }
-
-            .list-check li {
-                padding-left: 1.8rem;
-                position: relative;
-                margin-bottom: 0.6rem;
-            }
-
-                .list-check li:before {
-                    content: "\f00c";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
-                    position: absolute;
-                    left: 0;
-                    color: #4b8b3b;
-                }
-
-        .bg-soft-accent {
-            background-color: #eef5f0;
-        }
-
-        .tab-content {
-            background: #ffffff;
-            border-radius: 28px;
-            padding: 1.8rem;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
-            border: 1px solid #e9ecef;
-        }
-
-        .nav-tabs .nav-link {
-            border: none;
-            font-weight: 600;
-            color: #4a5b66;
-            padding: 0.8rem 1.5rem;
-            border-radius: 40px;
-            margin-right: 0.5rem;
-        }
-
-            .nav-tabs .nav-link.active {
-                background-color: #4b8b3b;
-                color: white;
-                box-shadow: 0 2px 8px rgba(75, 139, 59, 0.2);
-            }
-    </style>
-<br />
-<br />
-<br />
-    <section class="hero">
+<div class="docentes-page">
+    <section class="docentes-hero">
         <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <span class="badge-sofia mb-3 d-inline-block"><i class="fas fa-university me-1"></i> Bacharelado Presencial</span>
-                    <h1 class="display-4 fw-bold mb-3">Psicologia <br> <span style="color:#4b8b3b;">SOFIA</span></h1>
-                    <p class="lead mb-4">Curso consolidado em Campinas/SP, com ênfase em ciência, ética e compromisso social. Prepare-se para os desafios da Psicologia contemporânea com excelência acadêmica e prática supervisionada.</p>
-                    <div class="d-flex flex-wrap gap-3 mb-4">
-                        <div><i class="fas fa-clock text-success"></i> 5 anos</div>
-                        <div><i class="fas fa-hourglass-half text-success"></i> 4.760h</div>
-                        <div><i class="fas fa-chalkboard-user text-success"></i> 800h estágio + 476h extensão</div>
-                    </div>
-                    <div class="d-flex gap-3">
-                        <a href="#curriculo" class="btn btn-outline-gold px-4 py-2">Eixos formativos</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8Ar7_WTpoyQvFFNW-p68oG2h5vA59fXZzNJ_JW_odTQDAOQ/viewform" target="_blank" class="btn btn-gold px-4 py-2">Áreas de atuação</a>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card card-stat p-4 text-center">
-                        <i class="fas fa-user-graduate fa-3x mb-2" style="color:#4b8b3b"></i>
-                        <h3>Vagas 2026</h3>
-                        <p class="mb-2">120 anuais</p>
-                        <hr>
-                        <div><strong>Modalidade:</strong> Presencial</div>
-                        <div><strong>Carga horária total:</strong> 4.760h</div>
-                        <div><strong>Grau:</strong> Bacharelado</div>
-                    </div>
-                </div>
-            </div>
+            <span class="badge-sofia"><i class="fas fa-user-graduate"></i> Corpo Docente</span>
+            <h1>Corpo Docente e Coordenação</h1>
+            <p class="lead">Conheça os coordenadores e professores responsáveis pelos cursos e serviços da Faculdade Sofia. Clique em um card para ver contato e mini currículo.</p>
         </div>
     </section>
 
-    <!-- SOBRE O CURSO -->
-    <section id="sobre" class="py-5">
+    <section class="docentes-section">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <span class="text-uppercase text-muted small fw-semibold">Sobre o programa</span>
-                    <h2 class="section-title">Missão do curso</h2>
-                    <p>Formar psicólogos com competência técnica, responsabilidade ética e visão humanística, dotados de conhecimentos científicos e habilidades práticas para atuação qualificada na relação com indivíduos, grupos e comunidades, contribuindo para promoção da saúde mental e qualidade de vida da população.</p>
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <ul class="list-check">
-                                <li>Competência técnica: avaliação psicológica, diagnóstico e intervenção</li>
-                                <li>Formação científica: produção crítica e metodologia de pesquisa</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-check">
-                                <li>Responsabilidade ética: Código de Ética e direitos humanos</li>
-                                <li>Visão humanística e sensibilidade social</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="bg-soft-accent p-4 rounded-4">
-                        <h4 class="fw-bold mb-3"><i class="fas fa-map-pin"></i> Localização</h4>
-                        <p>Campinas/SP – Complexo Santa Casa de Misericórdia, ao lado do Paço Municipal.</p>
-                        <hr>
-                        <small><i class="fas fa-check-circle text-success"></i> Corpo docente qualificado, com mestres e doutores.</small>
-                    </div>
-                </div>
-            </div>
+            <div id="docentesGrid" class="docente-grid"></div>
         </div>
     </section>
+</div>
 
-    <!-- COORDENAÇÃO -->
-    <section id="coordenacao" class="py-4">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card-stat p-4 d-flex flex-row align-items-start gap-4">
-                        <img src="../pagina_inicial/img/coordenadores/beatriz-vargas.jpg" alt="Dra. Beatriz Vargas" class="rounded-circle flex-shrink-0" style="width:96px;height:96px;object-fit:cover;">
-                        <div>
-                            <span class="text-uppercase text-muted small fw-semibold">Coordenação do curso</span>
-                            <h4 class="fw-bold mb-1">Dra. Beatriz Vargas</h4>
-                            <p class="mb-2">Psicóloga clínica e supervisora, especialista em Terapia Cognitivo-Comportamental e EMDR. Doutora em Psicologia Clínica pela USP, com formação em terapia de casal pelo Instituto Familiare. Atende há 18 anos em consultório particular. Autora do livro "Emoções em Diálogo" e palestrante convidada em congressos nacionais.</p>
-                            <blockquote class="mb-0 fst-italic border-start ps-3" style="border-color:#4b8b3b !important; border-width:3px !important;">"Acredito que cada pessoa possui recursos internos poderosos; a terapia é o espaço seguro para descobri-los e usá-los a seu favor."</blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+(function () {
+    // TODO: substituir por dados reais (telefone, e-mail, plantão e mini currículo de cada docente/coordenador).
+    // Nome, foto e mini currículo já preenchidos com dados reais quando encontrados no site (ver Cursos/*.html);
+    // os demais campos (telefone, e-mail, plantão) são placeholder para todos, inclusive quem já tem foto/bio reais.
+    var docentes = [
+        {
+            id: 'karina',
+            nome: 'Karina Diniz Tavares Medina',
+            area: 'Coordenação — Técnico em Enfermagem',
+            foto: '../pagina_inicial/img/coordenadores/karina-diniz-tavares-medina.jpg',
+            telefone: '(19) 0000-0000',
+            email: 'karina.medina@faculdadesofia.edu.br',
+            plantao: 'Segunda e Quarta, 14h às 18h',
+            bio: 'Bacharel em Enfermagem pela PUC-Campinas (2013), especialista em Enfermagem em Saúde Mental e mestranda em Saúde Coletiva. Atuou em CAPS Infantojuvenil (2014–2016) e CAPS Adulto (2020–2022).'
+        },
+        {
+            id: 'cristina',
+            nome: 'Cristina Tanikawa',
+            area: 'Coordenação — Técnico em Farmácia',
+            foto: '../pagina_inicial/img/coordenadores/cristina-tanikawa.jpg',
+            telefone: '(19) 0000-0000',
+            email: 'cristina.tanikawa@faculdadesofia.edu.br',
+            plantao: 'Terça e Quinta, 14h às 18h',
+            bio: 'Farmácia e Bioquímica (UNIP), especialização em Fitoterapia. Trajetória em UNICAMP, USP, Hospital Sírio-Libanês e Fundação André Tosello. Atuação no CRF-SP e 18 anos de experiência na docência e coordenação do curso técnico em Farmácia.'
+        },
+        {
+            id: 'paulo',
+            nome: 'Dr. Paulo Fernando Signorelli',
+            area: 'Oftalmologia',
+            foto: '../pagina_inicial/img/home/img/0012.png',
+            telefone: '(19) 0000-0000',
+            email: 'paulo.signorelli@faculdadesofia.edu.br',
+            plantao: 'A confirmar',
+            bio: 'Médico oftalmologista nascido em Campinas, com mais de 30 anos de dedicação à saúde humanizada. Idealizador do SIHUSA, movimento de aproximação entre pacientes sem convênio e médicos com verdadeiro perfil de ajuda.'
+        },
+        {
+            id: 'rezende',
+            nome: 'Rezende',
+            area: 'Otorrinolaringologia',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'rezende@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        },
+        {
+            id: 'gabriel',
+            nome: 'Gabriel',
+            area: 'Otorrinolaringologia',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'gabriel@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        },
+        {
+            id: 'beatriz',
+            nome: 'Dra. Beatriz Vargas',
+            area: 'Coordenação de Psicologia — Bacharelado e Pós-Graduação',
+            foto: '../pagina_inicial/img/coordenadores/beatriz-vargas.jpg',
+            telefone: '(19) 0000-0000',
+            email: 'beatriz.vargas@faculdadesofia.edu.br',
+            plantao: 'Segunda e Quarta, 14h às 18h',
+            bio: 'Psicóloga clínica e supervisora, especialista em Terapia Cognitivo-Comportamental e EMDR. Doutora em Psicologia Clínica pela USP. Atende há 18 anos em consultório particular. Autora do livro "Emoções em Diálogo".'
+        },
+        {
+            id: 'psiquiatria',
+            nome: 'Nome a confirmar', // TODO: substituir por dados reais
+            area: 'Psiquiatria',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        },
+        {
+            id: 'clinicogeral',
+            nome: 'Nome a confirmar', // TODO: substituir por dados reais
+            area: 'Clínico Geral',
+            foto: null,
+            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
+            email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
+            plantao: 'A confirmar', // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+        }
+    ];
 
-    <!-- EIXOS ESTRUTURANTES -->
-    <section id="curriculo" class="py-5 bg-soft-accent">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Eixos Estruturantes da Formação</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="pilar-card">
-                        <i class="fas fa-book-open"></i>
-                        <h5>I. Fundamentos Epistemológicos e Históricos</h5>
-                        <p class="small text-muted">Bases epistemológicas, evolução histórica da Psicologia, pensamento crítico-científico.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="pilar-card">
-                        <i class="fas fa-chalkboard"></i>
-                        <h5>II. Fundamentos Teórico-Metodológicos</h5>
-                        <p class="small text-muted">Métodos científicos, abordagens teóricas, articulação teoria-prática profissional.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="pilar-card">
-                        <i class="fas fa-microscope"></i>
-                        <h5>III. Procedimentos para Investigação Científica</h5>
-                        <p class="small text-muted">Avaliação psicológica, metodologia de pesquisa, competências investigativas.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="pilar-card">
-                        <i class="fas fa-brain"></i>
-                        <h5>IV. Fenômenos e Processos Psicológicos</h5>
-                        <p class="small text-muted">Processos cognitivos, emocionais, desenvolvimento humano, psicopatologia e saúde mental.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="pilar-card">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h5>V. Interfaces com Campos Afins</h5>
-                        <p class="small text-muted">Neurociências, antropologia, sociologia, abordagem biopsicossocial e contextualização cultural.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="pilar-card">
-                        <i class="fas fa-briefcase"></i>
-                        <h5>VI. Práticas Profissionais</h5>
-                        <p class="small text-muted">Estágios supervisionados (800h), desenvolvimento de competências práticas e inserção profissional.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div class="alert alert-light border-0 shadow-sm rounded-4 text-center">
-                        <i class="fas fa-calendar-alt text-warning"></i> <strong>10 semestres</strong> (5 anos integrais) ·
-                        <i class="fas fa-clock text-warning"></i> <strong>4.760h</strong> ·
-                        <i class="fas fa-users text-warning"></i> <strong>120 vagas anuais</strong> ·
-                        <i class="fas fa-file-alt text-warning"></i> <strong>TCC obrigatório</strong> + 100h atividades complementares
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    var grid = document.getElementById('docentesGrid');
 
-    <!-- METODOLOGIA E DIFERENCIAIS -->
-    <section id="diferenciais" class="py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Metodologia e diferenciais</h2>
-            <p>O curso oferece três percursos de aprofundamento, permitindo formação ampla ou especializada conforme seus objetivos profissionais.</p>
-        </div>
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
 
-        <ul class="nav nav-tabs mb-3" id="enfaseTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="clinica-tab" data-bs-toggle="tab" data-bs-target="#clinica" type="button" role="tab">Psicologia e Processos Clínicos</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="saude-tab" data-bs-toggle="tab" data-bs-target="#saude" type="button" role="tab">Prevenção e Promoção da Saúde</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pesquisa-tab" data-bs-toggle="tab" data-bs-target="#pesquisa" type="button" role="tab">Investigação Científica</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="enfaseTabContent">
-            <div class="tab-pane fade show active" id="clinica" role="tabpanel">
-                <div class="row align-items-center">
-                    <div class="col-md-8"><h4 class="fw-semibold">🧠 Atuação clínica completa</h4><p>Concentração em competências para psicodiagnóstico, aconselhamento, psicoterapia e intervenções frente a demandas psicológicas de indivíduos e grupos em diferentes contextos. Destaque para estágio supervisionado na Clínica-Escola SOFIA.</p><span class="badge bg-success">Carga prática integrada</span></div>
-                    <div class="col-md-4 text-center"><i class="fas fa-couch fs-1 text-secondary"></i></div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="saude" role="tabpanel">
-                <div class="row"><div class="col-md-8"><h4 class="fw-semibold">🏥 Saúde coletiva e preventiva</h4><p>Ações preventivas e promocionais de saúde mental, capacitação de grupos, instituições e comunidades para proteção da saúde e qualidade de vida. Parceria com unidades básicas, CAPS e programas de extensão.</p><span class="badge bg-success">476h de extensão integradas</span></div><div class="col-md-4 text-center"><i class="fas fa-heartbeat fs-1 text-secondary"></i></div></div>
-            </div>
-            <div class="tab-pane fade" id="pesquisa" role="tabpanel">
-                <div class="row"><div class="col-md-8"><h4 class="fw-semibold">📊 Formação para ciência e docência</h4><p>Habilidades em metodologia da pesquisa, análise crítica, concepção e condução de investigações científicas. Preparação para mestrado, doutorado e produção acadêmica de impacto, com laboratório especializado.</p><span class="badge bg-success">Corpo docente com mestres e doutores</span></div><div class="col-md-4 text-center"><i class="fas fa-chart-bar fs-1 text-secondary"></i></div></div>
-            </div>
-        </div>
+    docentes.forEach(function (d) {
+        var card = document.createElement('div');
+        card.className = 'docente-card';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-expanded', 'false');
+        card.setAttribute('aria-controls', 'docente-details-' + d.id);
+        card.setAttribute('data-id', d.id);
 
-        <div class="card-stat p-4 mt-4">
-            <h3 class="fw-bold fs-4"><i class="fas fa-star text-warning"></i> Diferenciais SOFIA</h3>
-            <ul class="list-check mt-3 row">
-                <li class="col-md-6">Formação abrangente – Possibilidade de cursar as três ênfases curriculares.</li>
-                <li class="col-md-6">Integração teoria-prática – Estágios supervisionados (800h) + extensão.</li>
-                <li class="col-md-6">Compromisso social – Projetos de extensão comunitária e atendimento à população.</li>
-                <li class="col-md-6">Atualização científica – Currículo alinhado às Diretrizes Curriculares Nacionais.</li>
-            </ul>
-        </div>
-      </div>
-    </section>
+        var avatarHtml = d.foto
+            ? '<img class="docente-avatar" src="' + d.foto + '" alt="' + escapeHtml(d.nome) + '">'
+            : '<div class="docente-avatar docente-avatar-placeholder"><i class="fas fa-user"></i></div>';
 
-    <!-- MERCADO DE TRABALHO -->
-    <section id="mercado" class="py-5 bg-soft-accent">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="section-title">Mercado de trabalho</h2>
-                <p>O psicólogo formado pela SOFIA atua em múltiplos contextos com preparo ético, técnico e científico.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 col-lg-2"><div class="card-stat p-3 text-center h-100"><i class="fas fa-hospital-user fs-2 mb-2"></i><h6 class="mb-0">Saúde</h6></div></div>
-                <div class="col-md-4 col-lg-2"><div class="card-stat p-3 text-center h-100"><i class="fas fa-chalkboard fs-2 mb-2"></i><h6 class="mb-0">Educacional</h6></div></div>
-                <div class="col-md-4 col-lg-2"><div class="card-stat p-3 text-center h-100"><i class="fas fa-briefcase fs-2 mb-2"></i><h6 class="mb-0">Organizacional</h6></div></div>
-                <div class="col-md-4 col-lg-2"><div class="card-stat p-3 text-center h-100"><i class="fas fa-gavel fs-2 mb-2"></i><h6 class="mb-0">Jurídica</h6></div></div>
-                <div class="col-md-4 col-lg-2"><div class="card-stat p-3 text-center h-100"><i class="fas fa-users fs-2 mb-2"></i><h6 class="mb-0">Social/Comunitária</h6></div></div>
-                <div class="col-md-4 col-lg-2"><div class="card-stat p-3 text-center h-100"><i class="fas fa-microscope fs-2 mb-2"></i><h6 class="mb-0">Acadêmica & Pesquisa</h6></div></div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <div class="card border-0 shadow p-4 rounded-4">
-                        <h5><i class="fas fa-map-marker-alt"></i> Campinas/SP</h5>
-                        <p class="mb-0">Amplo mercado de trabalho, diversidade de instituições de saúde, educação e pesquisa, proporcionando múltiplas oportunidades de estágio e inserção profissional.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        card.innerHTML =
+            '<div class="docente-card-header">' +
+                avatarHtml +
+                '<div class="docente-card-header-text">' +
+                    '<h3 class="docente-nome">' + escapeHtml(d.nome) + '</h3>' +
+                    '<p class="docente-area">' + escapeHtml(d.area) + '</p>' +
+                '</div>' +
+                '<i class="fas fa-chevron-down docente-toggle-icon" aria-hidden="true"></i>' +
+            '</div>' +
+            '<div class="docente-details" id="docente-details-' + d.id + '">' +
+                '<div class="docente-details-inner">' +
+                    '<button type="button" class="docente-close" aria-label="Fechar">&times;</button>' +
+                    '<p><i class="fab fa-whatsapp"></i> <span><strong>WhatsApp:</strong> ' + escapeHtml(d.telefone) + '</span></p>' +
+                    '<p><i class="fas fa-envelope"></i> <span><strong>E-mail:</strong> ' + escapeHtml(d.email) + '</span></p>' +
+                    '<p><i class="fas fa-clock"></i> <span><strong>Plantão:</strong> ' + escapeHtml(d.plantao) + '</span></p>' +
+                    '<p class="docente-bio"><i class="fas fa-file-lines"></i> <span>' + escapeHtml(d.bio) + '</span></p>' +
+                '</div>' +
+            '</div>';
 
-    <!-- INFRAESTRUTURA -->
-    <section id="infra" class="py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-md-6">
-                    <h2 class="section-title">Infraestrutura</h2>
-                    <ul class="list-check">
-                        <li>Clínica-Escola: atendimento supervisionado à comunidade com salas individuais e grupais</li>
-                        <li>Laboratórios especializados: Avaliação Psicológica, Práticas em Psicologia, Informática e pesquisa</li>
-                        <li>Biblioteca digital 24h, com acervo especializado e periódicos científicos</li>
-                        <li>Corpo docente qualificado, com mestres e doutores, regime integral/parcial</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <div class="bg-dark text-white p-4 rounded-4 text-center" style="background: linear-gradient(145deg, #3a6e2d, #1e2f3a);">
-                        <i class="fas fa-building fa-4x mb-3 text-warning"></i>
-                        <h4>Localização</h4>
-                        <p class="mb-0">Campinas/SP – Complexo Santa Casa de Misericórdia, ao lado do Paço Municipal.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        grid.appendChild(card);
+    });
 
-    <!-- CERTIFICAÇÃO E PROCESSO SELETIVO -->
-    <section id="inscricao" class="py-5 bg-soft-accent">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 mx-auto text-center">
-                    <h2 class="section-title">Certificação e processo seletivo</h2>
-                    <p>Processo seletivo aberto · 120 vagas anuais · Bacharelado, grau de Psicólogo.</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8Ar7_WTpoyQvFFNW-p68oG2h5vA59fXZzNJ_JW_odTQDAOQ/viewform" target="_blank" class="btn btn-gold btn-lg px-5 py-3 mt-2"><i class="fas fa-calendar-check me-2"></i> Pré-inscrição</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    function toggleCard(card) {
+        var isOpen = card.classList.contains('open');
+        if (isOpen) {
+            card.classList.remove('open');
+            card.setAttribute('aria-expanded', 'false');
+        } else {
+            card.classList.add('open');
+            card.setAttribute('aria-expanded', 'true');
+        }
+    }
 
+    grid.addEventListener('click', function (e) {
+        var closeBtn = e.target.closest('.docente-close');
+        var card = e.target.closest('.docente-card');
+        if (!card) return;
 
-<!-- Vestibular Social CTA -->
-<section class="py-5" style="background-color:#0a2b3e;">
-    <div class="container text-center text-white">
-        <h2 class="fw-bold mb-3">
-            <i class="fas fa-hand-holding-heart me-2" style="color:#eab676;"></i>Vestibular Social
-        </h2>
-        <p class="mb-4 mx-auto" style="color:aliceblue; max-width:700px;">
-            A Faculdade Sofia oferece bolsas de até 75% para candidatos do Vestibular Social. Fale com a nossa equipe pelo WhatsApp e descubra as condições para o curso de Psicologia.
-        </p>
-        <a href="https://api.whatsapp.com/send?phone=5519999595129&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Vestibular%20Social%20(bolsas%20de%20at%C3%A9%2075%25)." target="_blank" rel="noopener noreferrer" class="btn btn-lg rounded-pill fw-bold px-5 py-3" style="background-color:#eab676; color:#0a2b3e;">
-            <i class="fab fa-whatsapp me-2"></i>Falar sobre o Vestibular Social
-        </a>
-    </div>
-</section>
+        if (closeBtn) {
+            card.classList.remove('open');
+            card.setAttribute('aria-expanded', 'false');
+            return;
+        }
+
+        toggleCard(card);
+    });
+
+    grid.addEventListener('keydown', function (e) {
+        var card = e.target.closest('.docente-card');
+        if (!card) return;
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            toggleCard(card);
+        }
+    });
+})();
+</script>
+
         </main>
+
     </div>
 
     <footer b-lj3f8y2p6z id="contact">
