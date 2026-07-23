@@ -4,7 +4,7 @@
     <meta name="google-site-verification" content="u0xCyRjxZPcQ4IE4_aWtwmBuY4wY7g2iSHd7p_b8QVc" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nossa Hist&#xF3;ria</title>
+    <title>Calend&#xE1;rio de Eventos</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2" />
 
     <!-- jQuery -->
@@ -406,7 +406,7 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("btnHome").addEventListener("click", function() {
-            window.location.href = "../home.html";
+            window.location.href = "/home";
         });
     });
 </script>
@@ -1199,268 +1199,253 @@
         })();
     </script>
 
-        <main b-lj3f8y2p6z role="main" class="pb-3">
-            
+                        <main b-lj3f8y2p6z role="main" class="pb-3">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
+    .eventos-page * {
         box-sizing: border-box;
     }
 
-    body {
+    .eventos-page {
         font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        background-color: #f8fafc;
         color: #1e293b;
-        line-height: 1.6;
     }
 
-    .container-custom {
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+    .eventos-hero {
+        background: linear-gradient(105deg, #eef3f9 0%, #f9f6ea 100%);
+        padding: 160px 0 55px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    .hero-history {
-        background: linear-gradient(145deg, #f1f5f9 0%, #ffffff 100%);
-        border-bottom: 1px solid rgba(0, 40, 80, 0.05);
-        padding-top: 3rem;
-        padding-bottom: 1.5rem;
-    }
-
-        .hero-history h1 {
-            font-weight: 500;
-            font-size: 2.8rem;
-            letter-spacing: -0.02em;
-            color: #0f2b45;
-            border-left: 8px solid #9b4d96;
-            padding-left: 1.8rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+    @media (max-width: 768px) {
+        .eventos-hero {
+            padding: 130px 0 40px;
         }
+    }
 
-        .hero-history .lead {
-            font-size: 1.3rem;
-            color: #2c3e50;
-            font-weight: 350;
-            max-width: 900px;
-        }
-
-    .timeline-badge {
-        background-color: #ffffffd9;
-        backdrop-filter: blur(4px);
-        border-radius: 40px;
-        padding: 0.5rem 1.5rem;
-        box-shadow: 0 8px 20px -10px rgba(100, 50, 100, 0.15);
-        display: inline-block;
-        margin-bottom: 2rem;
-        border: 1px solid rgba(155, 77, 150, 0.2);
-        color: #4a2d4e;
+    .eventos-hero .badge-sofia {
+        background-color: #003a6d;
+        color: #f7f3e0;
         font-weight: 500;
-    }
-
-    .history-section {
-        padding-top: 2.2rem;
-        padding-bottom: 3.5rem;
-    }
-
-    .history-card {
-        background: #ffffff;
-        border-radius: 28px;
-        padding: 2.5rem 2.8rem;
-        box-shadow: 0 20px 35px -8px rgba(0, 20, 30, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        border: 1px solid #ffffff50;
-        backdrop-filter: blur(2px);
-        margin-bottom: 2rem;
-    }
-
-        .history-card:hover {
-            box-shadow: 0 28px 40px -12px rgba(80, 40, 80, 0.18);
-            transform: scale(1.003);
-        }
-
-        .history-card p {
-            font-size: 1.18rem;
-            margin-bottom: 1.6rem;
-            color: #1e2c3c;
-        }
-
-    .insignia {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-    }
-
-        .insignia span {
-            background-color: #ecf5fa;
-            padding: 0.5rem 1.2rem;
-            border-radius: 60px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #1f3a57;
-            border: 1px solid #b9d3e8;
-        }
-
-    .big-quote {
-        font-size: 4rem;
-        line-height: 1rem;
-        font-family: serif;
-        color: #aa80b0;
-        opacity: 0.35;
-        margin-right: 0.5rem;
-        user-select: none;
-    }
-
-    .dropcap::first-letter {
-        font-size: 3.8rem;
-        float: left;
-        font-weight: 400;
-        line-height: 0.8;
-        margin-right: 0.75rem;
-        color: #7b4a76;
-        font-family: 'Times New Roman', serif;
-    }
-
-    /* IMAGENS */
-    .history-media {
-        margin: 2rem 0 1.5rem 0;
-        border-radius: 28px;
-        overflow: hidden;
-        box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.2);
-    }
-
-        .history-media img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-            .history-media img:hover {
-                transform: scale(1.02);
-            }
-
-    .image-caption {
-        text-align: center;
+        padding: 8px 18px;
+        border-radius: 40px;
         font-size: 0.85rem;
-        color: #4a627a;
-        margin-top: 0.5rem;
-        font-style: italic;
+        display: inline-block;
+        margin-bottom: 1rem;
     }
 
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        justify-content: center;
-        margin: 2rem 0;
+    .eventos-hero h1 {
+        font-weight: 800;
+        font-size: 2.4rem;
+        color: #0f2b45;
+        margin-bottom: 1rem;
     }
 
-    .gallery-item {
-        flex: 1 1 250px;
-        background: white;
-        border-radius: 24px;
-        overflow: hidden;
-        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
+    .eventos-hero p.lead {
+        font-size: 1.1rem;
+        color: #33424f;
+        max-width: 720px;
     }
 
-        .gallery-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-        }
+    .eventos-section {
+        padding: 60px 0 80px;
+    }
 
-        .gallery-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
+    .calendario-atual {
+        max-width: 620px;
+        margin: 0 auto 60px;
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+        padding: 32px;
+    }
 
-        .gallery-item p {
-            padding: 0.8rem;
-            text-align: center;
-            font-weight: 500;
-            margin: 0;
-            font-size: 0.9rem;
-            background: #fff;
-        }
-
-    .commemorative-seal {
+    .calendario-atual .cal-titulo {
         text-align: center;
-        margin: 2rem 0 1rem;
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: #0f2b45;
+        margin-bottom: 1.25rem;
+        text-transform: capitalize;
     }
 
-        .commemorative-seal img {
-            max-width: 140px;
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border: 3px solid #9b4d96;
-            padding: 0.3rem;
-            background: white;
-        }
-
-    
-
-    .history-card {
-        padding: 1.8rem;
+    .proximos-meses-titulo {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #0f2b45;
+        margin-bottom: 2rem;
     }
 
-    .hero-history h1 {
-        font-size: 2rem;
+    .meses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .mes-card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        padding: 20px;
+    }
+
+    .mes-card .cal-titulo {
+        font-size: 1.05rem;
+    }
+
+    .cal-tabela {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .cal-tabela th {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #5b6b7d;
+        text-transform: uppercase;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+
+    .cal-tabela td {
+        text-align: center;
+        padding: 6px 0;
+        font-size: 0.95rem;
+        color: #33424f;
+    }
+
+    .mes-card .cal-tabela td {
+        font-size: 0.8rem;
+        padding: 4px 0;
+    }
+
+    .cal-tabela td.vazio {
+        color: transparent;
+    }
+
+    .cal-tabela td.hoje {
+        position: relative;
+    }
+
+    .cal-tabela td.hoje span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #003a6d;
+        color: #fff;
+        border-radius: 50%;
+        font-weight: 700;
+    }
+
+    .mes-card .cal-tabela td.hoje span {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+
+    .eventos-aviso {
+        text-align: center;
+        color: #5b6b7d;
+        max-width: 600px;
+        margin: 0 auto 50px;
     }
 </style>
-<br />
-<br />
-<br />
-<div class="hero-history">
-    <div class="container-custom">
-        <div class="insignia">
-            <span>🏥 Instituído em 2006</span>
-            <span>🩺 Enfermagem e Farmácia</span>
-            <span>📍 Campinas/SP</span>
+
+<div class="eventos-page">
+    <section class="eventos-hero">
+        <div class="container">
+            <span class="badge-sofia"><i class="fas fa-calendar-alt"></i> Eventos</span>
+            <h1>Calendário de Eventos</h1>
+            <p class="lead">Acompanhe o calendário da Faculdade Sofia — mês atual em destaque e os quatro meses seguintes logo abaixo.</p>
         </div>
-        <h1>Nossa história</h1>
-        <p class="lead">A trajetória do Instituto de Saúde Integrada (ISI) até se tornar a Faculdade Sofia — a Faculdade do Trabalhador da Saúde.</p>
-    </div>
+    </section>
+
+    <section class="eventos-section">
+        <div class="container">
+            <div id="calendarioAtual" class="calendario-atual"></div>
+
+            <p class="eventos-aviso">Ainda não há eventos cadastrados neste calendário. Assim que novas datas forem confirmadas, elas aparecerão aqui.</p>
+
+            <h2 class="proximos-meses-titulo">Próximos meses</h2>
+            <div id="proximosMeses" class="meses-grid"></div>
+        </div>
+    </section>
 </div>
 
-<section class="history-section">
-    <div class="container-custom">
+<script>
+(function () {
+    var DIAS_SEMANA = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+    var NOMES_MES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
-        <div class="history-card" style="padding: 0.8rem; overflow: hidden;">
-            <img src="../pagina_inicial/img/home/img/0001.jpg" alt="Prédio histórico da Faculdade Sofia em Campinas/SP" style="width: 100%; border-radius: 20px; display: block;">
-        </div>
+    function construirCalendario(ano, mes, destacarHoje) {
+        var hoje = new Date();
+        var primeiroDia = new Date(ano, mes, 1);
+        var totalDias = new Date(ano, mes + 1, 0).getDate();
+        var diaSemanaInicio = primeiroDia.getDay();
 
-        <div class="history-card">
-            <p><strong>Origem: o Instituto de Saúde Integrada (ISI).</strong> O Instituto de Saúde Integrada – ISI foi instituído em 2006 pelo Sindicato dos Empregados em Estabelecimentos de Serviços de Saúde de Campinas e Região (SINSAÚDE), com a missão de promover educação, cultura, pesquisa, ação social e formação profissional, especialmente voltadas aos trabalhadores da área da saúde e à comunidade em geral.</p>
-            <p>Desde sua criação, o ISI tem como propósito contribuir para a qualificação e o desenvolvimento de profissionais da saúde, por meio da oferta de cursos de formação inicial, qualificação profissional e Educação Profissional Técnica de Nível Médio. Ao longo de sua trajetória, consolidou-se como referência regional na formação de profissionais nas áreas de Enfermagem e Farmácia e demais segmentos relacionados ao setor da saúde.</p>
-        </div>
+        var html = '<div class="cal-titulo">' + NOMES_MES[mes] + ' de ' + ano + '</div>';
+        html += '<table class="cal-tabela"><thead><tr>';
+        DIAS_SEMANA.forEach(function (d) {
+            html += '<th>' + d + '</th>';
+        });
+        html += '</tr></thead><tbody><tr>';
 
-        <div class="history-card">
-            <p><strong>Missão e atuação.</strong> Sua atuação é pautada na formação humanizada, ética e de excelência, fundamentada nos princípios da responsabilidade social, compromisso com a educação e atendimento às demandas do mundo do trabalho. A instituição está localizada em Campinas, em espaço de relevante importância histórica para a área da saúde e educação, integrando um ambiente tradicional de formação de profissionais.</p>
-        </div>
+        var coluna = 0;
+        for (var i = 0; i < diaSemanaInicio; i++) {
+            html += '<td class="vazio">0</td>';
+            coluna++;
+        }
 
-        <div class="history-card">
-            <p><strong>2024 — uma nova etapa institucional: ISI-SOFIA.</strong> Em 2024, o Instituto passou por um processo de reorganização institucional, com a alteração da entidade mantenedora, passando a ser mantido pela Sofia Faculdade de Saúde Ltda. A unidade educacional passou a adotar a denominação ISI-SOFIA – A Faculdade do Trabalhador da Saúde, consolidando uma nova etapa institucional.</p>
-            <p>A transição para a mantença da Sofia Faculdade de Saúde representa a continuidade da trajetória construída pelo ISI, preservando sua identidade, seus valores e seu compromisso histórico com a formação de profissionais da área da saúde, ao mesmo tempo em que amplia suas possibilidades de atuação educacional, fortalecendo a oferta de cursos técnicos e de graduação.</p>
-        </div>
+        for (var dia = 1; dia <= totalDias; dia++) {
+            var ehHoje = destacarHoje && hoje.getFullYear() === ano && hoje.getMonth() === mes && hoje.getDate() === dia;
+            html += ehHoje
+                ? '<td class="hoje"><span>' + dia + '</span></td>'
+                : '<td>' + dia + '</td>';
+            coluna++;
+            if (coluna === 7 && dia !== totalDias) {
+                html += '</tr><tr>';
+                coluna = 0;
+            }
+        }
 
-        <div class="history-card">
-            <p><strong>Atualmente.</strong> O ISI mantém o compromisso com uma educação transformadora, baseada na integração entre ensino, pesquisa, extensão, responsabilidade social e educação para a paz, promovendo a formação de profissionais éticos, humanizados e comprometidos com a construção de uma sociedade mais justa, contribuindo para o desenvolvimento da saúde e da educação na região de Campinas.</p>
-        </div>
+        while (coluna > 0 && coluna < 7) {
+            html += '<td class="vazio">0</td>';
+            coluna++;
+        }
 
-    </div>
-</section>
+        html += '</tr></tbody></table>';
+        return html;
+    }
+
+    var agora = new Date();
+    var anoAtual = agora.getFullYear();
+    var mesAtual = agora.getMonth();
+
+    var calAtual = document.getElementById('calendarioAtual');
+    calAtual.innerHTML = construirCalendario(anoAtual, mesAtual, true);
+
+    var proximosMeses = document.getElementById('proximosMeses');
+    for (var i = 1; i <= 4; i++) {
+        var dataFutura = new Date(anoAtual, mesAtual + i, 1);
+        var div = document.createElement('div');
+        div.className = 'mes-card';
+        div.innerHTML = construirCalendario(dataFutura.getFullYear(), dataFutura.getMonth(), false);
+        proximosMeses.appendChild(div);
+    }
+})();
+</script>
+
         </main>
+
+
     </div>
 
     <footer b-lj3f8y2p6z id="contact">
