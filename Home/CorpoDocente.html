@@ -1412,6 +1412,16 @@
         display: none;
     }
 
+    .docente-lattes a {
+        color: #003a6d;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+        .docente-lattes a:hover {
+            color: #C5A059;
+        }
+
     .docente-close {
         position: absolute;
         top: -4px;
@@ -1460,23 +1470,25 @@
     var docentes = [
         {
             id: 'karina',
-            nome: 'Karina Diniz Tavares Medina',
+            nome: 'Karina Medina - Enfermeira',
             area: 'Coordenação — Técnico em Enfermagem',
             foto: '/pagina_inicial/img/coordenadores/karina-diniz-tavares-medina.jpg',
             telefone: '(19) 0000-0000',
             email: 'karina.medina@faculdadesofia.edu.br',
             plantao: 'Segunda e Quarta, 14h às 18h',
-            bio: 'Bacharel em Enfermagem pela PUC-Campinas (2013), especialista em Enfermagem em Saúde Mental e mestranda em Saúde Coletiva. Atuou em CAPS Infantojuvenil (2014–2016) e CAPS Adulto (2020–2022).'
+            bio: 'Bacharel em Enfermagem pela PUC-Campinas (2013), especialista em Enfermagem em Saúde Mental e mestranda em Saúde Coletiva. Atuou em CAPS Infantojuvenil (2014–2016) e CAPS Adulto (2020–2022).',
+            lattes: 'http://lattes.cnpq.br/2741057741147741'
         },
         {
             id: 'cristina',
-            nome: 'Cristina Tanikawa',
+            nome: 'Cristina Tanikawa - Farmacêutica',
             area: 'Coordenação — Técnico em Farmácia',
             foto: '/pagina_inicial/img/coordenadores/cristina-tanikawa.jpg',
             telefone: '(19) 0000-0000',
             email: 'cristina.tanikawa@faculdadesofia.edu.br',
             plantao: 'Terça e Quinta, 14h às 18h',
-            bio: 'Farmácia e Bioquímica (UNIP), especialização em Fitoterapia. Trajetória em UNICAMP, USP, Hospital Sírio-Libanês e Fundação André Tosello. Atuação no CRF-SP e 18 anos de experiência na docência e coordenação do curso técnico em Farmácia.'
+            bio: 'Farmácia e Bioquímica (UNIP), especialização em Fitoterapia. Trajetória em UNICAMP, USP, Hospital Sírio-Libanês e Fundação André Tosello. Atuação no CRF-SP e 18 anos de experiência na docência e coordenação do curso técnico em Farmácia.',
+            lattes: 'http://lattes.cnpq.br/4705600127032852'
         },
         {
             id: 'paulo',
@@ -1486,7 +1498,8 @@
             telefone: '(19) 0000-0000',
             email: 'paulo.signorelli@faculdadesofia.edu.br',
             plantao: 'A confirmar',
-            bio: 'Médico oftalmologista nascido em Campinas, com mais de 30 anos de dedicação à saúde humanizada. Idealizador do SIHUSA, movimento de aproximação entre pacientes sem convênio e médicos com verdadeiro perfil de ajuda.'
+            bio: 'Médico oftalmologista nascido em Campinas, com mais de 30 anos de dedicação à saúde humanizada. Idealizador do SIHUSA, movimento de aproximação entre pacientes sem convênio e médicos com verdadeiro perfil de ajuda.',
+            lattes: null // TODO: substituir por link real do Lattes
         },
         {
             id: 'rezende',
@@ -1496,7 +1509,8 @@
             telefone: '(19) 0000-0000', // TODO: substituir por dados reais
             email: 'rezende@faculdadesofia.edu.br', // TODO: substituir por dados reais
             plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
+            lattes: null // TODO: substituir por link real do Lattes
         },
         {
             id: 'gabriel',
@@ -1506,17 +1520,19 @@
             telefone: '(19) 0000-0000', // TODO: substituir por dados reais
             email: 'gabriel@faculdadesofia.edu.br', // TODO: substituir por dados reais
             plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
+            lattes: null // TODO: substituir por link real do Lattes
         },
         {
             id: 'beatriz',
-            nome: 'Dra. Beatriz Vargas',
+            nome: 'Beatriz Vargas - Psicóloga',
             area: 'Coordenação de Psicologia — Bacharelado e Pós-Graduação',
             foto: '/pagina_inicial/img/coordenadores/beatriz-vargas.jpg',
             telefone: '(19) 0000-0000',
             email: 'beatriz.vargas@faculdadesofia.edu.br',
             plantao: 'Segunda e Quarta, 14h às 18h',
-            bio: 'Psicóloga clínica e supervisora, especialista em Terapia Cognitivo-Comportamental e EMDR. Doutora em Psicologia Clínica pela USP. Atende há 18 anos em consultório particular. Autora do livro "Emoções em Diálogo".'
+            bio: 'Psicóloga clínica e supervisora, especialista em Terapia Cognitivo-Comportamental e EMDR. Doutora em Psicologia Clínica pela USP. Atende há 18 anos em consultório particular. Autora do livro "Emoções em Diálogo".',
+            lattes: 'http://lattes.cnpq.br/1767999448173979'
         },
         {
             id: 'psiquiatria',
@@ -1526,7 +1542,8 @@
             telefone: '(19) 0000-0000', // TODO: substituir por dados reais
             email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
             plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
+            lattes: null // TODO: substituir por link real do Lattes
         },
         {
             id: 'clinicogeral',
@@ -1536,7 +1553,8 @@
             telefone: '(19) 0000-0000', // TODO: substituir por dados reais
             email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
             plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.' // TODO: substituir por dados reais
+            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
+            lattes: null // TODO: substituir por link real do Lattes
         }
     ];
 
@@ -1561,6 +1579,10 @@
             ? '<img class="docente-avatar" src="' + d.foto + '" alt="' + escapeHtml(d.nome) + '">'
             : '<div class="docente-avatar docente-avatar-placeholder"><i class="fas fa-user"></i></div>';
 
+        var lattesHtml = d.lattes
+            ? '<p class="docente-lattes"><i class="fas fa-graduation-cap"></i> <span><a href="' + d.lattes + '" target="_blank" rel="noopener noreferrer">Consultar Currículo Lattes</a></span></p>'
+            : '';
+
         card.innerHTML =
             '<div class="docente-card-header">' +
                 avatarHtml +
@@ -1577,6 +1599,7 @@
                     '<p><i class="fas fa-envelope"></i> <span><strong>E-mail:</strong> ' + escapeHtml(d.email) + '</span></p>' +
                     '<p><i class="fas fa-clock"></i> <span><strong>Plantão:</strong> ' + escapeHtml(d.plantao) + '</span></p>' +
                     '<p class="docente-bio"><i class="fas fa-file-lines"></i> <span>' + escapeHtml(d.bio) + '</span></p>' +
+                    lattesHtml +
                 '</div>' +
             '</div>';
 
