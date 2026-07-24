@@ -1343,6 +1343,49 @@
         max-width: 600px;
         margin: 0 auto 50px;
     }
+
+    .cal-tabela td.tem-evento {
+        position: relative;
+        font-weight: 700;
+        color: #003a6d;
+        cursor: default;
+    }
+
+    .evento-dot {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #C5A059;
+        margin: 2px auto 0;
+    }
+
+    .lista-eventos {
+        list-style: none;
+        max-width: 620px;
+        margin: 0 auto 50px;
+        padding: 0;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .lista-eventos li {
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        color: #33424f;
+    }
+
+        .lista-eventos li:last-child {
+            border-bottom: none;
+        }
+
+    .evento-descricao {
+        display: block;
+        color: #5b6b7d;
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
 </style>
 
 <div class="eventos-page">
@@ -1358,7 +1401,7 @@
         <div class="container">
             <div id="calendarioAtual" class="calendario-atual"></div>
 
-            <p class="eventos-aviso">Ainda não há eventos cadastrados neste calendário. Assim que novas datas forem confirmadas, elas aparecerão aqui.</p>
+            <div id="proximosEventos"></div>
 
             <h2 class="proximos-meses-titulo">Próximos meses</h2>
             <div id="proximosMeses" class="meses-grid"></div>
@@ -1368,8 +1411,29 @@
 
 <script>
 (function () {
+    // TODO: para adicionar um evento, inclua um item neste array no formato:
+    // { data: 'AAAA-MM-DD', titulo: 'Nome do evento', descricao: 'Opcional' }
+    // A data marcada aparecerá destacada no calendário e listada em "Próximos eventos".
+    var eventos = [
+        // { data: '2026-08-15', titulo: 'Exemplo de evento', descricao: 'Descrição opcional' }
+    ];
+
     var DIAS_SEMANA = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
     var NOMES_MES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+    function chaveData(ano, mes, dia) {
+        return ano + '-' + String(mes + 1).padStart(2, '0') + '-' + String(dia).padStart(2, '0');
+    }
+
+    function eventosDoDia(chave) {
+        return eventos.filter(function (ev) { return ev.data === chave; });
+    }
+
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
 
     function construirCalendario(ano, mes, destacarHoje) {
         var hoje = new Date();
@@ -1392,9 +1456,17 @@
 
         for (var dia = 1; dia <= totalDias; dia++) {
             var ehHoje = destacarHoje && hoje.getFullYear() === ano && hoje.getMonth() === mes && hoje.getDate() === dia;
-            html += ehHoje
-                ? '<td class="hoje"><span>' + dia + '</span></td>'
-                : '<td>' + dia + '</td>';
+            var doDia = eventosDoDia(chaveData(ano, mes, dia));
+            var temEvento = doDia.length > 0;
+            var titulos = temEvento ? doDia.map(function (ev) { return ev.titulo; }).join(', ') : '';
+
+            var conteudoDia = ehHoje ? '<span>' + dia + '</span>' : dia;
+            var classes = ehHoje ? 'hoje' : '';
+            if (temEvento) classes += (classes ? ' ' : '') + 'tem-evento';
+
+            html += classes
+                ? '<td class="' + classes + '"' + (temEvento ? ' title="' + escapeHtml(titulos) + '"' : '') + '>' + conteudoDia + (temEvento ? '<i class="evento-dot"></i>' : '') + '</td>'
+                : '<td>' + conteudoDia + '</td>';
             coluna++;
             if (coluna === 7 && dia !== totalDias) {
                 html += '</tr><tr>';
@@ -1425,6 +1497,27 @@
         div.className = 'mes-card';
         div.innerHTML = construirCalendario(dataFutura.getFullYear(), dataFutura.getMonth(), false);
         proximosMeses.appendChild(div);
+    }
+
+    var proximosEventosDiv = document.getElementById('proximosEventos');
+    var hojeChave = chaveData(agora.getFullYear(), agora.getMonth(), agora.getDate());
+    var futuros = eventos
+        .filter(function (ev) { return ev.data >= hojeChave; })
+        .sort(function (a, b) { return a.data < b.data ? -1 : 1; });
+
+    if (futuros.length === 0) {
+        proximosEventosDiv.innerHTML = '<p class="eventos-aviso">Ainda não há eventos cadastrados neste calendário. Assim que novas datas forem confirmadas, elas aparecerão aqui.</p>';
+    } else {
+        var lista = '<ul class="lista-eventos">';
+        futuros.forEach(function (ev) {
+            var partes = ev.data.split('-');
+            var dataFormatada = partes[2] + ' de ' + NOMES_MES[parseInt(partes[1], 10) - 1] + ' de ' + partes[0];
+            lista += '<li><strong>' + escapeHtml(dataFormatada) + '</strong> — ' + escapeHtml(ev.titulo) +
+                (ev.descricao ? '<span class="evento-descricao">' + escapeHtml(ev.descricao) + '</span>' : '') +
+                '</li>';
+        });
+        lista += '</ul>';
+        proximosEventosDiv.innerHTML = '<h2 class="proximos-meses-titulo">Próximos eventos</h2>' + lista;
     }
 })();
 </script>
