@@ -1243,6 +1243,185 @@
     </div>
 </section>
 
+<!-- Nossos Cursos -->
+<section class="services-section" id="cursos" style="padding-top:70px;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nossos Cursos</h2>
+            <p>Escolha sua área e conheça as opções de formação da Faculdade Sofia</p>
+        </div>
+
+        <div class="cursos-areas-grid" id="cursosAreasGrid">
+            <button type="button" class="curso-area-card" data-area="enfermagem">
+                <span class="curso-area-icon"><i class="fas fa-user-nurse"></i></span>
+                <span class="curso-area-title">Enfermagem</span>
+            </button>
+            <button type="button" class="curso-area-card" data-area="psicologia">
+                <span class="curso-area-icon"><i class="fas fa-brain"></i></span>
+                <span class="curso-area-title">Psicologia</span>
+            </button>
+            <button type="button" class="curso-area-card" data-area="farmacia">
+                <span class="curso-area-icon"><i class="fas fa-pills"></i></span>
+                <span class="curso-area-title">Farmácia</span>
+            </button>
+        </div>
+
+        <div class="cursos-lista-wrapper" id="cursosListaWrapper" style="display:none;">
+            <ul class="cursos-lista" id="cursosLista"></ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    .cursos-areas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .curso-area-card {
+        background-color: var(--white);
+        border: 2px solid transparent;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+        .curso-area-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .curso-area-card.active {
+            border-color: var(--gold);
+        }
+
+    .curso-area-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--light-blue), var(--white));
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-blue);
+        font-size: 1.6rem;
+        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.15);
+        border: 1px solid rgba(197, 160, 89, 0.2);
+    }
+
+    .curso-area-title {
+        font-weight: 700;
+        color: var(--dark-blue);
+        font-size: 1.1rem;
+    }
+
+    .cursos-lista-wrapper {
+        max-width: 640px;
+        margin: 32px auto 0;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 10px;
+    }
+
+    .cursos-lista {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .cursos-lista li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 18px;
+            border-radius: 10px;
+            color: var(--dark-blue);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+            .cursos-lista li a:hover {
+                background-color: var(--light-gray);
+                color: var(--primary-blue);
+            }
+
+            .cursos-lista li a i {
+                color: var(--gold);
+            }
+
+    @media (max-width: 576px) {
+        .cursos-areas-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>
+
+<script>
+(function () {
+    var CURSOS_POR_AREA = {
+        enfermagem: [
+            { nome: 'Técnico em Enfermagem', href: '/Cursos/TEnfermagem' },
+            { nome: 'Especialização Técnica em Enfermagem', href: '/Cursos/ETEnfermagem' },
+            { nome: 'Bacharelado em Enfermagem', href: '/Cursos/BEnfermagem' },
+            { nome: 'Pós-graduação latu sensu em Enfermagem', href: '/Cursos/PosEnfermagem' }
+        ],
+        psicologia: [
+            { nome: 'Bacharelado em Psicologia', href: '/Cursos/BPsicologia' },
+            { nome: 'Pós-graduação em Psicologia Clínica e Saúde Mental', href: '/Cursos/PosPsicologia' }
+        ],
+        farmacia: [
+            { nome: 'Técnico em Farmácia', href: '/Cursos/TFarmacia' }
+        ]
+    };
+
+    var cards = document.querySelectorAll('.curso-area-card');
+    var wrapper = document.getElementById('cursosListaWrapper');
+    var lista = document.getElementById('cursosLista');
+    var areaAtiva = null;
+
+    function renderLista(area) {
+        lista.innerHTML = '';
+        CURSOS_POR_AREA[area].forEach(function (curso) {
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = curso.href;
+            a.innerHTML = '<span>' + curso.nome + '</span><i class="fas fa-arrow-right"></i>';
+            li.appendChild(a);
+            lista.appendChild(li);
+        });
+    }
+
+    cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            var area = card.getAttribute('data-area');
+            if (areaAtiva === area) {
+                areaAtiva = null;
+                wrapper.style.display = 'none';
+                cards.forEach(function (c) { c.classList.remove('active'); });
+                return;
+            }
+            areaAtiva = area;
+            cards.forEach(function (c) { c.classList.remove('active'); });
+            card.classList.add('active');
+            renderLista(area);
+            wrapper.style.display = 'block';
+        });
+    });
+})();
+</script>
+
 <!-- Services Section -->
 <section class="services-section" id="services">
     <div class="container">
