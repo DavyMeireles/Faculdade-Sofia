@@ -1255,18 +1255,30 @@
             <button type="button" class="curso-area-card" data-area="enfermagem">
                 <span class="curso-area-icon"><i class="fas fa-user-nurse"></i></span>
                 <span class="curso-area-title">Enfermagem</span>
+                <span class="curso-area-sub" data-count-for="enfermagem"></span>
+                <span class="curso-area-cta">Ver cursos <i class="fas fa-chevron-down curso-area-chevron"></i></span>
             </button>
             <button type="button" class="curso-area-card" data-area="psicologia">
                 <span class="curso-area-icon"><i class="fas fa-brain"></i></span>
                 <span class="curso-area-title">Psicologia</span>
+                <span class="curso-area-sub" data-count-for="psicologia"></span>
+                <span class="curso-area-cta">Ver cursos <i class="fas fa-chevron-down curso-area-chevron"></i></span>
             </button>
             <button type="button" class="curso-area-card" data-area="farmacia">
                 <span class="curso-area-icon"><i class="fas fa-pills"></i></span>
                 <span class="curso-area-title">Farmácia</span>
+                <span class="curso-area-sub" data-count-for="farmacia"></span>
+                <span class="curso-area-cta">Ver cursos <i class="fas fa-chevron-down curso-area-chevron"></i></span>
             </button>
         </div>
 
-        <div class="cursos-lista-wrapper" id="cursosListaWrapper" style="display:none;">
+        <div class="cursos-lista-wrapper" id="cursosListaWrapper">
+            <div class="cursos-lista-header">
+                <span id="cursosListaTitulo"></span>
+                <button type="button" class="cursos-lista-fechar" id="cursosListaFechar" aria-label="Fechar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
             <ul class="cursos-lista" id="cursosLista"></ul>
         </div>
     </div>
@@ -1275,9 +1287,9 @@
 <style>
     .cursos-areas-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 24px;
-        max-width: 800px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 28px;
+        max-width: 900px;
         margin: 0 auto;
     }
 
@@ -1287,64 +1299,163 @@
         border-radius: var(--border-radius);
         box-shadow: var(--shadow);
         transition: var(--transition);
-        padding: 30px 20px;
+        padding: 36px 24px 28px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 14px;
+        gap: 8px;
         cursor: pointer;
         font-family: inherit;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
 
+        .curso-area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--primary-blue));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
         .curso-area-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
+        }
+
+        .curso-area-card:hover::before,
+        .curso-area-card.active::before {
+            transform: scaleX(1);
         }
 
         .curso-area-card.active {
             border-color: var(--gold);
         }
 
+        .curso-area-card.active .curso-area-icon {
+            transform: scale(1.08);
+        }
+
     .curso-area-icon {
-        width: 60px;
-        height: 60px;
+        width: 72px;
+        height: 72px;
         background: linear-gradient(135deg, var(--light-blue), var(--white));
-        border-radius: 12px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         color: var(--primary-blue);
-        font-size: 1.6rem;
-        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.15);
-        border: 1px solid rgba(197, 160, 89, 0.2);
+        font-size: 1.8rem;
+        box-shadow: 0 8px 20px rgba(197, 160, 89, 0.18);
+        border: 1px solid rgba(197, 160, 89, 0.25);
+        transition: var(--transition);
+        margin-bottom: 6px;
     }
 
     .curso-area-title {
         font-weight: 700;
         color: var(--dark-blue);
-        font-size: 1.1rem;
+        font-size: 1.25rem;
+    }
+
+    .curso-area-sub {
+        color: var(--dark-gray);
+        font-size: 0.9rem;
+    }
+
+    .curso-area-cta {
+        margin-top: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+    }
+
+    .curso-area-chevron {
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+    }
+
+    .curso-area-card.active .curso-area-chevron {
+        transform: rotate(180deg);
     }
 
     .cursos-lista-wrapper {
-        max-width: 640px;
-        margin: 32px auto 0;
+        max-width: 680px;
+        margin: 0 auto;
         background-color: var(--white);
         border-radius: var(--border-radius);
         box-shadow: var(--shadow);
-        padding: 10px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.4s ease;
     }
+
+        .cursos-lista-wrapper.aberto {
+            max-height: 700px;
+            opacity: 1;
+            margin: 36px auto 0;
+        }
+
+    .cursos-lista-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 22px;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        font-weight: 700;
+        color: var(--dark-blue);
+        font-size: 1.05rem;
+    }
+
+    .cursos-lista-fechar {
+        background: none;
+        border: none;
+        color: var(--dark-gray);
+        font-size: 1rem;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: var(--transition);
+    }
+
+        .cursos-lista-fechar:hover {
+            background-color: var(--light-gray);
+            color: var(--primary-blue);
+        }
 
     .cursos-lista {
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 10px;
     }
+
+        .cursos-lista li {
+            opacity: 0;
+            animation: cursoItemFadeIn 0.35s ease forwards;
+        }
+
+            .cursos-lista li:nth-child(1) { animation-delay: .05s; }
+            .cursos-lista li:nth-child(2) { animation-delay: .1s; }
+            .cursos-lista li:nth-child(3) { animation-delay: .15s; }
+            .cursos-lista li:nth-child(4) { animation-delay: .2s; }
 
         .cursos-lista li a {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 16px 18px;
+            gap: 14px;
+            padding: 14px 12px;
             border-radius: 10px;
             color: var(--dark-blue);
             font-weight: 600;
@@ -1357,13 +1468,45 @@
                 color: var(--primary-blue);
             }
 
-            .cursos-lista li a i {
-                color: var(--gold);
+            .cursos-lista li a:hover .curso-item-seta {
+                transform: translateX(4px);
             }
+
+    .curso-item-tipo {
+        flex-shrink: 0;
+        min-width: 130px;
+        background: rgba(197, 160, 89, 0.15);
+        color: #8a6a2f;
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        padding: 5px 10px;
+        border-radius: 999px;
+        text-align: center;
+    }
+
+    .curso-item-nome {
+        flex: 1;
+    }
+
+    .curso-item-seta {
+        color: var(--gold);
+        transition: transform 0.25s ease;
+    }
+
+    @keyframes cursoItemFadeIn {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
     @media (max-width: 576px) {
         .cursos-areas-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+
+        .curso-item-tipo {
+            min-width: 100px;
         }
     }
 </style>
@@ -1371,54 +1514,81 @@
 <script>
 (function () {
     var CURSOS_POR_AREA = {
-        enfermagem: [
-            { nome: 'Técnico em Enfermagem', href: 'Cursos/TEnfermagem.html' },
-            { nome: 'Especialização Técnica em Enfermagem', href: 'Cursos/ETEnfermagem.html' },
-            { nome: 'Bacharelado em Enfermagem', href: 'Cursos/BEnfermagem.html' },
-            { nome: 'Pós-graduação latu sensu em Enfermagem', href: 'Cursos/PosEnfermagem.html' }
-        ],
-        psicologia: [
-            { nome: 'Bacharelado em Psicologia', href: 'Cursos/BPsicologia.html' },
-            { nome: 'Pós-graduação em Psicologia Clínica e Saúde Mental', href: 'Cursos/PosPsicologia.html' }
-        ],
-        farmacia: [
-            { nome: 'Técnico em Farmácia', href: 'Cursos/TFarmacia.html' }
-        ]
+        enfermagem: {
+            titulo: 'Enfermagem',
+            cursos: [
+                { nome: 'Técnico em Enfermagem', tipo: 'Técnico', href: 'Cursos/TEnfermagem.html' },
+                { nome: 'Especialização Técnica em Enfermagem', tipo: 'Especialização Técnica', href: 'Cursos/ETEnfermagem.html' },
+                { nome: 'Bacharelado em Enfermagem', tipo: 'Bacharelado', href: 'Cursos/BEnfermagem.html' },
+                { nome: 'Pós-graduação latu sensu em Enfermagem', tipo: 'Pós-graduação', href: 'Cursos/PosEnfermagem.html' }
+            ]
+        },
+        psicologia: {
+            titulo: 'Psicologia',
+            cursos: [
+                { nome: 'Bacharelado em Psicologia', tipo: 'Bacharelado', href: 'Cursos/BPsicologia.html' },
+                { nome: 'Pós-graduação em Psicologia Clínica e Saúde Mental', tipo: 'Pós-graduação', href: 'Cursos/PosPsicologia.html' }
+            ]
+        },
+        farmacia: {
+            titulo: 'Farmácia',
+            cursos: [
+                { nome: 'Técnico em Farmácia', tipo: 'Técnico', href: 'Cursos/TFarmacia.html' }
+            ]
+        }
     };
 
     var cards = document.querySelectorAll('.curso-area-card');
     var wrapper = document.getElementById('cursosListaWrapper');
     var lista = document.getElementById('cursosLista');
+    var titulo = document.getElementById('cursosListaTitulo');
+    var fecharBtn = document.getElementById('cursosListaFechar');
     var areaAtiva = null;
 
-    function renderLista(area) {
+    document.querySelectorAll('[data-count-for]').forEach(function (el) {
+        var area = el.getAttribute('data-count-for');
+        var n = CURSOS_POR_AREA[area].cursos.length;
+        el.textContent = n === 1 ? '1 opção de formação' : n + ' opções de formação';
+    });
+
+    function fecharLista() {
+        areaAtiva = null;
+        wrapper.classList.remove('aberto');
+        cards.forEach(function (c) { c.classList.remove('active'); });
+    }
+
+    function abrirArea(area, card) {
+        areaAtiva = area;
+        cards.forEach(function (c) { c.classList.remove('active'); });
+        card.classList.add('active');
+
+        titulo.textContent = 'Cursos de ' + CURSOS_POR_AREA[area].titulo;
         lista.innerHTML = '';
-        CURSOS_POR_AREA[area].forEach(function (curso) {
+        CURSOS_POR_AREA[area].cursos.forEach(function (curso) {
             var li = document.createElement('li');
             var a = document.createElement('a');
             a.href = curso.href;
-            a.innerHTML = '<span>' + curso.nome + '</span><i class="fas fa-arrow-right"></i>';
+            a.innerHTML = '<span class="curso-item-tipo">' + curso.tipo + '</span>' +
+                '<span class="curso-item-nome">' + curso.nome + '</span>' +
+                '<i class="fas fa-arrow-right curso-item-seta"></i>';
             li.appendChild(a);
             lista.appendChild(li);
         });
+        wrapper.classList.add('aberto');
     }
 
     cards.forEach(function (card) {
         card.addEventListener('click', function () {
             var area = card.getAttribute('data-area');
             if (areaAtiva === area) {
-                areaAtiva = null;
-                wrapper.style.display = 'none';
-                cards.forEach(function (c) { c.classList.remove('active'); });
+                fecharLista();
                 return;
             }
-            areaAtiva = area;
-            cards.forEach(function (c) { c.classList.remove('active'); });
-            card.classList.add('active');
-            renderLista(area);
-            wrapper.style.display = 'block';
+            abrirArea(area, card);
         });
     });
+
+    fecharBtn.addEventListener('click', fecharLista);
 })();
 </script>
 
