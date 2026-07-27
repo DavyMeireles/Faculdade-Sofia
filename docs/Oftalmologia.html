@@ -1183,446 +1183,1197 @@
     </script>
 
         <main b-lj3f8y2p6z role="main" class="pb-3">
-              <style>
-       
+<style>
+    .oft-page {
+        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+        --oft-navy: #0c1f3a;
+        --oft-navy-light: #14315a;
+        --oft-cream: #f7f1e4;
+        --oft-mauve: #7a4a52;
+        --oft-gold: #C5A059;
+        --oft-text: #2c3440;
+        color: var(--oft-text);
+        overflow-x: hidden;
+    }
 
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
+    .oft-page * {
+        box-sizing: border-box;
+    }
+
+    .oft-page section {
+        scroll-margin-top: 140px;
+    }
+
+    .oft-container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    /* Sub-nav */
+    .oft-subnav {
+        position: sticky;
+        top: 75px;
+        z-index: 40;
+        background: var(--oft-navy);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .oft-subnav .oft-container {
+        display: flex;
+        gap: 6px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .oft-subnav a {
+        display: inline-block;
+        padding: 12px 16px;
+        color: #cdd8e6;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: .02em;
+        border-bottom: 3px solid transparent;
+        transition: all 0.25s ease;
+    }
+
+        .oft-subnav a:hover {
+            color: var(--oft-gold);
+            border-color: var(--oft-gold);
         }
 
-        /* cabeçalho institucional */
-        .header-clinica {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2.5rem;
-            border-bottom: 2px solid #c7e2f0;
-            padding-bottom: 1.5rem;
+    /* Hero */
+    .oft-hero {
+        background: linear-gradient(120deg, var(--oft-navy) 0%, var(--oft-navy-light) 100%);
+        padding: 70px 0 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .oft-hero .oft-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .oft-hero-text {
+        flex: 1 1 420px;
+        min-width: 280px;
+    }
+
+    .oft-hero-text h1 {
+        color: #fff;
+        font-weight: 800;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    .oft-hero-text p {
+        color: #d6dee9;
+        font-size: 1.05rem;
+        max-width: 480px;
+        margin-bottom: 24px;
+    }
+
+    .oft-hero-media {
+        flex: 1 1 360px;
+        min-width: 260px;
+    }
+
+    /* Buttons */
+    .oft-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 26px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: all 0.25s ease;
+        cursor: pointer;
+    }
+
+    .oft-btn-gold {
+        background: var(--oft-gold);
+        color: var(--oft-navy);
+    }
+
+        .oft-btn-gold:hover {
+            background: #b08b45;
+            color: var(--oft-navy);
         }
 
-        .logo-area h1 {
-            font-size: 1.9rem;
-            font-weight: 700;
-            color: #0b4b6b;
-            letter-spacing: -0.02em;
+    .oft-btn-outline-light {
+        border-color: rgba(255,255,255,0.5);
+        color: #fff;
+    }
+
+        .oft-btn-outline-light:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.08);
+            color: #fff;
         }
 
-        .logo-area span {
-            font-weight: 300;
-            font-size: 1rem;
-            color: #2f5e7a;
-            display: block;
-            margin-top: 0.25rem;
+    .oft-btn-outline-navy {
+        border-color: var(--oft-navy);
+        color: var(--oft-navy);
+    }
+
+        .oft-btn-outline-navy:hover {
+            background: var(--oft-navy);
+            color: #fff;
         }
 
-        .atendimento-tag {
-            background: #e2f0f9;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
+    .oft-btn-navy {
+        background: var(--oft-navy);
+        color: #fff;
+    }
+
+        .oft-btn-navy:hover {
+            background: var(--oft-navy-light);
+            color: #fff;
+        }
+
+    .oft-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    /* Image placeholder */
+    .oft-imgph {
+        background: linear-gradient(135deg, #e7edf5, #cfdcec);
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #5a6b80;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+        .oft-imgph i {
+            font-size: 2.4rem;
+            color: var(--oft-navy);
+            opacity: .55;
+        }
+
+        .oft-imgph span {
+            font-size: 0.82rem;
             font-weight: 600;
+        }
+
+    /* 3 portas de entrada */
+    .oft-portas {
+        padding: 50px 0;
+        background: var(--oft-cream);
+    }
+
+    .oft-portas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+    }
+
+    .oft-porta {
+        border-radius: 18px;
+        padding: 30px 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 220px;
+    }
+
+        .oft-porta .oft-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            opacity: .85;
+        }
+
+        .oft-porta h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .oft-porta .oft-porta-sub {
+            font-size: 0.85rem;
+            font-weight: 600;
+            opacity: .85;
+        }
+
+        .oft-porta p {
+            font-size: 0.92rem;
+            margin: 0;
+            opacity: .9;
+        }
+
+        .oft-porta .oft-btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+    .oft-porta-refrativa {
+        background: #fff;
+        color: var(--oft-navy);
+        border: 1px solid #e7dcc4;
+    }
+
+    .oft-porta-catarata {
+        background: var(--oft-navy);
+        color: #fff;
+    }
+
+    .oft-porta-estetica {
+        background: var(--oft-mauve);
+        color: #fff;
+    }
+
+    /* Generic split section */
+    .oft-split {
+        padding: 64px 0;
+    }
+
+    .oft-split .oft-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 44px;
+    }
+
+    .oft-split-media,
+    .oft-split-text {
+        flex: 1 1 420px;
+        min-width: 280px;
+    }
+
+    .oft-split.oft-reverse .oft-container {
+        flex-direction: row-reverse;
+    }
+
+    .oft-eyebrow-gold {
+        color: var(--oft-gold);
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .oft-split h2 {
+        color: var(--oft-navy);
+        font-weight: 800;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        margin-bottom: 16px;
+    }
+
+    .oft-split p {
+        color: #445064;
+        margin-bottom: 16px;
+    }
+
+    .oft-tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .oft-tag {
+        background: var(--oft-cream);
+        color: var(--oft-navy);
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 8px 16px;
+        border-radius: 999px;
+        text-transform: uppercase;
+        letter-spacing: .02em;
+    }
+
+    .oft-tecnicas {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--oft-navy);
+        margin-bottom: 20px;
+    }
+
+    /* Quiz */
+    .oft-quiz {
+        background: var(--oft-cream);
+        padding: 56px 0;
+    }
+
+    .oft-quiz-box {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(12,31,58,0.08);
+        padding: 32px;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .oft-quiz-box h3 {
+        color: var(--oft-navy);
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .oft-quiz-field {
+        margin-bottom: 16px;
+    }
+
+        .oft-quiz-field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--oft-navy);
+            margin-bottom: 6px;
+        }
+
+        .oft-quiz-field select,
+        .oft-quiz-field input[type="number"] {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #d7dee6;
             font-size: 0.95rem;
-            color: #0b4b6b;
-            box-shadow: 0 2px 6px rgba(0,50,70,0.08);
         }
 
-            .atendimento-tag i {
-                margin-right: 0.4rem;
-                color: #1b98c6;
-            }
+    .oft-quiz-checks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
 
-        /* título principal da página (oftalmo avançada) */
-        .titulo-secao {
-            margin-bottom: 2.5rem;
-        }
-
-            .titulo-secao h2 {
-                font-size: 2.3rem;
-                font-weight: 700;
-                color: #10384b;
-                display: flex;
-                align-items: center;
-                gap: 0.75rem;
-            }
-
-                .titulo-secao h2 i {
-                    font-size: 2.2rem;
-                    color: #1b98c6;
-                    background: #dbeef9;
-                    padding: 0.5rem;
-                    border-radius: 20px;
-                }
-
-        .subtitulo-clinico {
-            font-size: 1.15rem;
-            color: #2b5f7a;
-            max-width: 800px;
-            margin-top: 0.5rem;
-            padding-left: 0.8rem;
-            border-left: 5px solid #9bc9de;
-        }
-
-        /* grid de cards principal */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .card-procedimento {
-            background: white;
-            border-radius: 28px;
-            box-shadow: 0 12px 28px -8px rgba(0, 55, 80, 0.15);
-            overflow: hidden;
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgba(140, 200, 230, 0.3);
-        }
-
-            .card-procedimento:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 22px 35px -12px #0b4b6b33;
-            }
-
-        /* imagem ilustrativa (placeholder com ícone ou gradiente) */
-        .card-img {
-            height: 160px;
-            background: linear-gradient(145deg, #b3dff0, #ddf2fa);
+        .oft-quiz-checks label {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #11577a;
-            font-size: 3.5rem;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--oft-text);
+        }
+
+    .oft-quiz-result {
+        display: none;
+        margin-top: 22px;
+        padding: 18px 20px;
+        background: var(--oft-cream);
+        border-radius: 12px;
+        border-left: 4px solid var(--oft-gold);
+    }
+
+        .oft-quiz-result.oft-show {
+            display: block;
+        }
+
+        .oft-quiz-result h4 {
+            color: var(--oft-navy);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .oft-quiz-result p {
+            font-size: 0.9rem;
+            color: #445064;
+            margin-bottom: 14px;
+        }
+
+    /* Before/after slider */
+    .oft-baslider {
+        position: relative;
+        width: 100%;
+        max-width: 520px;
+        aspect-ratio: 4/3;
+        border-radius: 18px;
+        overflow: hidden;
+        margin: 0 auto 12px;
+        background: linear-gradient(135deg, #cfdcec, #e7edf5);
+    }
+
+    .oft-baslider-before,
+    .oft-baslider-after {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        color: #445064;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .oft-baslider-before {
+        filter: blur(3px) saturate(0.6) brightness(0.9);
+    }
+
+    .oft-baslider-after {
+        overflow: hidden;
+        filter: none;
+        clip-path: inset(0 50% 0 0);
+    }
+
+    .oft-baslider-handle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        margin: 0;
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        cursor: ew-resize;
+        z-index: 5;
+    }
+
+        .oft-baslider-handle::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--oft-navy);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            cursor: ew-resize;
+        }
+
+        .oft-baslider-handle::-moz-range-thumb {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--oft-navy);
+            cursor: ew-resize;
+        }
+
+    .oft-baslider-caption {
+        text-align: center;
+        font-size: 0.78rem;
+        color: #6a7686;
+        font-style: italic;
+        max-width: 520px;
+        margin: 0 auto 20px;
+    }
+
+    /* Lentes */
+    .oft-lentes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
+        margin: 24px 0;
+    }
+
+    .oft-lente-card {
+        background: var(--oft-cream);
+        border-radius: 14px;
+        padding: 20px;
+        text-align: center;
+    }
+
+        .oft-lente-card i {
+            font-size: 1.6rem;
+            color: var(--oft-navy);
+            margin-bottom: 10px;
+        }
+
+        .oft-lente-card h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--oft-navy);
+            margin-bottom: 6px;
+        }
+
+        .oft-lente-card p {
+            font-size: 0.8rem;
+            color: #556173;
+            margin: 0;
+        }
+
+    /* Estética list */
+    .oft-lista-estetica {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 8px 20px;
+    }
+
+        .oft-lista-estetica li {
+            font-size: 0.92rem;
+            color: #445064;
+            padding-left: 20px;
             position: relative;
         }
 
-            .card-img img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: cover;
-                opacity: 0.9;
-            }
-
-        /* quando não temos foto real, usamos um ícone temático */
-        .img-placeholder {
-            background: radial-gradient(circle at 30% 30%, #bbe4f2, #8bc1d9);
+        .oft-lista-estetica li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--oft-gold);
         }
 
-        .card-content {
-            padding: 1.5rem 1.5rem 1.8rem;
-            flex: 1;
+    .oft-frase-central {
+        color: var(--oft-mauve);
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+
+    /* Diferenciais */
+    .oft-diferenciais {
+        background: #fff;
+        padding: 40px 0;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .oft-diferenciais .oft-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        text-align: center;
+    }
+
+    .oft-diferencial i {
+        font-size: 1.6rem;
+        color: var(--oft-gold);
+        margin-bottom: 10px;
+    }
+
+    .oft-diferencial p {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--oft-navy);
+        margin: 0;
+    }
+
+    /* Tecnologia */
+    .oft-tecnologia {
+        background: var(--oft-navy);
+        padding: 60px 0;
+        color: #fff;
+    }
+
+    .oft-tecnologia h2 {
+        color: #fff;
+    }
+
+    .oft-tecnologia .oft-split-text p {
+        color: #cdd8e6;
+    }
+
+    .oft-tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+    }
+
+    .oft-tech-card {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 14px;
+        padding: 20px;
+    }
+
+        .oft-tech-card i {
+            color: var(--oft-gold);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
 
-        .card-procedimento h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #0b4b6b;
-            margin-bottom: 0.5rem;
-            border-left: 5px solid #49b5d9;
-            padding-left: 0.9rem;
-        }
-
-        .proced-desc {
-            color: #1c4053;
-            font-size: 0.98rem;
-            margin: 0.8rem 0 1.2rem;
-        }
-
-            .proced-desc strong {
-                color: #0b4b6b;
-                font-weight: 700;
-            }
-
-        .bullets {
-            list-style: none;
-            margin-top: 0.8rem;
-        }
-
-            .bullets li {
-                display: flex;
-                align-items: center;
-                gap: 0.6rem;
-                font-size: 0.95rem;
-                margin-bottom: 0.55rem;
-                color: #1a4356;
-            }
-
-                .bullets li i {
-                    color: #2499c0;
-                    width: 1.3rem;
-                    font-size: 1rem;
-                }
-
-        .badge-grau {
-            background: #e4f1f9;
-            border-radius: 40px;
-            padding: 0.25rem 1rem;
-            font-weight: 600;
-            font-size: 0.85rem;
-            display: inline-block;
-            color: #0b5b7a;
-            margin-top: 0.8rem;
-            border: 1px dashed #6bb6d4;
-        }
-
-        /* seção especialidades extra (da imagem) */
-        .especialidades-extra {
-            margin-top: 3.5rem;
-            background: #e2f0f7;
-            border-radius: 40px;
-            padding: 2rem 2.5rem;
-            box-shadow: inset 0 1px 5px rgba(255,255,255,0.8), 0 10px 20px rgba(0,60,80,0.1);
-        }
-
-            .especialidades-extra h3 {
-                font-size: 2rem;
-                font-weight: 600;
-                color: #10384b;
-                display: flex;
-                align-items: center;
-                gap: 0.8rem;
-                margin-bottom: 2rem;
-            }
-
-        .grid-extra {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .extra-item {
-            background: rgba(255,255,255,0.75);
-            backdrop-filter: blur(2px);
-            border-radius: 30px;
-            padding: 1.5rem 1.8rem;
-            border: 1px solid white;
-        }
-
-            .extra-item h4 {
-                color: #11577a;
-                font-weight: 700;
-                font-size: 1.3rem;
-                margin-bottom: 1rem;
-                border-bottom: 2px solid #9fd0e5;
-                padding-bottom: 0.4rem;
-            }
-
-            .extra-item p {
-                margin-bottom: 1rem;
-                color: #1d4e63;
-            }
-
-        .mini-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem 0.8rem;
-            margin-top: 0.8rem;
-        }
-
-            .mini-tags span {
-                background: white;
-                padding: 0.3rem 1rem;
-                border-radius: 50px;
-                font-size: 0.85rem;
-                font-weight: 500;
-                color: #0b5b7a;
-                box-shadow: 0 2px 5px #a6cadd;
-            }
-
-        .rodape-info {
-            margin-top: 3rem;
-            text-align: center;
+        .oft-tech-card h4 {
             font-size: 0.95rem;
-            color: #376983;
-            border-top: 1px solid #c3deec;
-            padding-top: 2rem;
+            font-weight: 800;
+            margin-bottom: 6px;
         }
 
-        /* ilustração interna (simulando foto) */
-        .foto-simbolo {
-            display: flex;
-            gap: 0.3rem;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(130deg, #b0daf0, #d5ecf9);
+        .oft-tech-card p {
+            font-size: 0.82rem;
+            color: #cdd8e6;
+            margin: 0;
         }
 
-            .foto-simbolo i {
-                font-size: 3.2rem;
-                color: #1b7093;
-                text-shadow: 2px 2px 0 white;
-            }
+    .oft-exames-lista {
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
 
-       
-
-        .titulo-secao h2 {
-            font-size: 1.9rem;
-            flex-wrap: wrap;
+        .oft-exames-lista h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 14px;
         }
-    </style>
 
-<br />
-<br />
-<br />
-    <div class="container">
+        .oft-exames-lista .oft-tag-row .oft-tag {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
 
+    /* Corpo clinico */
+    .oft-corpo-clinico {
+        padding: 60px 0;
+    }
 
+    .oft-cc-head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
 
-        <!-- título principal (oftalmologia avançada) -->
-        <div class="titulo-secao">
-            <h2>
+    .oft-cc-head h2 {
+        color: var(--oft-navy);
+        font-weight: 800;
+        margin: 0;
+    }
+
+    .oft-cc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .oft-cc-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(12,31,58,0.05);
+    }
+
+    .oft-cc-avatar {
+        height: 160px;
+        background: linear-gradient(135deg, #e7edf5, #cfdcec);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .oft-cc-avatar i {
+            font-size: 2.6rem;
+            color: var(--oft-navy);
+            opacity: .5;
+        }
+
+    .oft-cc-info {
+        padding: 16px 18px;
+    }
+
+        .oft-cc-info h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--oft-navy);
+            margin-bottom: 4px;
+        }
+
+        .oft-cc-info span {
+            font-size: 0.78rem;
+            color: #8a94a3;
+        }
+
+    /* Conteudos */
+    .oft-conteudos {
+        background: var(--oft-cream);
+        padding: 60px 0;
+    }
+
+    .oft-conteudos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-top: 26px;
+    }
+
+    .oft-conteudo-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 22px;
+    }
+
+        .oft-conteudo-card span.oft-eyebrow-gold {
+            margin-bottom: 8px;
+        }
+
+        .oft-conteudo-card h4 {
+            font-size: 1.02rem;
+            font-weight: 800;
+            color: var(--oft-navy);
+            margin-bottom: 10px;
+        }
+
+        .oft-conteudo-card p {
+            font-size: 0.82rem;
+            color: #8a94a3;
+            margin: 0;
+            font-style: italic;
+        }
+
+    /* CTA final */
+    .oft-cta-final {
+        background: linear-gradient(120deg, var(--oft-navy), var(--oft-navy-light));
+        padding: 60px 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    .oft-cta-final h2 {
+        font-weight: 800;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        margin-bottom: 14px;
+    }
+
+    .oft-cta-final p {
+        color: #d6dee9;
+        max-width: 560px;
+        margin: 0 auto 26px;
+    }
+
+    .oft-cta-final .oft-btns {
+        justify-content: center;
+    }
+
+    @media (max-width: 640px) {
+        .oft-split .oft-container,
+        .oft-split.oft-reverse .oft-container {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<div class="oft-page">
+
+    <!-- Sub-navegação -->
+    <nav class="oft-subnav" aria-label="Navegação da Oftalmologia">
+        <div class="oft-container">
+            <a href="#refrativa">Refrativa</a>
+            <a href="#catarata">Catarata</a>
+            <a href="#estetica">Estética do Olhar</a>
+            <a href="#exames">Exames</a>
+            <a href="#tecnologia">Tecnologia</a>
+            <a href="#corpo-clinico">Corpo Clínico</a>
+            <a href="#conteudos">Conteúdos</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="oft-hero">
+        <div class="oft-container">
+            <div class="oft-hero-text">
+                <h1>Um novo olhar<br>para a oftalmologia.</h1>
+                <p>Ciência para diagnosticar. Tecnologia para tratar. Cuidado para acolher.</p>
+                <div class="oft-btns">
+                    <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20oftalmol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
+                        <i class="fas fa-calendar-check"></i> Agendar minha avaliação
+                    </a>
+                    <a href="#sobre" class="oft-btn oft-btn-outline-light">
+                        Conhecer a clínica
+                    </a>
+                </div>
+            </div>
+            <div class="oft-hero-media">
+                <div class="oft-imgph" style="height:280px;">
+                    <i class="fas fa-eye"></i>
+                    <span>Foto: exame oftalmológico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre / intro -->
+    <section id="sobre" class="oft-split" style="padding:44px 0 0;">
+        <div class="oft-container" style="display:block;">
+            <p style="max-width:760px; color:#445064; font-size:1.02rem;">
+                Procedimentos de alta precisão, diagnóstico por imagem e cirurgia refrativa. Corpo clínico especializado e tecnologia diferenciada, com avaliação individualizada para cada paciente.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3 portas de entrada -->
+    <section class="oft-portas">
+        <div class="oft-container">
+            <div class="oft-portas-grid">
+                <div class="oft-porta oft-porta-refrativa">
+                    <span class="oft-eyebrow">Quero me livrar dos óculos</span>
+                    <h3>Cirurgia Refrativa</h3>
+                    <span class="oft-porta-sub">Miopia • Astigmatismo • Hipermetropia</span>
+                    <p>Descubra se você pode realizar cirurgia refrativa.</p>
+                    <a href="#refrativa" class="oft-btn oft-btn-outline-navy">Quero saber se posso operar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="oft-porta oft-porta-catarata">
+                    <span class="oft-eyebrow">Quero voltar a enxergar melhor</span>
+                    <h3>Cirurgia de Catarata</h3>
+                    <span class="oft-porta-sub">Diagnóstico • Cirurgia • Lentes intraoculares</span>
+                    <p>Tecnologia e planejamento individualizado para cada paciente.</p>
+                    <a href="#catarata" class="oft-btn oft-btn-gold">Avaliar minha catarata <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="oft-porta oft-porta-estetica">
+                    <span class="oft-eyebrow">Quero cuidar do meu olhar</span>
+                    <h3>Estética do Olhar</h3>
+                    <span class="oft-porta-sub">Pálpebras • Blefaroplastia • Região periocular</span>
+                    <p>Saúde, harmonia e naturalidade para a região dos olhos.</p>
+                    <a href="#estetica" class="oft-btn oft-btn-outline-light">Conhecer os tratamentos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cirurgia Refrativa -->
+    <section id="refrativa" class="oft-split">
+        <div class="oft-container">
+            <div class="oft-split-media">
+                <div class="oft-imgph" style="height:320px;">
+                    <i class="fas fa-laptop-medical"></i>
+                    <span>Foto: plataforma de cirurgia refrativa a laser</span>
+                </div>
+            </div>
+            <div class="oft-split-text">
+                <span class="oft-eyebrow-gold">Cirurgia Refrativa</span>
+                <h2>Liberdade para enxergar.</h2>
+                <p>Imagine acordar, olhar ao redor e não precisar procurar imediatamente seus óculos. A cirurgia refrativa pode reduzir a dependência de óculos e lentes de contato em pacientes adequadamente selecionados.</p>
+                <div class="oft-tag-row">
+                    <span class="oft-tag">Miopia</span>
+                    <span class="oft-tag">Astigmatismo</span>
+                    <span class="oft-tag">Hipermetropia</span>
+                </div>
+                <div class="oft-tecnicas">Técnicas: LASIK | PRK</div>
+                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20fazer%20minha%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20refrativa." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-navy">
+                    Fazer minha avaliação refrativa <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Refrativa -->
+    <section class="oft-quiz">
+        <div class="oft-container">
+            <div class="oft-quiz-box">
+                <h3>Você pode ser candidato à cirurgia refrativa?</h3>
+                <form id="oftQuizForm">
+                    <div class="oft-quiz-field">
+                        <label for="oftIdade">Qual sua idade?</label>
+                        <input type="number" id="oftIdade" min="1" max="120" placeholder="Ex: 32">
+                    </div>
+                    <div class="oft-quiz-field">
+                        <label for="oftUsaOculos">Você usa óculos ou lentes?</label>
+                        <select id="oftUsaOculos">
+                            <option value="">Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                    <div class="oft-quiz-field">
+                        <label for="oftGrauMudou">Seu grau mudou recentemente?</label>
+                        <select id="oftGrauMudou">
+                            <option value="">Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                    <div class="oft-quiz-field">
+                        <label>Você possui:</label>
+                        <div class="oft-quiz-checks">
+                            <label><input type="checkbox" name="oftCondicao" value="miopia"> Miopia</label>
+                            <label><input type="checkbox" name="oftCondicao" value="astigmatismo"> Astigmatismo</label>
+                            <label><input type="checkbox" name="oftCondicao" value="hipermetropia"> Hipermetropia</label>
+                            <label><input type="checkbox" name="oftCondicao" value="naosei"> Não sei</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="oft-btn oft-btn-navy">Descubra suas possibilidades <i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="oft-quiz-result" id="oftQuizResult">
+                    <h4>Uma avaliação oftalmológica completa é necessária para determinar sua indicação.</h4>
+                    <p>Esse questionário é apenas educativo e não substitui uma consulta — nenhuma indicação cirúrgica pode ser feita sem exame presencial.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Fiz%20o%20question%C3%A1rio%20de%20cirurgia%20refrativa%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
+                        Agendar avaliação <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catarata -->
+    <section id="catarata" class="oft-split oft-reverse">
+        <div class="oft-container">
+            <div class="oft-split-media">
+                <div class="oft-baslider">
+                    <div class="oft-baslider-before">
+                        <i class="fas fa-eye" style="font-size:2rem;"></i>
+                        <span>Com catarata (ilustração)</span>
+                    </div>
+                    <div class="oft-baslider-after" id="oftBaAfter">
+                        <i class="fas fa-eye" style="font-size:2rem;"></i>
+                        <span>Após o tratamento (ilustração)</span>
+                    </div>
+                    <input type="range" class="oft-baslider-handle" id="oftBaRange" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+                </div>
+                <p class="oft-baslider-caption">Imagens meramente ilustrativas e educativas, sem promessa de resultado individual.</p>
+            </div>
+            <div class="oft-split-text">
+                <span class="oft-eyebrow-gold">Cirurgia de Catarata</span>
+                <h2>A catarata pode mudar a maneira como você vê o mundo.</h2>
+                <p>A catarata provoca perda progressiva da transparência do cristalino. Quando indicada, a cirurgia substitui o cristalino opacificado por uma lente intraocular.</p>
+                <a href="#lentes" class="oft-btn oft-btn-navy">Quero entender a cirurgia <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lentes intraoculares -->
+    <section id="lentes" class="oft-split" style="padding-top:0;">
+        <div class="oft-container" style="display:block;">
+            <span class="oft-eyebrow-gold">Lentes Intraoculares</span>
+            <h2>Uma cirurgia. Diferentes possibilidades visuais.</h2>
+            <div class="oft-lentes-grid">
+                <div class="oft-lente-card">
+                    <i class="fas fa-circle"></i>
+                    <h4>Monofocal</h4>
+                    <p>Foco prioritário em uma determinada distância.</p>
+                </div>
+                <div class="oft-lente-card">
+                    <i class="fas fa-adjust"></i>
+                    <h4>Tórica</h4>
+                    <p>Possibilidade de correção do astigmatismo em pacientes selecionados.</p>
+                </div>
+                <div class="oft-lente-card">
+                    <i class="fas fa-expand-alt"></i>
+                    <h4>Foco Estendido</h4>
+                    <p>Busca ampliar a faixa de visão útil.</p>
+                </div>
+                <div class="oft-lente-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>Multifocal / Trifocal</h4>
+                    <p>Possibilidade de diferentes pontos de foco em pacientes adequadamente selecionados.</p>
+                </div>
+            </div>
+            <p><strong>Qual é a melhor lente?</strong> A melhor lente não é necessariamente a mais sofisticada. É aquela mais adequada ao seu olho, à sua rotina e às suas necessidades visuais.</p>
+            <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20entender%20minhas%20op%C3%A7%C3%B5es%20de%20lente%20intraocular." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-outline-navy">
+                Descobrir minhas opções <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Estética do Olhar -->
+    <section id="estetica" class="oft-split oft-reverse">
+        <div class="oft-container">
+            <div class="oft-split-media">
+                <div class="oft-imgph" style="height:300px;">
+                    <i class="fas fa-eye-low-vision"></i>
+                    <span>Foto: avaliação da região periocular</span>
+                </div>
+            </div>
+            <div class="oft-split-text">
+                <span class="oft-eyebrow-gold">Estética do Olhar</span>
+                <h2>Seus olhos contam sua história.</h2>
+                <p>A região dos olhos é uma das áreas mais expressivas do rosto. A avaliação médica permite buscar equilíbrio entre função, saúde, estética e naturalidade.</p>
+                <div class="oft-tag-row">
+                    <span class="oft-tag">Função</span>
+                    <span class="oft-tag">Saúde</span>
+                    <span class="oft-tag">Estética</span>
+                    <span class="oft-tag">Naturalidade</span>
+                </div>
+                <ul class="oft-lista-estetica">
+                    <li>Blefaroplastia superior</li>
+                    <li>Blefaroplastia inferior</li>
+                    <li>Bolsas palpebrais</li>
+                    <li>Ptose palpebral</li>
+                    <li>Xantelasma</li>
+                    <li>Lesões palpebrais</li>
+                    <li>Rejuvenescimento periocular</li>
+                </ul>
+                <p class="oft-frase-central">Não buscamos mudar sua expressão.<br>Buscamos preservá-la.</p>
+                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20do%20olhar." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-navy">
+                    Agendar avaliação do olhar <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="oft-diferenciais">
+        <div class="oft-container">
+            <div class="oft-diferencial">
                 <i class="fas fa-microscope"></i>
-                Oftalmologia Avançada
-            </h2>
-            <div class="subtitulo-clinico">
-                Procedimentos de alta precisão, diagnóstico por imagem e cirurgia refrativa.
-                Corpo clínico especializado e tecnologia diferenciada.
+                <p>Tecnologia de ponta em diagnóstico e tratamento</p>
+            </div>
+            <div class="oft-diferencial">
+                <i class="fas fa-building"></i>
+                <p>Estrutura moderna e acolhedora</p>
+            </div>
+            <div class="oft-diferencial">
+                <i class="fas fa-hand-holding-heart"></i>
+                <p>Atendimento humano e personalizado</p>
+            </div>
+            <div class="oft-diferencial">
+                <i class="fas fa-user-check"></i>
+                <p>Avaliação individualizada para cada paciente</p>
             </div>
         </div>
+    </section>
 
-        <!-- grid de procedimentos (baseado no conteúdo do ficheiro) -->
-        <div class="cards-grid">
-
-            <!-- 1. Exames biológicos (tamponado, dosagem, sonograma, imagem retina, biópsia) -->
-            <div class="card-procedimento">
-                <div class="card-img img-placeholder">
-                    <div class="foto-simbolo">
-                        <i class="fas fa-flask"></i>
-                        <i class="fas fa-eye"></i>
-                        <i class="fas fa-wave-square"></i>
-                    </div>
+    <!-- Tecnologia + Exames -->
+    <section id="tecnologia" class="oft-tecnologia">
+        <div class="oft-container" style="display:block;">
+            <span class="oft-eyebrow-gold">Tecnologia</span>
+            <h2>Tecnologia é importante.<br>Saber utilizá-la é fundamental.</h2>
+            <div class="oft-tech-grid">
+                <!-- TODO: substituir pelos nomes comerciais reais dos equipamentos da clínica -->
+                <div class="oft-tech-card">
+                    <i class="fas fa-street-view"></i>
+                    <h4>Topografia corneana</h4>
+                    <p>Mapeamento da curvatura da córnea, usado na indicação e no acompanhamento de cirurgias refrativas.</p>
                 </div>
-                <div class="card-content">
-                    <h3>Exames biológicos</h3>
-                    <div class="proced-desc">
-                        Análise laboratorial e funcional da superfície ocular e estruturas internas.
-                    </div>
-                    <ul class="bullets">
-                        <li><i class="fas fa-vial"></i> <strong>Tamponado</strong> – avaliação do filme lacrimal</li>
-                        <li><i class="fas fa-chart-line"></i> <strong>Dosificação</strong> – marcadores inflamatórios e hormonais</li>
-                        <li><i class="fas fa-ultrasound"></i> <strong>Sonograma</strong> – ultrassonografia modo A/B</li>
-                        <li><i class="fas fa-camera-retro"></i> <strong>Imagenamento de Retina</strong> – tomografia, angio-OCT</li>
-                        <li><i class="fas fa-syringe"></i> <strong>Biópsia ocular / cuña hidráulica</strong> – microamostras e análise de humor vítreo</li>
-                    </ul>
-                    <span class="badge-grau"><i class="far fa-clock"></i> resultado ágil · painel molecular</span>
+                <div class="oft-tech-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Plataforma a laser para cirurgia refrativa</h4>
+                    <p>Utilizada nos procedimentos de LASIK e PRK para correção de miopia, astigmatismo e hipermetropia.</p>
+                </div>
+                <div class="oft-tech-card">
+                    <i class="fas fa-wave-square"></i>
+                    <h4>Tomografia de coerência óptica (OCT)</h4>
+                    <p>Exame de imagem de alta resolução da retina e do nervo óptico.</p>
                 </div>
             </div>
 
-            <!-- 2. Oftalmología Alomodo: cabezas 2°, diente primordial (tóric, fócico, asférico) e crosslink -->
-            <div class="card-procedimento">
-                <div class="card-img img-placeholder">
-                    <div class="foto-simbolo">
-                        <i class="fas fa-tooth"></i>
-                        <i class="fas fa-ring"></i>
-                        <i class="fas fa-sun"></i>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>Oftalmologia Alomodo</h3>
-                    <div class="proced-desc">
-                        Técnicas regenerativas e lentes especiais para córnea irregular e ceratocone.
-                    </div>
-                    <ul class="bullets">
-                        <li><i class="fas fa-head-side"></i> <strong>Cabezas: 2°</strong> – análise topográfica de alta definição (2 mapas)</li>
-                        <li><i class="fas fa-gem"></i> <strong>Diente primordial:</strong> lentes de suporte corneano</li>
-                        <li><i class="fas fa-adjust"></i> <strong>Toric • Focico • Asfericio</strong> – geometrias personalizadas</li>
-                        <li><i class="fas fa-link"></i> <strong>Cross Link K 3°</strong> – reforço do colágeno corneano (ceratocone)</li>
-                    </ul>
-                    <span class="badge-grau"><i class="fas fa-crosshairs"></i> indicação: ceratocone progressivo · 3° geração</span>
-                </div>
-            </div>
-
-            <!-- 3. Cirugía Refracción (LASIK / PRK) 1° + Bulbopolaridad / Pituírico -->
-            <div class="card-procedimento">
-                <div class="card-img img-placeholder">
-                    <div class="foto-simbolo">
-                        <i class="fas fa-laser"></i>
-                        <i class="fas fa-eye"></i>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>Cirugía Refracción</h3>
-                    <div class="proced-desc">
-                        <strong>LASIK / PRK 1°</strong> – correção de miopia, hipermetropia e astigmatismo com laser de femtosegundo.
-                    </div>
-                    <ul class="bullets">
-                        <li><i class="fas fa-bolt"></i> <strong>Bulbopolaridad</strong> – análise da biomecânica ocular</li>
-                        <li><i class="fas fa-brain"></i> <strong>Pituírico</strong> – mapeamento neural da via óptica (pré-operatório)</li>
-                    </ul>
-                    <span class="badge-grau"><i class="fas fa-check-circle"></i> procedimento fast-track · alta no mesmo dia</span>
-                </div>
-            </div>
-
-            <!-- 4. Oftalmología Aguda / consulta + pruebas + envejecimiento + poliación (extra) -->
-            <div class="card-procedimento">
-                <div class="card-img img-placeholder">
-                    <div class="foto-simbolo">
-                        <i class="fas fa-ambulance"></i>
-                        <i class="fas fa-clock"></i>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>Oftalmología Aguda</h3>
-                    <div class="proced-desc">
-                        Atendimento de urgência e pronto‑socorro ocular, com testes diagnósticos imediatos.
-                    </div>
-                    <ul class="bullets">
-                        <li><i class="fas fa-stethoscope"></i> <strong>Consulta especializada</strong> – 24h para quadros agudos</li>
-                        <li><i class="fas fa-flask"></i> <strong>Pruebas rápidas</strong> – microbiologia, lâmpada de fenda</li>
-                        <li><i class="fas fa-hourglass-half"></i> <strong>Envejecimiento</strong> – avaliação de degeneração macular relacionada à idade</li>
-                        <li><i class="fas fa-chart-pie"></i> <strong>Poliación</strong> – campimetria computadorizada (campo visual)</li>
-                    </ul>
-                    <span class="badge-grau"><i class="fas fa-phone-alt"></i> linha direta: (11) 3456-7890</span>
+            <div class="oft-exames-lista" id="exames">
+                <h3>Exames diagnósticos</h3>
+                <div class="oft-tag-row">
+                    <span class="oft-tag">Topografia corneana</span>
+                    <span class="oft-tag">Biometria óptica</span>
+                    <span class="oft-tag">OCT</span>
+                    <span class="oft-tag">Campimetria computadorizada</span>
+                    <span class="oft-tag">Paquimetria</span>
+                    <span class="oft-tag">Biomicroscopia</span>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Bloco extra: "Na área Especialidades" (conteúdo adicional do ficheiro) -->
-        <div class="especialidades-extra">
-            <h3><i class="fas fa-star-of-life" style="color: #1b7093;"></i> Na área Especialidades</h3>
-            <div class="grid-extra">
-                <div class="extra-item">
-                    <h4>Oftalmologia Aguda</h4>
-                    <p><i class="fas fa-clock" style="color:#11577a;"></i> Consulta imediata · Pruebas point‑of‑care</p>
-                    <div class="mini-tags">
-                        <span>envejecimiento</span>
-                        <span>poliación</span>
-                        <span>trauma ocular</span>
+    <!-- Corpo Clínico -->
+    <section id="corpo-clinico" class="oft-corpo-clinico">
+        <div class="oft-container">
+            <div class="oft-cc-head">
+                <h2>Experiência que gera confiança.</h2>
+            </div>
+            <div class="oft-cc-grid">
+                <div class="oft-cc-card">
+                    <div class="oft-cc-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="oft-cc-info">
+                        <h4>Dr. Paulo Signorelli</h4>
+                        <!-- TODO: especialidade, CRM/RQE e mini-currículo do Dr. Paulo Signorelli -->
                     </div>
                 </div>
-                <div class="extra-item">
-                    <h4>Pruebas específicas</h4>
-                    <p>Envelhecimento ocular, análise de células endoteliais, tomografia de coerência óptica (OCT).</p>
-                    <div class="mini-tags">
-                        <span>biomicroscopia</span>
-                        <span>curva tensional</span>
-                        <span>pachimetria</span>
-                    </div>
+                <!-- TODO: adicionar demais médicos do corpo clínico assim que confirmados -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdos -->
+    <section id="conteudos" class="oft-conteudos">
+        <div class="oft-container">
+            <span class="oft-eyebrow-gold">Conteúdos</span>
+            <h2 style="color:var(--oft-navy); font-weight:800;">Entenda melhor sua visão.</h2>
+            <div class="oft-conteudos-grid">
+                <div class="oft-conteudo-card">
+                    <span class="oft-eyebrow-gold">Cirurgia Refrativa</span>
+                    <h4>LASIK ou PRK: qual a diferença?</h4>
+                    <p>Em breve, conteúdo completo.</p>
                 </div>
-                <div class="extra-item">
-                    <h4>Poliación & Neuroftalmo</h4>
-                    <p>Campo visual computadorizado, potencial evocado visual, análise de fibras nervosas.</p>
-                    <div class="mini-tags">
-                        <span>glaucoma</span>
-                        <span>neurite óptica</span>
-                    </div>
+                <div class="oft-conteudo-card">
+                    <span class="oft-eyebrow-gold">Catarata</span>
+                    <h4>Como saber a hora de operar a catarata?</h4>
+                    <p>Em breve, conteúdo completo.</p>
+                </div>
+                <div class="oft-conteudo-card">
+                    <span class="oft-eyebrow-gold">Lentes</span>
+                    <h4>Como escolher uma lente para cirurgia de catarata?</h4>
+                    <p>Em breve, conteúdo completo.</p>
                 </div>
             </div>
-            <!-- pequena nota com termos originais -->
-            <p style="margin-top:2rem; font-style:italic; color:#1f5975;"><i class="fas fa-quote-left"></i> Unidade de Oftalmologia Avançada – especialidades integradas: bulbopolaridad, pituírico, diente primordial e cross link 3°.</p>
         </div>
+    </section>
 
-    
-    </div>
+    <!-- CTA final -->
+    <section class="oft-cta-final">
+        <div class="oft-container">
+            <h2>Sua visão é única.<br>Seu tratamento também deve ser.</h2>
+            <p>O primeiro passo para qualquer tratamento é um diagnóstico preciso e uma avaliação individualizada.</p>
+            <div class="oft-btns">
+                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20oftalmol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
+                    Agendar minha avaliação
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20falar%20com%20a%20cl%C3%ADnica%20de%20Oftalmologia." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-outline-light">
+                    <i class="fab fa-whatsapp"></i> Falar com a clínica
+                </a>
+            </div>
+        </div>
+    </section>
 
+</div>
 
-        </main>
+<script>
+(function () {
+    var form = document.getElementById('oftQuizForm');
+    var result = document.getElementById('oftQuizResult');
+    if (form && result) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            result.classList.add('oft-show');
+            result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    }
+
+    var range = document.getElementById('oftBaRange');
+    var after = document.getElementById('oftBaAfter');
+    if (range && after) {
+        range.addEventListener('input', function () {
+            after.style.clipPath = 'inset(0 ' + (100 - range.value) + '% 0 0)';
+        });
+    }
+
+    document.querySelectorAll('.oft-subnav a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var id = link.getAttribute('href');
+            var target = document.querySelector(id);
+            if (target) {
+                e.preventDefault();
+                var y = target.getBoundingClientRect().top + window.pageYOffset - 130;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        });
+    });
+})();
+</script>
+</main>
     </div>
 
     <footer b-lj3f8y2p6z id="contact">
