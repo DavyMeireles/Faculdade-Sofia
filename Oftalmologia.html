@@ -1871,11 +1871,12 @@
     }
 
     .oft-cc-avatar {
-        height: 160px;
+        height: 220px;
         background: linear-gradient(135deg, #e7edf5, #cfdcec);
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
 
         .oft-cc-avatar i {
@@ -1883,6 +1884,19 @@
             color: var(--oft-navy);
             opacity: .5;
         }
+
+        .oft-cc-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+    .oft-cc-info p {
+        font-size: 0.85rem;
+        color: #556173;
+        margin: 8px 0 0;
+    }
 
     .oft-cc-info {
         padding: 16px 18px;
@@ -1991,7 +2005,7 @@
                 <h1>Um novo olhar<br>para a oftalmologia.</h1>
                 <p>Ciência para diagnosticar. Tecnologia para tratar. Cuidado para acolher.</p>
                 <div class="oft-btns">
-                    <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20oftalmol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
+                    <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20oftalmol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
                         <i class="fas fa-calendar-check"></i> Agendar minha avaliação
                     </a>
                     <a href="#sobre" class="oft-btn oft-btn-outline-light">
@@ -2065,7 +2079,7 @@
                     <span class="oft-tag">Hipermetropia</span>
                 </div>
                 <div class="oft-tecnicas">Técnicas: LASIK | PRK</div>
-                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20fazer%20minha%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20refrativa." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-navy">
+                <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Quero%20fazer%20minha%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20refrativa." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-navy">
                     Fazer minha avaliação refrativa <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -2112,7 +2126,7 @@
                 <div class="oft-quiz-result" id="oftQuizResult">
                     <h4>Uma avaliação oftalmológica completa é necessária para determinar sua indicação.</h4>
                     <p>Esse questionário é apenas educativo e não substitui uma consulta — nenhuma indicação cirúrgica pode ser feita sem exame presencial.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Fiz%20o%20question%C3%A1rio%20de%20cirurgia%20refrativa%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
+                    <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Fiz%20o%20question%C3%A1rio%20de%20cirurgia%20refrativa%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
                         Agendar avaliação <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -2174,7 +2188,7 @@
                 </div>
             </div>
             <p><strong>Qual é a melhor lente?</strong> A melhor lente não é necessariamente a mais sofisticada. É aquela mais adequada ao seu olho, à sua rotina e às suas necessidades visuais.</p>
-            <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20entender%20minhas%20op%C3%A7%C3%B5es%20de%20lente%20intraocular." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-outline-navy">
+            <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Quero%20entender%20minhas%20op%C3%A7%C3%B5es%20de%20lente%20intraocular." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-outline-navy">
                 Descobrir minhas opções <i class="fas fa-arrow-right"></i>
             </a>
         </div>
@@ -2209,7 +2223,7 @@
                     <li>Rejuvenescimento periocular</li>
                 </ul>
                 <p class="oft-frase-central">Não buscamos mudar sua expressão.<br>Buscamos preservá-la.</p>
-                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20do%20olhar." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-navy">
+                <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20do%20olhar." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-navy">
                     Agendar avaliação do olhar <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -2285,11 +2299,13 @@
             <div class="oft-cc-grid">
                 <div class="oft-cc-card">
                     <div class="oft-cc-avatar">
-                        <i class="fas fa-user-md"></i>
+                        <img src="/pagina_inicial/img/home/img/0012.png" alt="Dr. Paulo Fernando Signorelli">
                     </div>
                     <div class="oft-cc-info">
-                        <h4>Dr. Paulo Signorelli</h4>
-                        <!-- TODO: especialidade, CRM/RQE e mini-currículo do Dr. Paulo Signorelli -->
+                        <h4>Dr. Paulo Fernando Signorelli</h4>
+                        <span>Oftalmologia</span>
+                        <!-- TODO: CRM/RQE do Dr. Paulo Fernando Signorelli -->
+                        <p>Médico oftalmologista nascido em Campinas, com mais de 30 anos de dedicação à saúde humanizada. Idealizador do SIHUSA, movimento de aproximação entre pacientes sem convênio e médicos com verdadeiro perfil de ajuda.</p>
                     </div>
                 </div>
                 <!-- TODO: adicionar demais médicos do corpo clínico assim que confirmados -->
@@ -2328,10 +2344,10 @@
             <h2>Sua visão é única.<br>Seu tratamento também deve ser.</h2>
             <p>O primeiro passo para qualquer tratamento é um diagnóstico preciso e uma avaliação individualizada.</p>
             <div class="oft-btns">
-                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20oftalmol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
+                <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20oftalmol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-gold">
                     Agendar minha avaliação
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5519999601237&text=Ol%C3%A1!%20Quero%20falar%20com%20a%20cl%C3%ADnica%20de%20Oftalmologia." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-outline-light">
+                <a href="https://api.whatsapp.com/send?phone=5519981070301&text=Ol%C3%A1!%20Quero%20falar%20com%20a%20cl%C3%ADnica%20de%20Oftalmologia." target="_blank" rel="noopener noreferrer" class="oft-btn oft-btn-outline-light">
                     <i class="fab fa-whatsapp"></i> Falar com a clínica
                 </a>
             </div>
