@@ -1610,26 +1610,31 @@
     .oft-baslider-after {
         position: absolute;
         inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 8px;
-        color: #445064;
-        font-weight: 700;
-        font-size: 0.85rem;
-        text-align: center;
-        padding: 20px;
+        background-image: url('pagina_inicial/img/oftalmologia/banner-catarata.png');
+        background-size: cover;
+        background-position: center;
     }
 
     .oft-baslider-before {
-        filter: blur(3px) saturate(0.6) brightness(0.9);
+        filter: blur(4px) saturate(0.35) brightness(0.75);
     }
 
     .oft-baslider-after {
         overflow: hidden;
         filter: none;
         clip-path: inset(0 50% 0 0);
+    }
+
+    .oft-baslider-label {
+        position: absolute;
+        bottom: 12px;
+        z-index: 3;
+        background: rgba(12,31,58,0.75);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 999px;
     }
 
     .oft-baslider-handle {
@@ -2021,20 +2026,24 @@
                 </div>
             </div>
             <div class="oft-hero-media">
-                <div class="oft-imgph" style="height:280px;">
-                    <i class="fas fa-eye"></i>
-                    <span>Foto: exame oftalmológico</span>
-                </div>
+                <img src="pagina_inicial/img/oftalmologia/banner-principal.png" alt="Avaliação oftalmológica" style="width:100%; height:280px; object-fit:cover; border-radius:18px;">
             </div>
         </div>
     </section>
 
     <!-- Sobre / intro -->
-    <section id="sobre" class="oft-split" style="padding:44px 0 0;">
-        <div class="oft-container" style="display:block;">
-            <p style="max-width:760px; color:#445064; font-size:1.02rem;">
-                Procedimentos de alta precisão, diagnóstico por imagem e cirurgia refrativa. Corpo clínico especializado e tecnologia diferenciada, com avaliação individualizada para cada paciente.
-            </p>
+    <section id="sobre" class="oft-split" style="padding:60px 0;">
+        <div class="oft-container">
+            <div class="oft-split-text">
+                <span class="oft-eyebrow-gold">Conheça a clínica</span>
+                <h2>Ambiente pensado para cuidar.</h2>
+                <p style="max-width:520px;">
+                    Procedimentos de alta precisão, diagnóstico por imagem e cirurgia refrativa. Corpo clínico especializado e tecnologia diferenciada, com avaliação individualizada para cada paciente.
+                </p>
+            </div>
+            <div class="oft-split-media">
+                <img src="pagina_inicial/img/oftalmologia/banner-consultorio.png" alt="Consultório de Oftalmologia" style="width:100%; border-radius:18px; display:block;">
+            </div>
         </div>
     </section>
 
@@ -2071,10 +2080,7 @@
     <section id="refrativa" class="oft-split">
         <div class="oft-container">
             <div class="oft-split-media">
-                <div class="oft-imgph" style="height:320px;">
-                    <i class="fas fa-laptop-medical"></i>
-                    <span>Foto: plataforma de cirurgia refrativa a laser</span>
-                </div>
+                <img src="pagina_inicial/img/oftalmologia/banner-cirurgia-refrativa.png" alt="Cirurgia refrativa" style="width:100%; border-radius:18px; display:block;">
             </div>
             <div class="oft-split-text">
                 <span class="oft-eyebrow-gold">Cirurgia Refrativa</span>
@@ -2146,14 +2152,10 @@
         <div class="oft-container">
             <div class="oft-split-media">
                 <div class="oft-baslider">
-                    <div class="oft-baslider-before">
-                        <i class="fas fa-eye" style="font-size:2rem;"></i>
-                        <span>Com catarata (ilustração)</span>
-                    </div>
-                    <div class="oft-baslider-after" id="oftBaAfter">
-                        <i class="fas fa-eye" style="font-size:2rem;"></i>
-                        <span>Após o tratamento (ilustração)</span>
-                    </div>
+                    <div class="oft-baslider-before"></div>
+                    <div class="oft-baslider-after" id="oftBaAfter"></div>
+                    <span class="oft-baslider-label" style="left:12px;">Com catarata (ilustração)</span>
+                    <span class="oft-baslider-label" style="right:12px;">Após o tratamento (ilustração)</span>
                     <input type="range" class="oft-baslider-handle" id="oftBaRange" min="0" max="100" value="50" aria-label="Comparar antes e depois">
                 </div>
                 <p class="oft-baslider-caption">Imagens meramente ilustrativas e educativas, sem promessa de resultado individual.</p>
@@ -2262,8 +2264,9 @@
     <!-- Tecnologia + Exames -->
     <section id="tecnologia" class="oft-tecnologia">
         <div class="oft-container" style="display:block;">
+            <img src="pagina_inicial/img/oftalmologia/tecnologia.png" alt="Tecnologia de Ponta" style="width:100%; border-radius:18px; display:block; margin-bottom:28px;">
             <span class="oft-eyebrow-gold">Tecnologia</span>
-            <h2>Tecnologia é importante.<br>Saber utilizá-la é fundamental.</h2>
+            <h2>Saber utilizá-la é fundamental.</h2>
             <div class="oft-tech-grid">
                 <!-- TODO: substituir pelos nomes comerciais reais dos equipamentos da clínica -->
                 <div class="oft-tech-card">
