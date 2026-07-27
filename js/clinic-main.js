@@ -3,7 +3,6 @@
     initMobileMenu();
     initLogoMenu();
     initStatsAnimation();
-    initHealthTopics();
     initSearch();
     initNewsletter();
     initSocialSidebar();
@@ -214,26 +213,6 @@ function animateStats() {
                 stat.textContent = `${prefix}${Math.floor(current).toLocaleString()}${suffix}`;
             }
         }, 16);
-    });
-}
-function initHealthTopics() {
-    const healthTopics = [
-        "Nutricionista", "Endócrino", "Otorrino", "Psicologia", "Ginecologia",
-        "Cirurgia Vascular", "Urologia", "Odontologia", "Psiquiatria",
-        "Implantodotia Cirurgias", "Plásticas", "Estéticas", "Telemedicina",
-        "Cirurgias Plásticas e Estética", "Telemedicina",
-    ];
-
-    const topicsContainer = document.getElementById('topicsContainer');
-    if (!topicsContainer) return;
-
-    topicsContainer.innerHTML = '';
-
-    healthTopics.forEach(topic => {
-        const topicElement = document.createElement('div');
-        topicElement.className = 'topic-tag';
-        topicElement.innerHTML = `<i class="fas fa-stethoscope"></i> ${topic}`;
-        topicsContainer.appendChild(topicElement);
     });
 }
 function initSearch() {
