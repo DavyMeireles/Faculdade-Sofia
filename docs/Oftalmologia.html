@@ -1617,12 +1617,11 @@
 
     .oft-baslider-before {
         filter: blur(4px) saturate(0.35) brightness(0.75);
+        clip-path: inset(0 50% 0 0);
     }
 
     .oft-baslider-after {
-        overflow: hidden;
         filter: none;
-        clip-path: inset(0 50% 0 0);
     }
 
     .oft-baslider-label {
@@ -1641,7 +1640,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 50%;
+        left: 0;
         width: 100%;
         margin: 0;
         -webkit-appearance: none;
@@ -2152,8 +2151,8 @@
         <div class="oft-container">
             <div class="oft-split-media">
                 <div class="oft-baslider">
-                    <div class="oft-baslider-before"></div>
-                    <div class="oft-baslider-after" id="oftBaAfter"></div>
+                    <div class="oft-baslider-after"></div>
+                    <div class="oft-baslider-before" id="oftBaBefore"></div>
                     <span class="oft-baslider-label" style="left:12px;">Com catarata (ilustração)</span>
                     <span class="oft-baslider-label" style="right:12px;">Após o tratamento (ilustração)</span>
                     <input type="range" class="oft-baslider-handle" id="oftBaRange" min="0" max="100" value="50" aria-label="Comparar antes e depois">
@@ -2379,10 +2378,10 @@
     }
 
     var range = document.getElementById('oftBaRange');
-    var after = document.getElementById('oftBaAfter');
-    if (range && after) {
+    var before = document.getElementById('oftBaBefore');
+    if (range && before) {
         range.addEventListener('input', function () {
-            after.style.clipPath = 'inset(0 ' + (100 - range.value) + '% 0 0)';
+            before.style.clipPath = 'inset(0 ' + (100 - range.value) + '% 0 0)';
         });
     }
 
