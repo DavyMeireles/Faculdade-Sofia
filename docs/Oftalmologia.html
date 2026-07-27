@@ -1858,8 +1858,9 @@
 
     .oft-cc-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
         gap: 20px;
+        justify-content: center;
     }
 
     .oft-cc-card {
@@ -1868,10 +1869,14 @@
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 6px 18px rgba(12,31,58,0.05);
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
     }
 
     .oft-cc-avatar {
-        aspect-ratio: 1 / 1;
+        width: 120px;
+        flex-shrink: 0;
         background: linear-gradient(135deg, #e7edf5, #cfdcec);
         display: flex;
         align-items: center;
@@ -1880,7 +1885,7 @@
     }
 
         .oft-cc-avatar i {
-            font-size: 2.6rem;
+            font-size: 2.2rem;
             color: var(--oft-navy);
             opacity: .5;
         }
@@ -1893,24 +1898,27 @@
         }
 
     .oft-cc-info p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: #556173;
-        margin: 8px 0 0;
+        margin: 6px 0 0;
     }
 
     .oft-cc-info {
-        padding: 16px 18px;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
         .oft-cc-info h4 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 800;
             color: var(--oft-navy);
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .oft-cc-info span {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: #8a94a3;
         }
 
