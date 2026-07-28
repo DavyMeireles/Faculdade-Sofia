@@ -1082,8 +1082,8 @@ header {
 /* ===== HERO SECTION ===== */
 .video-hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    aspect-ratio: 3 / 2;
+    height: auto;
     left:-9px;
     width:105%;
     overflow: hidden;

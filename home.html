@@ -1180,17 +1180,141 @@
         <main b-lj3f8y2p6z role="main" class="pb-3">
             
 <section class="video-hero" id="home">
-    <div class="video-background">
-        <img src="https://images.unsplash.com/photo-1516549655669-df6654e447d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Clínica Santa Sofia" id="heroVideo">
-        <div class="video-overlay"></div>
+    <div class="hero-carousel" id="heroCarousel">
+        <img src="/pagina_inicial/img/banner-home-1.png" alt="Faculdade Sofia — Tradição que forma, educação que transforma" class="hero-slide active">
+        <img src="/pagina_inicial/img/banner-home-2.png" alt="Faculdade Sofia — Educação que transforma e cuida" class="hero-slide">
     </div>
 
-    <div class="container text-center" style="position: relative; z-index: 1; color: #fff; padding: 0 20px;">
-        <h1 class="fw-bold" style="font-size: clamp(1.8rem, 4vw, 3rem); text-shadow: 0 2px 12px rgba(0,0,0,0.5);">
-            FACULDADE SOFIA<br>
-            <span style="color:#eab676;">A Faculdade do Trabalhador da Saúde</span>
-        </h1>
+    <button type="button" class="hero-carousel-arrow hero-carousel-prev" id="heroPrev" aria-label="Slide anterior">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button type="button" class="hero-carousel-arrow hero-carousel-next" id="heroNext" aria-label="Próximo slide">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="hero-carousel-dots" id="heroDots">
+        <button type="button" class="hero-dot active" data-slide="0" aria-label="Ir para slide 1"></button>
+        <button type="button" class="hero-dot" data-slide="1" aria-label="Ir para slide 2"></button>
     </div>
+
+    <style>
+        .hero-carousel {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+            .hero-slide.active {
+                opacity: 1;
+            }
+
+        .hero-carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            background: rgba(12, 31, 58, 0.45);
+            color: #fff;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+            .hero-carousel-arrow:hover {
+                background: rgba(12, 31, 58, 0.75);
+            }
+
+        .hero-carousel-prev {
+            left: 18px;
+        }
+
+        .hero-carousel-next {
+            right: 18px;
+        }
+
+        .hero-carousel-dots {
+            position: absolute;
+            bottom: 18px;
+            right: 18px;
+            z-index: 5;
+            display: flex;
+            gap: 8px;
+        }
+
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+
+            .hero-dot.active {
+                background: #eab676;
+                border-color: #eab676;
+            }
+
+        @media (max-width: 576px) {
+            .hero-carousel-arrow {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('#heroCarousel .hero-slide');
+            var dots = document.querySelectorAll('#heroDots .hero-dot');
+            var prevBtn = document.getElementById('heroPrev');
+            var nextBtn = document.getElementById('heroNext');
+            var current = 0;
+            var timer;
+
+            function showSlide(index) {
+                slides[current].classList.remove('active');
+                dots[current].classList.remove('active');
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dots[current].classList.add('active');
+            }
+
+            function nextSlide() { showSlide(current + 1); }
+            function prevSlide() { showSlide(current - 1); }
+
+            function resetTimer() {
+                clearInterval(timer);
+                timer = setInterval(nextSlide, 10000);
+            }
+
+            if (slides.length > 1) {
+                nextBtn.addEventListener('click', function () { nextSlide(); resetTimer(); });
+                prevBtn.addEventListener('click', function () { prevSlide(); resetTimer(); });
+                dots.forEach(function (dot, i) {
+                    dot.addEventListener('click', function () { showSlide(i); resetTimer(); });
+                });
+                resetTimer();
+            }
+        })();
+    </script>
 
     <div class="qr-code-container" id="qrCodeContainer">
         <div class="qr-code-card" id="qrCodeCard">
