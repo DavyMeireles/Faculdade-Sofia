@@ -321,15 +321,9 @@
                     </li>
 
                     <li class="nav-combo">
-                        <a class="combo-title" href="#">
-                            <span class="menu-text full-text">CORPO DOCENTE</span>
-                            <i class="fas fa-chevron-down combo-arrow"></i>
+                        <a class="combo-title" href="/Home/CorpoDocente">
+                            <span class="menu-text full-text">COORDENAÇÃO E DOCÊNCIA</span>
                         </a>
-                        <div class="combo-dropdown">
-                            <a href="/Home/CorpoDocente" class="dropdown-item">
-                                Coordenação e Professores
-                            </a>
-                        </div>
                     </li>
 
                     <li class="nav-combo">
@@ -793,14 +787,10 @@
                         </ul>
                     </li>
 
-                    <li class="mobile-nav-item has-children">
-                        <p class="mobile-nav-link">
-                            <span>CORPO DOCENTE</span>
-                            <i class="fas fa-chevron-down mobile-arrow"></i>
-                        </p>
-                        <ul class="mobile-submenu">
-                            <li><a href="/Home/CorpoDocente" class="mobile-nav-link" data-turbo="true">Coordenação e Professores</a></li>
-                        </ul>
+                    <li class="mobile-nav-item">
+                        <a class="mobile-nav-link" href="/Home/CorpoDocente" data-turbo="true">
+                            <span>COORDENAÇÃO E DOCÊNCIA</span>
+                        </a>
                     </li>
 
                     <li class="mobile-nav-item">
@@ -1452,28 +1442,6 @@
             lattes: null // TODO: substituir por link real do Lattes
         },
         {
-            id: 'rezende',
-            nome: 'Rezende',
-            area: 'Otorrinolaringologia',
-            foto: null,
-            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
-            email: 'rezende@faculdadesofia.edu.br', // TODO: substituir por dados reais
-            plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
-            lattes: null // TODO: substituir por link real do Lattes
-        },
-        {
-            id: 'gabriel',
-            nome: 'Gabriel',
-            area: 'Otorrinolaringologia',
-            foto: null,
-            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
-            email: 'gabriel@faculdadesofia.edu.br', // TODO: substituir por dados reais
-            plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
-            lattes: null // TODO: substituir por link real do Lattes
-        },
-        {
             id: 'beatriz',
             nome: 'Beatriz Vargas - Psicóloga',
             area: 'Coordenação de Psicologia — Bacharelado e Pós-Graduação',
@@ -1483,29 +1451,8 @@
             plantao: 'Segunda e Quarta, 14h às 18h',
             bio: 'Psicóloga clínica e supervisora, especialista em Terapia Cognitivo-Comportamental e EMDR. Doutora em Psicologia Clínica pela USP. Atende há 18 anos em consultório particular. Autora do livro "Emoções em Diálogo".',
             lattes: 'http://lattes.cnpq.br/1767999448173979'
-        },
-        {
-            id: 'psiquiatria',
-            nome: 'Nome a confirmar', // TODO: substituir por dados reais
-            area: 'Psiquiatria',
-            foto: null,
-            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
-            email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
-            plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
-            lattes: null // TODO: substituir por link real do Lattes
-        },
-        {
-            id: 'clinicogeral',
-            nome: 'Nome a confirmar', // TODO: substituir por dados reais
-            area: 'Clínico Geral',
-            foto: null,
-            telefone: '(19) 0000-0000', // TODO: substituir por dados reais
-            email: 'nome@faculdadesofia.edu.br', // TODO: substituir por dados reais
-            plantao: 'A confirmar', // TODO: substituir por dados reais
-            bio: 'Currículo de exemplo — substituir pelo texto real.', // TODO: substituir por dados reais
-            lattes: null // TODO: substituir por link real do Lattes
         }
+        // TODO: adicionar Otorrinolaringologia, Psiquiatria e Clínico Geral assim que os dados reais (nome, foto, bio, contato) forem confirmados
     ];
 
     var grid = document.getElementById('docentesGrid');
