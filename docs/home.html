@@ -1407,6 +1407,10 @@
         margin: 0 auto;
     }
 
+    #cursosAreasGrid .cursos-lista-wrapper {
+        grid-column: 1 / -1;
+    }
+
     .curso-area-card {
         background-color: var(--white);
         border: 2px solid transparent;
@@ -1652,12 +1656,30 @@
         }
     };
 
+    var grid = document.getElementById('cursosAreasGrid');
     var cards = document.querySelectorAll('.curso-area-card');
     var wrapper = document.getElementById('cursosListaWrapper');
+    var wrapperParent = wrapper.parentNode;
+    var wrapperNext = wrapper.nextSibling;
     var lista = document.getElementById('cursosLista');
     var titulo = document.getElementById('cursosListaTitulo');
     var fecharBtn = document.getElementById('cursosListaFechar');
     var areaAtiva = null;
+
+    function isSingleColumn() {
+        var cols = window.getComputedStyle(grid).getPropertyValue('grid-template-columns').trim().split(' ');
+        return cols.length <= 1;
+    }
+
+    function posicionarWrapper(card) {
+        if (isSingleColumn()) {
+            card.insertAdjacentElement('afterend', wrapper);
+        } else if (wrapperNext) {
+            wrapperParent.insertBefore(wrapper, wrapperNext);
+        } else {
+            wrapperParent.appendChild(wrapper);
+        }
+    }
 
     document.querySelectorAll('[data-count-for]').forEach(function (el) {
         var area = el.getAttribute('data-count-for');
@@ -1673,6 +1695,7 @@
 
     function abrirArea(area, card) {
         areaAtiva = area;
+        posicionarWrapper(card);
         cards.forEach(function (c) { c.classList.remove('active'); });
         card.classList.add('active');
 
