@@ -22,13 +22,11 @@ function initHeaderScroll() {
         const isHome = isHomePage();
 
         if (isHome) {
+            header.classList.add('scrolled');
+            header.classList.remove('internal-page');
             if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-                header.classList.remove('internal-page');
                 document.querySelector('.header-content')?.classList.add('compact');
             } else {
-                header.classList.remove('scrolled');
-                header.classList.remove('internal-page');
                 document.querySelector('.header-content')?.classList.remove('compact');
             }
         } else {
@@ -430,7 +428,7 @@ function checkWindowSize() {
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const headerActions = document.querySelector('.header-actions');
 
-    if (width <= 1050) {
+    if (width <= 1400) {
         if (navWrapper) navWrapper.style.display = 'none';
         if (headerActions) headerActions.style.display = 'none';
         if (mobileBtn) mobileBtn.style.display = 'block';
