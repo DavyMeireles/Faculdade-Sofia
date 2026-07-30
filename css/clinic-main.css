@@ -780,6 +780,31 @@ header {
     }
 }
 
+/* Em telas baixas (paisagem/janelas curtas), a barra lateral fixa
+   verticalmente centralizada pode sobrepor o conteúdo do hero.
+   Nesses casos ela também vira uma barra horizontal no rodapé. */
+@media (max-height: 900px) {
+    .social-sidebar {
+        flex-direction: row;
+        top: auto;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+        .social-sidebar:hover {
+            transform: translateX(-50%) scale(1.02);
+        }
+
+    .social-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+}
+
 /* ===== MENU MOBILE MODERNO ===== */
 .mobile-nav-overlay {
     position: fixed;
